@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Lab — El laboratorio de la agricultura del futuro</title>
+  <meta name="description" content="5 hectáreas en El Puig (Valencia) donde testeamos en campo real la próxima generación de IA agrícola." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <!-- Brand mark — referenciable como <use href="#m-nucleo"/> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="m-nucleo" viewBox="0 0 200 200">
+        <polygon points="60,50 50,67.32 30,67.32 20,50 30,32.68 50,32.68"          fill="var(--mc)"/>
+        <polygon points="180,50 170,67.32 150,67.32 140,50 150,32.68 170,32.68"    fill="var(--mc)"/>
+        <polygon points="90,95 80,112.32 60,112.32 50,95 60,77.68 80,77.68"        fill="var(--mc)"/>
+        <polygon points="150,95 140,112.32 120,112.32 110,95 120,77.68 140,77.68"  fill="var(--mc)"/>
+        <polygon points="120,145 110,162.32 90,162.32 80,145 90,127.68 110,127.68" fill="var(--ma)"/>
+        <circle cx="100" cy="145" r="5" fill="var(--md)"/>
+      </symbol>
+      <symbol id="m-hex" viewBox="0 0 40 35">
+        <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__logo"><span class="visual">Visual</span><span class="nacert">NACert</span></div>
+      <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+      <div class="loader__count">0</div>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__pill">
+      <a href="index.html" class="nav__brand">
+        <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+        <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+      </a>
+      <nav class="nav__links">
+        <a href="soluciones.html">Soluciones</a>
+        <a href="visual-app.html">App</a>
+        <a href="visual-lab.html" class="is-active">Lab</a>
+        <a href="visual-academy.html">Academy</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__lang">ES</button>
+        <a href="contacto.html" class="nav__cta">
+          Hablemos
+          <span class="nav__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="page-hero__media">
+        <div class="page-hero__image" style="background-image: url('img/ai-tomato-mesh.jpg')"></div>
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__watermark" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#m-nucleo"/></svg></div>
+      </div>
+      <div class="page-hero__shell">
+        <div class="page-hero__top">
+          <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Visual Lab</span>
+          <span class="page-hero__crumb"><a href="index.html">Inicio</a> · Visual Lab</span>
+        </div>
+        <h1 class="page-hero__title">
+          El laboratorio<br />
+          de la <em>agricultura del futuro</em>.
+        </h1>
+        <p class="page-hero__lead">5 hectáreas de cultivo ecológico certificado en El Puig (Valencia) donde testeamos en entorno real cada nueva idea antes de llevarla a la plataforma. Nuestro objetivo: el <strong>tratamiento 0</strong>.</p>
+      </div>
+    </section>
+
+    <!-- DATOS CLAVE -->
+    <section class="section" style="padding-bottom: 60px;">
+      <div class="container">
+        <div class="kd-row">
+          <div class="kd">
+            <span class="kd__lbl">Ubicación</span>
+            <span class="kd__val">El Puig, Valencia</span>
+          </div>
+          <div class="kd">
+            <span class="kd__lbl">Superficie</span>
+            <span class="kd__val">5 hectáreas</span>
+          </div>
+          <div class="kd">
+            <span class="kd__lbl">Certificación</span>
+            <span class="kd__val">Ecológica</span>
+          </div>
+          <div class="kd">
+            <span class="kd__lbl">Objetivo</span>
+            <span class="kd__val">Tratamiento 0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section" style="padding-top: 60px;">
+      <div class="container">
+        <div class="two-col">
+          <h2 class="two-col__head">Donde la IA <em>aprende del campo</em>.</h2>
+          <div class="two-col__body">
+            <p>Visual Lab es nuestro centro de experiencias en la Comarca Horta Nord. Aquí no probamos modelos en un ordenador: probamos en tierra, con tomates, con clima real y con todas las variables imprevisibles que el campo siempre te lanza.</p>
+            <p>Aplicamos técnicas de agricultura ecológica certificada — cubiertas vegetales, suelta de fauna auxiliar, control biológico, sensores Visual Sensor y modelos predictivos — para demostrar que es posible producir más, mejor y con menos químicos.</p>
+            <p>Cada algoritmo que ves en la plataforma ha pasado antes por estas <em>cinco hectáreas</em>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREAS -->
+    <section class="section" style="background: var(--linen);">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 01 — Áreas de investigación</span>
+          <h2 class="section__title">Donde experimentamos <em>de verdad</em>.</h2>
+        </div>
+        <div class="areas-grid">
+          <article class="area" data-reveal>
+            <span class="area__num">01 · Gestión sostenible</span>
+            <h4>Gestión integral de plagas sostenible.</h4>
+            <p>Enfoque proactivo mediante muestreos rigurosos y fortalecimiento de enemigos naturales. Casetas de murciélagos como aliados de control biológico — sí, en serio.</p>
+          </article>
+          <article class="area" data-reveal>
+            <span class="area__num">02 · Biodiversidad</span>
+            <h4>Control biológico y fauna auxiliar.</h4>
+            <p>Cubiertas vegetales multifuncionales, transformación de infraestructuras obsoletas en setos de biodiversidad e incorporación de plantas aromáticas para favorecer la fauna beneficiosa.</p>
+          </article>
+          <article class="area" data-reveal>
+            <span class="area__num">03 · Monitorización</span>
+            <h4>Sensores y modelos en campo.</h4>
+            <p>Pruebas con Visual Sensor para tratamientos personalizados, reducción de costes y maximización del ahorro hídrico. Cada decisión, basada en lectura real, no en estimación.</p>
+          </article>
+          <article class="area" data-reveal>
+            <span class="area__num">04 · Conservación</span>
+            <h4>Estrategias de conservación del suelo.</h4>
+            <p>Mantenimiento de cubierta vegetal, métodos de conservación del suelo, islas de biodiversidad y diseño ecológico de estrategias antiplagas con base en investigación propia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEDIA BLOCK -->
+    <section class="section">
+      <div class="container">
+        <div class="media-block" style="background-image: url('img/ai-leaf-pest.jpg')">
+          <div class="media-block__content">
+            <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Objetivo estratégico</span>
+            <h3 style="margin-top: 16px;">Hacia el <em>tratamiento 0</em>.</h3>
+            <p>Seguimiento continuo de poblaciones de enemigos naturales para crear un ecosistema agrícola autosostenible. Eliminación progresiva de fitosanitarios y fertilizantes químicos sin sacrificar productividad. Lo que aprendemos aquí, lo escalamos en la plataforma.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 02 — Resultados conseguidos</span>
+          <h2 class="section__title">Lo que <em>ya funciona</em>.</h2>
+        </div>
+        <div class="pillars-grid">
+          <div class="pillar" data-reveal>
+            <div class="pillar__num">Sostenibilidad real</div>
+            <h4>Cero fitosanitarios químicos.</h4>
+            <p>Eliminación completa del uso de fitosanitarios y fertilizantes químicos. Calidad de fruto medida, no estimada.</p>
+          </div>
+          <div class="pillar" data-reveal>
+            <div class="pillar__num">Producto mejor</div>
+            <h4>Mejora medible de calidad.</h4>
+            <p>Calidad de frutos superior gracias a un suelo más sano, biodiversidad activa y modelos predictivos refinados año tras año.</p>
+          </div>
+          <div class="pillar" data-reveal>
+            <div class="pillar__num">Equipo y entorno</div>
+            <h4>Bienestar laboral y visitas.</h4>
+            <p>Un entorno inspirador donde el equipo trabaja con orgullo y nuestros clientes ven cómo se construye la próxima generación de IA agrícola.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-final">
+      <div class="cta-final__bg" style="background-image: url('img/ai-greenhouse-warm.jpg')"></div>
+      <div class="cta-final__overlay"></div>
+      <div class="container">
+        <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Visítanos</span>
+        <h2 class="cta-final__title cta-final__title--light" data-reveal>
+          Ven a ver cómo trabaja<br />
+          <span class="accent">la nueva agricultura</span>.
+        </h2>
+        <p class="cta-final__lead">Organizamos visitas a Visual Lab para clientes, partners y prensa especializada. Habla con nosotros y reserva tu jornada.</p>
+        <div class="cta-final__actions">
+          <a href="contacto.html" class="btn btn--primary btn--lg">
+            <span>Reservar visita</span>
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="visual-app.html" class="btn btn--ghost-light">
+            <span>Conoce la app</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+              <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+            </div>
+            <p>La capa de IA del sector agroalimentario. Hecho desde Valencia, para el mundo.</p>
+          </div>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h5>Plataforma</h5>
+              <a href="visual-app.html">Visual App</a><a href="visual-lab.html">Visual Lab</a><a href="visual-academy.html">Academy</a><a href="index.html#soluciones">FertiPRO</a><a href="index.html#soluciones">Visual Sensor</a><a href="index.html#soluciones">Analytics</a>
+            </div>
+            <div class="footer__col">
+              <h5>Sectores</h5>
+              <a href="index.html#sectores">Viticultura</a><a href="index.html#sectores">Olivar</a><a href="index.html#sectores">Fruticultura</a><a href="index.html#sectores">Cítricos</a><a href="index.html#sectores">Hortícola</a><a href="index.html#sectores">Frutos secos</a>
+            </div>
+            <div class="footer__col">
+              <h5>Compañía</h5>
+              <a href="nosotros.html">Sobre Visual NAcert</a><a href="clientes.html">Clientes</a><a href="#">Carreras</a><a href="#">Prensa</a>
+            </div>
+            <div class="footer__col">
+              <h5>Contacto</h5>
+              <a href="mailto:contacto@visualnacert.com">contacto@visualnacert.com</a><a href="tel:+34961410675">+34 96 141 06 75</a><a>Valencia, ES</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Visual NAcert · Todos los derechos reservados</span>
+          <span class="footer__legal">
+            <a href="#">Aviso legal</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Cookies</a>
+          </span>
+        </div>
+        <div class="footer__giant">
+          <span class="visual">Visual</span><span class="nacert">NACert</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js?v=10"></script>
+</body>
+</html>

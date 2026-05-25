@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual NAcert — La inteligencia del nuevo agro</title>
+  <meta name="description" content="El sistema operativo de la agricultura inteligente. IA, datos y agronomía en una sola plataforma." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=10" />
+</head>
+<body>
+  <!-- Brand mark — referenciable como <use href="#m-nucleo"/> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="m-nucleo" viewBox="0 0 200 200">
+        <polygon points="60,50 50,67.32 30,67.32 20,50 30,32.68 50,32.68"          fill="var(--mc)"/>
+        <polygon points="180,50 170,67.32 150,67.32 140,50 150,32.68 170,32.68"    fill="var(--mc)"/>
+        <polygon points="90,95 80,112.32 60,112.32 50,95 60,77.68 80,77.68"        fill="var(--mc)"/>
+        <polygon points="150,95 140,112.32 120,112.32 110,95 120,77.68 140,77.68"  fill="var(--mc)"/>
+        <polygon points="120,145 110,162.32 90,162.32 80,145 90,127.68 110,127.68" fill="var(--ma)"/>
+        <circle cx="100" cy="145" r="5" fill="var(--md)"/>
+      </symbol>
+      <symbol id="m-hex" viewBox="0 0 40 35">
+        <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+
+  <!-- Custom cursor -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__logo"><span class="visual">Visual</span><span class="nacert">NACert</span></div>
+      <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+      <div class="loader__count">0</div>
+    </div>
+  </div>
+
+  <!-- Floating Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__pill">
+      <a href="#" class="nav__brand">
+        <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+        <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+      </a>
+      <nav class="nav__links">
+        <a href="soluciones.html">Soluciones</a>
+        <a href="visual-app.html">App</a>
+        <a href="visual-lab.html">Lab</a>
+        <a href="visual-academy.html">Academy</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__lang">ES</button>
+        <a href="contacto.html" class="nav__cta">
+          Hablemos
+          <span class="nav__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO con vídeo scroll-scrub estilo Apple -->
+    <section class="hero hero--scrub" id="hero">
+      <div class="hero__pin">
+        <div class="hero__media">
+          <video class="hero__video" muted playsinline preload="auto" poster="img/ai-hero-plant.jpg">
+            <source src="video/hero.mp4" type="video/mp4">
+          </video>
+          <div class="hero__overlay"></div>
+          <div class="hero__watermark" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+          </div>
+          <div class="hero__grain"></div>
+        </div>
+
+        <div class="hero__shell">
+          <div class="hero__top">
+            <span class="eyebrow eyebrow--light">
+              <span class="eyebrow__dot"></span>
+              IA aplicada al sector agroalimentario
+            </span>
+            <span class="hero__meta">EST. 2014 · Valencia, ES</span>
+          </div>
+
+          <h1 class="hero__title">
+            <span class="hero__line"><span data-split>La nueva agricultura</span></span>
+            <span class="hero__line"><span data-split><em>inteligente.</em></span></span>
+          </h1>
+
+          <div class="hero__bottom">
+            <div class="hero__lead">
+              <p>Visual es tu partner tecnológico para adoptar la IA.</p>
+              <div class="hero__pillars">
+                <span>Menos costes operativos</span>
+                <span class="hero__pillars-dot">·</span>
+                <span>Decisiones más rápidas</span>
+                <span class="hero__pillars-dot">·</span>
+                <span>Resultados medibles</span>
+              </div>
+              <div class="hero__actions">
+                <a href="contacto.html" class="btn btn--primary">
+                  <span>Habla con un consultor</span>
+                  <span class="btn__arrow">→</span>
+                </a>
+                <a href="soluciones.html" class="btn btn--ghost-light">
+                  <span class="btn__play">▶</span>
+                  <span>Ver plataforma</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__scroll">
+            <span class="hero__scroll-label">Scroll</span>
+            <span class="hero__scroll-line"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span>+4M hectáreas digitalizadas</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+          <span>+400 empresas clientes</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+          <span>+200.000 agricultores</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+          <span>+10 años de IA aplicada</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+          <span>RD 1051/2022 compliant</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+          <span>Alineados con los ODS de la ONU</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+        </div>
+        <div class="ticker__group" aria-hidden="true">
+          <span>+4M hectáreas digitalizadas</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+          <span>+400 empresas clientes</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+          <span>+200.000 agricultores</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+          <span>+10 años de IA aplicada</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+          <span>RD 1051/2022 compliant</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+          <span>Alineados con los ODS de la ONU</span><svg class="ticker__sep" viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFIESTO -->
+    <section class="manifesto" id="plataforma">
+      <div class="container">
+        <div class="manifesto__head">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 01 — Posicionamiento</span>
+          <span class="manifesto__year">2026</span>
+        </div>
+        <h2 class="manifesto__title" data-reveal>
+          No vendemos software.
+          <br />Construimos la <em>capa de inteligencia artificial</em>
+          <br />del sector que alimenta al mundo.
+        </h2>
+        <div class="manifesto__foot">
+          <p class="manifesto__lead">La IA que transforma tu empresa empieza por el partner que eliges. Llevamos una década aplicando inteligencia artificial al ciclo completo del cultivo — del suelo a la sala de dirección — con criterio, proceso y resultados medibles.</p>
+          <a href="#compania" class="link-arrow">Conoce nuestro enfoque <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND STATEMENT — el isotipo grabado en el bosque -->
+    <section class="brand-statement">
+      <div class="brand-statement__bg" style="background-image: url('img/forest-isotipo-clean.jpg')"></div>
+      <div class="brand-statement__overlay"></div>
+      <div class="container brand-statement__content">
+        <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Posicionamiento como núcleo</span>
+        <h2 class="brand-statement__title" data-reveal>
+          Somos el núcleo<br />
+          donde el dato se vuelve <em>decisión</em>.
+        </h2>
+        <div class="brand-statement__foot">
+          <div>
+            <div class="caption">El símbolo lo dice</div>
+            <p>Cuatro celdas convergen en una quinta. Ahí es donde el dato del campo se transforma en decisión.</p>
+          </div>
+          <div>
+            <div class="caption">Y lo hace literal</div>
+            <p>El punto dentro del núcleo es el dato puntual: la inteligencia aplicada que devolvemos al cliente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE -->
+    <section class="showcase">
+      <div class="container">
+        <div class="showcase__card">
+          <div class="showcase__media" style="background-image: url('img/ai-phone-plants.jpg')"></div>
+          <div class="showcase__overlay"></div>
+          <div class="showcase__content">
+            <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Visual IA · En acción</span>
+            <h3 class="showcase__title">
+              La <span class="accent">IA</span>, en la palma de la mano del agricultor.
+            </h3>
+            <p class="showcase__lead">Plagas detectadas con visión por computador, dosis nutricionales calculadas con modelos propios y decisiones agronómicas validadas por nuestros consultores.</p>
+            <div class="showcase__chips">
+              <span class="chip">Visión por computador</span>
+              <span class="chip">Modelos predictivos</span>
+              <span class="chip">Sincronización offline</span>
+              <span class="chip">Cumplimiento RD 1051/2022</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats__head">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 02 — Resultados</span>
+          <h3 class="stats__title">Números que <em>crecen</em> contigo.</h3>
+        </div>
+        <div class="stats__grid">
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count="4" data-suffix="M+">0</span>
+            <span class="stat__lbl">Hectáreas digitalizadas en España</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count="400" data-suffix="+">0</span>
+            <span class="stat__lbl">Empresas clientes desde 2014</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count="200" data-suffix="K+">0</span>
+            <span class="stat__lbl">Agricultores con productividad mejorada</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count="24" data-suffix="/7">0</span>
+            <span class="stat__lbl">Datos accionables en tiempo real</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGOS MARQUEE -->
+    <section class="logos">
+      <div class="container logos__head">
+        <span class="eyebrow"><span class="eyebrow__dot"></span> Confían en nosotros</span>
+        <p class="logos__line">Cooperativas, agroindustrias y operadores líderes del sur de Europa.</p>
+      </div>
+      <div class="logos__marquee">
+        <div class="logos__track">
+          <span>AGROMILLORA</span><span class="dot">·</span>
+          <span>HISPATEC</span><span class="dot">·</span>
+          <span>FRESHUELVA</span><span class="dot">·</span>
+          <span>ANECOOP</span><span class="dot">·</span>
+          <span>CITROSOL</span><span class="dot">·</span>
+          <span>SYNGENTA</span><span class="dot">·</span>
+          <span>BAYER</span><span class="dot">·</span>
+          <span>CAJAMAR</span><span class="dot">·</span>
+          <span>AGROMILLORA</span><span class="dot">·</span>
+          <span>HISPATEC</span><span class="dot">·</span>
+          <span>FRESHUELVA</span><span class="dot">·</span>
+          <span>ANECOOP</span><span class="dot">·</span>
+          <span>CITROSOL</span><span class="dot">·</span>
+          <span>SYNGENTA</span><span class="dot">·</span>
+          <span>BAYER</span><span class="dot">·</span>
+          <span>CAJAMAR</span><span class="dot">·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUCIONES (pinned reveal) -->
+    <section class="solutions" id="soluciones">
+      <div class="solutions__bg"></div>
+      <div class="container">
+        <div class="solutions__sticky">
+          <div class="solutions__intro">
+            <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> 03 — Plataforma</span>
+            <h3 class="solutions__title">Una plataforma. <em>Toda</em> la cadena de valor.</h3>
+            <p class="solutions__lead">Implementamos la IA en tu empresa con módulos integrados que comparten datos, modelos y agronomía. Activa lo que necesitas hoy, escala mañana.</p>
+            <a href="#" class="link-arrow link-arrow--light">Hablar con un consultor <span>→</span></a>
+          </div>
+
+          <div class="solutions__list">
+            <article class="sol" data-reveal>
+              <div class="sol__top">
+                <span class="sol__num">01</span>
+                <span class="sol__tag">Núcleo IA</span>
+              </div>
+              <h4 class="sol__name">FertiPRO</h4>
+              <p class="sol__desc">Dosis precisas de nutrientes por parcela. Cumple el RD 1051/2022 con análisis de suelo y agua integrados.</p>
+              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
+            </article>
+
+            <article class="sol" data-reveal>
+              <div class="sol__top">
+                <span class="sol__num">02</span>
+                <span class="sol__tag">Datos</span>
+              </div>
+              <h4 class="sol__name">Visual Sensor</h4>
+              <p class="sol__desc">Red IoT propia para humedad, temperatura, conductividad y nutrientes. Decisiones de riego y fertilización en tiempo real.</p>
+              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
+            </article>
+
+            <article class="sol" data-reveal>
+              <div class="sol__top">
+                <span class="sol__num">03</span>
+                <span class="sol__tag">IA Predictiva</span>
+              </div>
+              <h4 class="sol__name">Riesgos Climáticos</h4>
+              <p class="sol__desc">Modelos que anticipan heladas, sequía y plagas. Reduce hasta un 35% el impacto operativo de eventos climáticos.</p>
+              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
+            </article>
+
+            <article class="sol" data-reveal>
+              <div class="sol__top">
+                <span class="sol__num">04</span>
+                <span class="sol__tag">Analytics</span>
+              </div>
+              <h4 class="sol__name">Visual Analytics</h4>
+              <p class="sol__desc">Cuadro de mando agronómico y financiero unificado. Toma decisiones con la misma información que tu CFO y tu técnico.</p>
+              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
+            </article>
+
+            <article class="sol" data-reveal>
+              <div class="sol__top">
+                <span class="sol__num">05</span>
+                <span class="sol__tag">Operación</span>
+              </div>
+              <h4 class="sol__name">Enterprise Suite</h4>
+              <p class="sol__desc">Gestión integral de compras, calidad y costes para grandes operadores agroindustriales.</p>
+              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
+            </article>
+
+            <article class="sol" data-reveal>
+              <div class="sol__top">
+                <span class="sol__num">06</span>
+                <span class="sol__tag">Sostenibilidad</span>
+              </div>
+              <h4 class="sol__name">CSRD Report</h4>
+              <p class="sol__desc">Informes de sostenibilidad alineados con CSRD y los ODS. Cumple la nueva regulación sin fricción.</p>
+              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="process">
+      <div class="container">
+        <div class="process__head">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 04 — Cómo trabajamos</span>
+          <h3 class="process__title">
+            Con criterio,<br />
+            con proceso,<br />
+            con <span class="accent">resultados</span>.
+          </h3>
+        </div>
+        <div class="process__row">
+          <div class="step" data-reveal>
+            <span class="step__num">01</span>
+            <div class="step__icon">◐</div>
+            <h4>Capturar</h4>
+            <p>Sensores IoT, satélite, ERP y cuadernos de campo. La realidad agronómica, en tiempo real.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__num">02</span>
+            <div class="step__icon">◑</div>
+            <h4>Aprender</h4>
+            <p>Modelos de IA entrenados con más de 4M de hectáreas y 10 años de histórico.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__num">03</span>
+            <div class="step__icon">◒</div>
+            <h4>Recomendar</h4>
+            <p>Decisiones priorizadas por impacto, coste y riesgo. Validadas por agrónomos sénior.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__num">04</span>
+            <div class="step__icon">◓</div>
+            <h4>Medir</h4>
+            <p>Resultado por hectárea, campaña y línea de negocio. Lo que no se mide, no mejora.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTORES -->
+    <section class="sectors" id="sectores">
+      <div class="container">
+        <div class="sectors__head">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 05 — Sectores</span>
+          <h3 class="sectors__title">Diseñado con quienes <em>cultivan</em> de verdad.</h3>
+        </div>
+        <div class="sectors__grid">
+          <a href="#" class="sector" data-reveal style="background-image: url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=1200&q=80')">
+            <span class="sector__name">Viticultura</span>
+            <span class="sector__meta">+850K ha</span>
+          </a>
+          <a href="#" class="sector" data-reveal style="background-image: url('img/ai-leaf-pest.jpg')">
+            <span class="sector__name">Olivar</span>
+            <span class="sector__meta">+1.2M ha</span>
+          </a>
+          <a href="#" class="sector" data-reveal style="background-image: url('img/ai-tomato-mesh.jpg')">
+            <span class="sector__name">Fruticultura</span>
+            <span class="sector__meta">+600K ha</span>
+          </a>
+          <a href="#" class="sector" data-reveal style="background-image: url('img/ai-robot-citrus.jpg')">
+            <span class="sector__name">Cítricos</span>
+            <span class="sector__meta">+420K ha</span>
+          </a>
+          <a href="#" class="sector" data-reveal style="background-image: url('img/ai-tomato-data.jpg')">
+            <span class="sector__name">Hortícola</span>
+            <span class="sector__meta">+380K ha</span>
+          </a>
+          <a href="#" class="sector" data-reveal style="background-image: url('img/ai-phone-plants.jpg')">
+            <span class="sector__name">Frutos secos</span>
+            <span class="sector__meta">+550K ha</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" id="contacto">
+      <div class="cta-final__bg" style="background-image: url('img/ai-greenhouse-warm.jpg')"></div>
+      <div class="cta-final__overlay"></div>
+      <div class="container">
+        <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Construyamos juntos</span>
+        <h2 class="cta-final__title cta-final__title--light" data-reveal>
+          ¿Listos para liderar
+          <br />la <span class="accent">nueva agricultura</span>?
+        </h2>
+        <p class="cta-final__lead">Una conversación de 30 minutos con uno de nuestros consultores. Sin compromiso. Sin demo genérica. Con criterio, proceso y resultados.</p>
+        <div class="cta-final__actions">
+          <a href="mailto:contacto@visualnacert.com" class="btn btn--primary btn--lg">
+            <span>Reserva una sesión</span>
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="tel:+34961410675" class="btn btn--ghost-light">
+            <span>96 141 06 75</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="compania">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+              <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+            </div>
+            <p>La capa de IA del sector agroalimentario. Hecho desde Valencia, para el mundo.</p>
+          </div>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h5>Plataforma</h5>
+              <a>FertiPRO</a><a>Visual Sensor</a><a>Analytics</a><a>Riesgos Climáticos</a><a>Enterprise</a><a>CSRD Report</a>
+            </div>
+            <div class="footer__col">
+              <h5>Sectores</h5>
+              <a>Viticultura</a><a>Olivar</a><a>Fruticultura</a><a>Cítricos</a><a>Hortícola</a><a>Frutos secos</a>
+            </div>
+            <div class="footer__col">
+              <h5>Compañía</h5>
+              <a>Sobre Visual NAcert</a><a>Carreras</a><a>Prensa</a><a>Sostenibilidad</a><a>Partners</a>
+            </div>
+            <div class="footer__col">
+              <h5>Contacto</h5>
+              <a>contacto@visualnacert.com</a><a>+34 96 141 06 75</a><a>Valencia, ES</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Visual NAcert · Todos los derechos reservados</span>
+          <span class="footer__legal">
+            <a>Aviso legal</a>
+            <a>Privacidad</a>
+            <a>Cookies</a>
+          </span>
+        </div>
+        <div class="footer__giant">
+          <span class="visual">Visual</span><span class="nacert">NACert</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js?v=10"></script>
+</body>
+</html>
