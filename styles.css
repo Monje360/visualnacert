@@ -1195,7 +1195,6 @@ em {
   transform: translateY(-4px);
 }
 .step:hover .step__num { color: rgba(255, 255, 255, 0.5); }
-.step:hover .step__icon { color: var(--orange); }
 .step:hover p { color: rgba(255, 255, 255, 0.7); }
 
 .step__num {
@@ -1205,12 +1204,15 @@ em {
   color: var(--mute);
 }
 .step__icon {
-  font-size: 56px;
-  color: var(--orange);
-  line-height: 1;
+  width: 64px;
+  height: 56px;
+  display: block;
+  color: var(--ink);
   margin: 12px 0 32px;
+  overflow: visible;
   transition: color 0.4s var(--ease);
 }
+.step:hover .step__icon { color: #fff; }
 .step h4 {
   font-size: 24px;
   font-weight: 500;

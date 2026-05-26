@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=17" />
+  <link rel="stylesheet" href="styles.css?v=18" />
 </head>
 <body>
   <!-- Brand mark — referenciable como <use href="#m-nucleo"/> -->
@@ -384,25 +384,37 @@
         <div class="process__row">
           <div class="step" data-reveal>
             <span class="step__num">01</span>
-            <div class="step__icon">◐</div>
+            <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
+              <polygon points="20,0 10,0 0,17.32 10,34.64 20,34.64" fill="var(--orange)"/>
+              <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
             <h4>Capturar</h4>
             <p>Sensores IoT, satélite, ERP y cuadernos de campo. La realidad agronómica, en tiempo real.</p>
           </div>
           <div class="step" data-reveal>
             <span class="step__num">02</span>
-            <div class="step__icon">◑</div>
+            <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
+              <polygon points="20,0 30,0 40,17.32 30,34.64 20,34.64" fill="var(--orange)"/>
+              <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
             <h4>Aprender</h4>
             <p>Modelos de IA entrenados con más de 4M de hectáreas y 10 años de histórico.</p>
           </div>
           <div class="step" data-reveal>
             <span class="step__num">03</span>
-            <div class="step__icon">◒</div>
+            <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
+              <polygon points="0,17.32 40,17.32 30,34.64 10,34.64" fill="var(--orange)"/>
+              <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
             <h4>Recomendar</h4>
             <p>Decisiones priorizadas por impacto, coste y riesgo. Validadas por agrónomos sénior.</p>
           </div>
           <div class="step" data-reveal>
             <span class="step__num">04</span>
-            <div class="step__icon">◓</div>
+            <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
+              <polygon points="0,17.32 10,0 30,0 40,17.32" fill="var(--orange)"/>
+              <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
             <h4>Medir</h4>
             <p>Resultado por hectárea, campaña y línea de negocio. Lo que no se mide, no mejora.</p>
           </div>
@@ -534,6 +546,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=17"></script>
+  <script src="script.js?v=18"></script>
 </body>
 </html>
