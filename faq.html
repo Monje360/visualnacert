@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ · Preguntas frecuentes — VisualNACert</title>
+  <meta name="description" content="Preguntas y respuestas sobre el software agrícola Visual: cultivos, conectividad, satélite, fitosanitarios, app, mapas y mucho más." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="og-image.jpg" />
+  <link rel="apple-touch-icon" href="og-image.jpg" />
+  <meta name="theme-color" content="#FD801D" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://visualnacert.vercel.app/faq.html" />
+  <meta property="og:title" content="FAQ · Preguntas frecuentes — VisualNACert" />
+  <meta property="og:description" content="Resolvemos las preguntas más frecuentes sobre VisualNACert: el software agrícola del sector agroalimentario." />
+  <meta property="og:image" content="https://visualnacert.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="VisualNACert" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAQ · Preguntas frecuentes — VisualNACert" />
+  <meta name="twitter:description" content="Resolvemos las preguntas más frecuentes sobre VisualNACert." />
+  <meta name="twitter:image" content="https://visualnacert.vercel.app/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=17" />
+</head>
+<body>
+  <!-- Brand mark -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="m-nucleo" viewBox="0 0 200 200">
+        <polygon points="60,50 50,67.32 30,67.32 20,50 30,32.68 50,32.68"          fill="var(--mc)"/>
+        <polygon points="180,50 170,67.32 150,67.32 140,50 150,32.68 170,32.68"    fill="var(--mc)"/>
+        <polygon points="90,95 80,112.32 60,112.32 50,95 60,77.68 80,77.68"        fill="var(--mc)"/>
+        <polygon points="150,95 140,112.32 120,112.32 110,95 120,77.68 140,77.68"  fill="var(--mc)"/>
+        <polygon points="120,145 110,162.32 90,162.32 80,145 90,127.68 110,127.68" fill="var(--ma)"/>
+        <circle cx="100" cy="145" r="5" fill="var(--md)"/>
+      </symbol>
+      <symbol id="m-hex" viewBox="0 0 40 35">
+        <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__logo"><span class="visual">Visual</span><span class="nacert">NACert</span></div>
+      <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+      <div class="loader__count">0</div>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__pill">
+      <a href="index.html" class="nav__brand">
+        <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+        <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+      </a>
+      <nav class="nav__links">
+        <a href="soluciones.html">Soluciones</a>
+        <a href="visual-app.html">App</a>
+        <a href="visual-lab.html">Lab</a>
+        <a href="visual-academy.html">Academy</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__lang">ES</button>
+        <a href="contacto.html" class="nav__cta">
+          Hablemos
+          <span class="nav__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO compacto -->
+    <section class="page-hero">
+      <div class="page-hero__media">
+        <div class="page-hero__image" style="background-image: url('img/ai-leaf-pest.jpg')"></div>
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__watermark" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#m-nucleo"/></svg></div>
+      </div>
+      <div class="page-hero__shell">
+        <div class="page-hero__top">
+          <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Soporte</span>
+          <span class="page-hero__crumb"><a href="index.html">Inicio</a> · FAQ</span>
+        </div>
+        <h1 class="page-hero__title">
+          Preguntas<br />
+          <em>frecuentes</em>.
+        </h1>
+        <p class="page-hero__lead">Todo lo que necesitas saber sobre VisualNACert: cultivos, usuarios, conectividad, satélite, fitosanitarios, cuaderno de campo, app y mucho más.</p>
+      </div>
+    </section>
+
+    <!-- Nav lateral de categorías + accordions -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-layout">
+          <aside class="faq-toc">
+            <span class="faq-toc__label">Categorías</span>
+            <a href="#visual" class="faq-toc__link is-active">Visual</a>
+            <a href="#usuarios" class="faq-toc__link">Usuarios y permisos</a>
+            <a href="#conectividad" class="faq-toc__link">Conectividad</a>
+            <a href="#agroclima" class="faq-toc__link">Agroclima</a>
+            <a href="#satelites" class="faq-toc__link">Satélites</a>
+            <a href="#fitos" class="faq-toc__link">Fitosanitarios</a>
+            <a href="#cuaderno" class="faq-toc__link">Cuaderno de campo</a>
+            <a href="#app" class="faq-toc__link">App</a>
+            <a href="#mapas" class="faq-toc__link">Mapas</a>
+            <a href="#otras" class="faq-toc__link">Otras</a>
+          </aside>
+
+          <div class="faq-content">
+            <article class="faq-group" id="visual">
+              <h2 class="faq-group__title">Visual</h2>
+              <details class="faq-item"><summary>¿Con qué cultivos puedo trabajar en Visual?</summary><div class="faq-item__body"><p>Visual trabaja con cualquier tipo de cultivo, adaptándose a las necesidades y especializaciones de cada cliente. Trabaja con cooperativas, productores, asesores, industria, fabricantes de insumos, gestores de variedades protegidas y empresas ganaderas.</p></div></details>
+              <details class="faq-item"><summary>¿Existe límite de superficie en una cuenta de usuario?</summary><div class="faq-item__body"><p>No existe límite de uso en cuanto a superficie. Los clientes pueden registrar todas sus parcelas sin restricciones.</p></div></details>
+              <details class="faq-item"><summary>¿Puedo solicitar una demo?</summary><div class="faq-item__body"><p>Sí, el equipo de Visual está disponible para hacer una presentación adaptada a intereses y necesidades específicas.</p></div></details>
+              <details class="faq-item"><summary>¿Está incluida la asistencia técnica?</summary><div class="faq-item__body"><p>Sí, VisualNACert ofrece formación y soporte continuado para contribuir al éxito del cliente.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo puedo contratar Visual?</summary><div class="faq-item__body"><p>Puedes contactar a través del formulario de la web, por teléfono o mediante los contactos disponibles en la página.</p></div></details>
+              <details class="faq-item"><summary>¿Qué soluciones de Visual están disponibles?</summary><div class="faq-item__body"><p>Existen diferentes soluciones adaptadas a distintos tipos de organización y cultivos, desde gestiones básicas hasta más avanzadas.</p></div></details>
+              <details class="faq-item"><summary>¿Qué ocurre si tengo necesidades especiales de personalización?</summary><div class="faq-item__body"><p>Visual es un software abierto preparado para dar solución a necesidades específicas empresariales mediante personalización.</p></div></details>
+              <details class="faq-item"><summary>¿Puedo exportar a Excel mi información?</summary><div class="faq-item__body"><p>Sí, toda la información registrada en Visual puede exportarse a Excel de manera ordenada.</p></div></details>
+              <details class="faq-item"><summary>¿Puedo trabajar con diferentes CIF o diferentes almacenes?</summary><div class="faq-item__body"><p>Sí, Visual permite una estructura piramidal para trabajar con organizaciones madre/hijas a nivel organizacional y de almacenes.</p></div></details>
+            </article>
+
+            <article class="faq-group" id="usuarios">
+              <h2 class="faq-group__title">Usuarios y permisos</h2>
+              <details class="faq-item"><summary>¿Qué tipos de usuarios son los habituales? ¿Qué permisos tienen?</summary><div class="faq-item__body"><p>Existen usuarios para Administrador, Máster, operarios, agricultores, equipo de campo y técnicos de calidad. Sus permisos dependen de tareas diarias y necesidades específicas.</p></div></details>
+              <details class="faq-item"><summary>¿Puedo personalizar los permisos de usuario?</summary><div class="faq-item__body"><p>Sí, los roles y funciones de usuarios son personalizables según las necesidades empresariales.</p></div></details>
+            </article>
+
+            <article class="faq-group" id="conectividad">
+              <h2 class="faq-group__title">Conectividad</h2>
+              <details class="faq-item"><summary>Un ERP, CRM o BI, ¿se puede conectar con Visual?</summary><div class="faq-item__body"><p>Sí. Visual destaca por su plataforma de conectividad y web services. Cualquier ERP, CRM, BI y base de datos puede conectar e integrar información.</p></div></details>
+              <details class="faq-item"><summary>Tengo un sistema de fertirrigación automático, ¿se puede conectar con Visual?</summary><div class="faq-item__body"><p>Sí, Visual permite este tipo de conexiones para registrar datos de riego y fertirrigación.</p></div></details>
+              <details class="faq-item"><summary>¿Puedo conectar el centro de control de la maquinaria con Visual?</summary><div class="faq-item__body"><p>Sí, My John Deere ha elegido Visual para conectar maquinaria. Pronto estará disponible la integración de FEDE.</p></div></details>
+            </article>
+
+            <article class="faq-group" id="agroclima">
+              <h2 class="faq-group__title">Agroclima y previsión</h2>
+              <details class="faq-item"><summary>¿Qué índices puedo consultar en agroclimáticos?</summary><div class="faq-item__body"><p>Se pueden consultar horas frío, acumulación térmica, pluviometría, horas luz y evapotranspiración, con histórico desde 2013.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo se calculan las horas frío de mi parcela?</summary><div class="faq-item__body"><p>Se mide la acumulación de horas por debajo de 7 ºC, siendo cada hora de frío una hora bajo esa temperatura.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo se calculan las horas de integral térmica de mi parcela?</summary><div class="faq-item__body"><p>Se mide la acumulación de grados día con umbral de 12 ºC, siendo cada grado día un grado de temperatura media por encima de ese umbral.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo puedo conocer la pluviometría acumulada?</summary><div class="faq-item__body"><p>Una vez creada la parcela, está disponible el índice de pluviometría calculado en litros por metro cuadrado acumulado diariamente.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo puedo consultar la previsión de clima?</summary><div class="faq-item__body"><p>Puedes conocer la previsión del clima de tus parcelas desde la aplicación y consultar condiciones meteorológicas en cualquier parte del mundo.</p></div></details>
+            </article>
+
+            <article class="faq-group" id="satelites">
+              <h2 class="faq-group__title">Satélites</h2>
+              <details class="faq-item"><summary>¿Qué índices están disponibles?</summary><div class="faq-item__body"><p>Se pueden consultar NDVI (índice de vigor), LAI (crecimiento del cultivo) e NDII (estrés hídrico en planta), disponibles en mapas desde web y app.</p></div></details>
+              <details class="faq-item"><summary>¿Cuántas imágenes de satélite ofrece Visual?</summary><div class="faq-item__body"><p>Cada 5 días Visual dispone de una imagen satélite, guardando todas en histórico.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo me entero si hay una nueva imagen satélite en mi parcela?</summary><div class="faq-item__body"><p>Se recibe notificación en el teléfono alertando de nuevas imágenes, incluyendo cambios significativos.</p></div></details>
+              <details class="faq-item"><summary>¿Cuándo están disponibles las imágenes satélite para mis unidades de cultivo?</summary><div class="faq-item__body"><p>Las imágenes están disponibles en el momento de registrar la geometría de la parcela, junto con todo el histórico.</p></div></details>
+              <details class="faq-item"><summary>¿Cuál es el histórico de imágenes disponible, desde cuándo lo puedo consultar?</summary><div class="faq-item__body"><p>Puedes consultar histórico desde diciembre de 2016, con comparativas y gráficos en el informe satelital.</p></div></details>
+              <details class="faq-item"><summary>¿Se pueden consultar offline las imágenes satélite?</summary><div class="faq-item__body"><p>Sí, siempre que hayas descargado previamente la zona de trabajo.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo me ayudan las imágenes satélite?</summary><div class="faq-item__body"><p>Muestran el estado de los cultivos, identifican zonas problemáticas y generan información para la toma de decisiones rápida y acertada.</p></div></details>
+            </article>
+
+            <article class="faq-group" id="fitos">
+              <h2 class="faq-group__title">Fitosanitarios</h2>
+              <details class="faq-item"><summary>¿Cómo me ayuda Visual a utilizar los fitosanitarios autorizados?</summary><div class="faq-item__body"><p>Visual dispone de un servicio de información fitosanitaria con recomendaciones específicas por cultivo, PDFs e histórico desde 2016. Permite crear listas propias de productos.</p></div></details>
+              <details class="faq-item"><summary>¿Cuándo se actualizan los fitosanitarios?</summary><div class="faq-item__body"><p>Visual mantiene actualización mensual de los fitosanitarios autorizados por el Ministerio de Agricultura, de manera automática.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo puedo consultar los fitosanitarios que he aplicado?</summary><div class="faq-item__body"><p>Visual dispone de múltiples criterios de búsqueda, informes, filtros, mapas interactivos y cuadernos de campo.</p></div></details>
+              <details class="faq-item"><summary>¿Qué pasa con los fitosanitarios que ya no están autorizados?</summary><div class="faq-item__body"><p>Se guardan en histórico para consulta cuando sea necesario, útil en auditorías e inspecciones.</p></div></details>
+            </article>
+
+            <article class="faq-group" id="cuaderno">
+              <h2 class="faq-group__title">Cuaderno de campo</h2>
+              <details class="faq-item"><summary>¿Dispone de cuaderno de campo?</summary><div class="faq-item__body"><p>Visual genera automáticamente cuaderno de campo completo con los campos exigidos por las principales normas europeas, permitiendo elegir secciones.</p></div></details>
+              <details class="faq-item"><summary>¿Puedo descargar todos los cuadernos de campo de un agricultor?</summary><div class="faq-item__body"><p>Con un clic se pueden descargar todos los cuadernos de un productor o parcela específica.</p></div></details>
+              <details class="faq-item"><summary>¿En qué formatos se descarga el cuaderno de campo?</summary><div class="faq-item__body"><p>Se descarga en Word, Excel o PDF, personalizado con el logo de la empresa.</p></div></details>
+            </article>
+
+            <article class="faq-group" id="app">
+              <h2 class="faq-group__title">App</h2>
+              <details class="faq-item"><summary>¿Cómo puedo descargar la app?</summary><div class="faq-item__body"><p>La aplicación agrícola se descarga de Play Store (Android) o App Store (iOS).</p></div></details>
+              <details class="faq-item"><summary>¿Visual App funciona offline?</summary><div class="faq-item__body"><p>Sí, la aplicación funciona tanto online como offline.</p></div></details>
+              <details class="faq-item"><summary>¿Cuándo se actualiza la app?</summary><div class="faq-item__body"><p>Se actualiza mensualmente con mejoras continuas.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo puedo saber si estoy utilizando la última versión de la app?</summary><div class="faq-item__body"><p>Recibirás notificaciones de la tienda de aplicaciones para actualizar a la versión más reciente.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo actualizo la app?</summary><div class="faq-item__body"><p>Desde la tienda de aplicaciones (iOS o Android), pulsando el botón Actualizar.</p></div></details>
+              <details class="faq-item"><summary>¿Qué ocurre si no tengo descargada la última versión?</summary><div class="faq-item__body"><p>Visual sigue funcionando en versiones anteriores, pero se recomienda instalar la última para beneficiarse de todas las funcionalidades mejoradas.</p></div></details>
+            </article>
+
+            <article class="faq-group" id="mapas">
+              <h2 class="faq-group__title">Mapas</h2>
+              <details class="faq-item"><summary>¿Cómo me ayudan los mapas de Visual a tomar decisiones?</summary><div class="faq-item__body"><p>Visual elabora mapas de decisión según necesidades: kg/ha, seguridad alimentaria, unidades fertilizantes/ha, evolución de la recolección, etc.</p></div></details>
+              <details class="faq-item"><summary>¿Visual es un GIS?</summary><div class="faq-item__body"><p>Visual lleva integrado un Geoportal GIS permitiendo control sobre la información mostrada según necesidades.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo se actualizan los datos de SIGPAC de mi organización?</summary><div class="faq-item__body"><p>Visual se encarga de la actualización anual automática de SIGPAC, realizando la intersección y recuperando datos de polígono, parcela y recinto.</p></div></details>
+              <details class="faq-item"><summary>Mis parcelas no siguen la geometría de los recintos SIGPAC, ¿cómo podría trabajar con Visual?</summary><div class="faq-item__body"><p>Se pueden cargar ficheros .dxf, .shp o similares, o usar el GPS del smartphone para dar de alta unidades de cultivo.</p></div></details>
+              <details class="faq-item"><summary>¿Necesito tener conocimiento de GIS para utilizar Visual?</summary><div class="faq-item__body"><p>No. Los mapas se adaptan según necesidades para analizar información en un clic con premisa de simplificación.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo puedo hacer un seguimiento de recolección?</summary><div class="faq-item__body"><p>Mediante mapas de precocidad se visualizan parcelas previstas para recolección semanal o mensual, incluyendo el estado actual.</p></div></details>
+              <details class="faq-item"><summary>¿Puedo planificar las inspecciones con el mapa?</summary><div class="faq-item__body"><p>Sí, puedes planificar inspecciones visualizando las del día actual y resultados en el mapa.</p></div></details>
+              <details class="faq-item"><summary>¿Cómo me informa Visual sobre la seguridad alimentaria?</summary><div class="faq-item__body"><p>Sistema de colores tipo semáforo: verde (plazo pasado), amarillo (menos de una semana), rojo (más de una semana).</p></div></details>
+              <details class="faq-item"><summary>¿Puedo descargar la información a formato shp?</summary><div class="faq-item__body"><p>Sí, seleccionando unidades de cultivo por parámetros (productor, cultivo, variedad) se exportan a ficheros .shp.</p></div></details>
+              <details class="faq-item"><summary>¿Podemos acceder a servicios externos tipo usos de suelo o zonas vulnerables a nitratos?</summary><div class="faq-item__body"><p>Sí, Visual integra Geoportal con estándares OGC permitiendo acceso a servicios WMS y WFS.</p></div></details>
+            </article>
+
+            <article class="faq-group" id="otras">
+              <h2 class="faq-group__title">Otras preguntas</h2>
+              <details class="faq-item"><summary>¿Qué pasa si no sé manejarme en la app?</summary><div class="faq-item__body"><p>El equipo de soporte te ayuda paso a paso para entender el funcionamiento de Visual.</p></div></details>
+              <details class="faq-item"><summary>¿Qué pasa si después de contratar necesitamos más funcionalidades?</summary><div class="faq-item__body"><p>Muchos clientes progresan de soluciones básicas a avanzadas, implementando nuevas funcionalidades según sus necesidades.</p></div></details>
+              <details class="faq-item"><summary>¿Se pueden hacer formaciones presenciales?</summary><div class="faq-item__body"><p>Sí, muchos clientes prefieren formación presencial. Está disponible según circunstancias.</p></div></details>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="cta-final">
+      <div class="cta-final__bg" style="background-image: url('img/ai-greenhouse-warm.jpg')"></div>
+      <div class="cta-final__overlay"></div>
+      <div class="container">
+        <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> ¿No has encontrado tu respuesta?</span>
+        <h2 class="cta-final__title cta-final__title--light" data-reveal>
+          Hablamos<br />
+          contigo en <span class="accent">24 horas</span>.
+        </h2>
+        <p class="cta-final__lead">Cuéntanos tu reto y un consultor de Visual se pone en contacto. Sin compromiso. Con criterio.</p>
+        <div class="cta-final__actions">
+          <a href="contacto.html" class="btn btn--primary btn--lg">
+            <span>Habla con un consultor</span>
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="tel:+34961410675" class="btn btn--ghost-light">
+            <span>96 141 06 75</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+              <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+            </div>
+            <p>Tu partner IA para el sector agroalimentario.</p>
+            <div class="footer__social" aria-label="Síguenos">
+              <span class="footer__social-label">Síguenos</span>
+              <a href="#" aria-label="LinkedIn">LinkedIn</a>
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="YouTube">YouTube</a>
+              <a href="#" aria-label="X (Twitter)">X</a>
+              <a href="#" aria-label="Facebook">Facebook</a>
+            </div>
+          </div>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h5>Recursos</h5>
+              <a href="faq.html">FAQ · Preguntas frecuentes</a><a href="https://app.visualnacert.com" target="_blank" rel="noopener">Acceso clientes</a><a href="#">Partners</a><a href="#">Trabaja en Visual</a>
+            </div>
+            <div class="footer__col">
+              <h5>Dirección comercial</h5>
+              <span class="footer__contact-line">María Luz Peñarrubia</span>
+              <span class="footer__contact-line footer__contact-meta">Directora comercial</span>
+              <a href="tel:+34620472712">+34 620 472 712</a>
+              <a href="mailto:mluz@visualnacert.com">mluz@visualnacert.com</a>
+            </div>
+            <div class="footer__col">
+              <h5>Oficinas</h5>
+              <span class="footer__contact-line">Calle Mayor 41 · Rafelbunyol</span>
+              <span class="footer__contact-line footer__contact-meta">46138 · Valencia · ES</span>
+              <a href="tel:+34961410675">+34 961 410 675</a>
+              <a href="mailto:contacto@visualnacert.com">contacto@visualnacert.com</a>
+            </div>
+            <div class="footer__col">
+              <h5>Horario</h5>
+              <span class="footer__contact-line">Lunes – Jueves</span>
+              <span class="footer__contact-line footer__contact-meta">8:30 – 17:30</span>
+              <span class="footer__contact-line">Viernes</span>
+              <span class="footer__contact-line footer__contact-meta">8:00 – 15:00 · Hora España</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Visual NAcert · Todos los derechos reservados</span>
+          <span class="footer__legal">
+            <a href="#">Aviso legal</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Cookies</a>
+          </span>
+        </div>
+        <div class="footer__giant">
+          <span class="visual">Visual</span><span class="nacert">NACert</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js?v=17"></script>
+</body>
+</html>

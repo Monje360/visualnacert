@@ -367,6 +367,92 @@ document.querySelectorAll(".scroller").forEach((scroller) => {
   });
 });
 
+/* ---------- FAQ scroll spy del TOC ---------- */
+(() => {
+  const toc = document.querySelector(".faq-toc");
+  if (!toc) return;
+  const links = Array.from(toc.querySelectorAll(".faq-toc__link"));
+  const groups = links
+    .map((l) => document.querySelector(l.getAttribute("href")))
+    .filter(Boolean);
+
+  if (!groups.length) return;
+
+  const setActive = (id) => {
+    links.forEach((l) => l.classList.toggle("is-active", l.getAttribute("href") === "#" + id));
+  };
+
+  const obs = new IntersectionObserver(
+    (entries) => {
+      const visible = entries.filter((e) => e.isIntersecting);
+      if (!visible.length) return;
+      visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      setActive(visible[0].target.id);
+    },
+    { rootMargin: "-25% 0px -65% 0px", threshold: 0 }
+  );
+  groups.forEach((g) => obs.observe(g));
+
+  // Smooth scroll al hacer click en un link del TOC
+  links.forEach((l) => {
+    l.addEventListener("click", (e) => {
+      const id = l.getAttribute("href").slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  });
+})();
+
+/* ---------- Cookie consent banner ---------- */
+(() => {
+  const KEY = "vn-cookie-consent";
+  const stored = (() => { try { return localStorage.getItem(KEY); } catch (_) { return null; } })();
+  if (stored === "accepted" || stored === "rejected") return;
+
+  const html = `
+    <div class="cookies" role="dialog" aria-labelledby="cookies-title" aria-describedby="cookies-desc">
+      <div class="cookies__panel">
+        <div class="cookies__icon" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+        </div>
+        <div class="cookies__body">
+          <h3 id="cookies-title">Cookies</h3>
+          <p id="cookies-desc">Usamos cookies propias y de terceros para mejorar la experiencia, analizar el tráfico y personalizar contenidos. Puedes aceptarlas, rechazarlas o consultar la <a href="#" class="cookies__link">política de cookies</a>.</p>
+        </div>
+        <div class="cookies__actions">
+          <button class="btn btn--ghost cookies__btn" data-cookies="reject">Rechazar</button>
+          <button class="btn btn--primary cookies__btn" data-cookies="accept">
+            <span>Aceptar todas</span>
+            <span class="btn__arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </div>`;
+
+  const tmp = document.createElement("div");
+  tmp.innerHTML = html.trim();
+  const banner = tmp.firstChild;
+  document.body.appendChild(banner);
+
+  // Entrada animada
+  requestAnimationFrame(() => banner.classList.add("is-visible"));
+
+  function dismiss(value) {
+    try { localStorage.setItem(KEY, value); } catch (_) {}
+    banner.classList.remove("is-visible");
+    setTimeout(() => banner.remove(), 400);
+  }
+
+  banner.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-cookies]");
+    if (!btn) return;
+    dismiss(btn.dataset.cookies === "accept" ? "accepted" : "rejected");
+  });
+})();
+
 /* ---------- Resize handler ---------- */
 window.addEventListener("resize", () => {
   ScrollTrigger.refresh();
