@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=11" />
 </head>
 <body>
   <!-- Brand mark — referenciable como <use href="#m-nucleo"/> -->
@@ -68,23 +68,17 @@
   </header>
 
   <main>
-    <!-- HERO con vídeo scroll-scrub estilo Apple -->
+    <!-- HERO claro · vídeo a la derecha con scroll-scrub estilo Apple -->
     <section class="hero hero--scrub" id="hero">
       <div class="hero__pin">
-        <div class="hero__media">
-          <video class="hero__video" muted playsinline preload="auto" poster="img/ai-hero-plant.jpg">
-            <source src="video/hero.mp4" type="video/mp4">
-          </video>
-          <div class="hero__overlay"></div>
-          <div class="hero__watermark" aria-hidden="true">
-            <svg viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
-          </div>
-          <div class="hero__grain"></div>
+        <div class="hero__watermark" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
         </div>
+        <div class="hero__grain"></div>
 
         <div class="hero__shell">
           <div class="hero__top">
-            <span class="eyebrow eyebrow--light">
+            <span class="eyebrow">
               <span class="eyebrow__dot"></span>
               IA aplicada al sector agroalimentario
             </span>
@@ -92,9 +86,17 @@
           </div>
 
           <h1 class="hero__title">
-            <span class="hero__line"><span data-split>La nueva agricultura</span></span>
+            <span class="hero__line"><span data-split>La nueva</span></span>
+            <span class="hero__line"><span data-split>agricultura</span></span>
             <span class="hero__line"><span data-split><em>inteligente.</em></span></span>
           </h1>
+
+          <div class="hero__media">
+            <video class="hero__video" muted playsinline preload="auto" poster="img/ai-hero-plant.jpg">
+              <source src="video/hero.mp4" type="video/mp4">
+            </video>
+            <div class="hero__media-glow"></div>
+          </div>
 
           <div class="hero__bottom">
             <div class="hero__lead">
@@ -111,7 +113,7 @@
                   <span>Habla con un consultor</span>
                   <span class="btn__arrow">→</span>
                 </a>
-                <a href="soluciones.html" class="btn btn--ghost-light">
+                <a href="soluciones.html" class="btn btn--ghost">
                   <span class="btn__play">▶</span>
                   <span>Ver plataforma</span>
                 </a>
@@ -494,6 +496,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=11"></script>
 </body>
 </html>
