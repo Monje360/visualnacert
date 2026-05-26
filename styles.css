@@ -1009,6 +1009,13 @@ em {
   padding-right: 48px;
 }
 .logos__track .dot { color: var(--orange); opacity: 0.7; }
+.logos__hex {
+  width: 0.42em;
+  height: 0.36em;
+  color: var(--orange);
+  flex-shrink: 0;
+  display: inline-block;
+}
 
 /* ============================================
    SOLUTIONS (sticky/pinned)
