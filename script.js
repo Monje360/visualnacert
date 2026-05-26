@@ -196,17 +196,9 @@ if (document.querySelector(".page-hero")) {
   });
 }
 
-gsap.to(".hero__title, .hero__lead, .hero__top, .hero__scroll", {
-  yPercent: -4,
-  opacity: 0,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".hero",
-    start: "65% top",
-    end: "bottom bottom",
-    scrub: true,
-  },
-});
+// Sin fade del texto durante el scrub: el contenido permanece visible
+// todo el rato mientras el vídeo (a la derecha) avanza. Cuando termina la
+// sección sticky aparece el ticker debajo, en sincronía con el final del vídeo.
 
 /* ---------- Reveal on scroll ---------- */
 const reveals = document.querySelectorAll("[data-reveal]");

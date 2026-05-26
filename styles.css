@@ -581,7 +581,7 @@ em {
   max-height: 70vh;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: var(--ink);
+  background: var(--mist);
   box-shadow: var(--shadow-lg);
   align-self: center;
   isolation: isolate;
@@ -592,7 +592,7 @@ em {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: var(--ink);
+  background: var(--mist);
 }
 .hero__media-glow {
   position: absolute;
