@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solicita una demo · 30 min con nuestro equipo | VisualNACert</title>
-  <meta name="description" content="Reserva 30 minutos con el equipo de Visual NAcert. Sin demo genérica: te decimos dónde la IA mueve la aguja en tu operación agroalimentaria — y dónde no." />
+  <meta name="description" content="30 minutos con el equipo de Visual NAcert. Cuéntanos qué quieres resolver y te respondemos en menos de 24h con un par de horarios. Sin demo genérica." />
   <meta name="keywords" content="demo IA agroalimentario, solicitar demo Visual NAcert, automatización agroindustria, demo plataforma agro" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="alternate icon" type="image/png" href="og-image.jpg" />
@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=21" />
+  <link rel="stylesheet" href="styles.css?v=22" />
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -101,10 +101,10 @@
         <div class="demo-hero__copy">
           <span class="eyebrow"><span class="eyebrow__dot"></span> 30 min · sin compromiso</span>
           <h1 class="demo-hero__title">
-            Reserva 30 minutos<br />
-            con nuestro <em>equipo</em>.
+            30 minutos con<br />
+            nuestro <em>equipo</em>.
           </h1>
-          <p class="demo-hero__lead">Sin demo genérica. Sin powerpoint de 80 slides. Te decimos exactamente dónde la IA mueve la aguja en tu operación — y dónde no.</p>
+          <p class="demo-hero__lead">Cuéntanos qué quieres resolver y te respondemos en menos de 24h laborables con un par de horarios. Sin demo genérica. Sin powerpoint de 80 slides.</p>
 
           <ul class="demo-hero__bullets">
             <li><svg viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg> Diagnóstico rápido de tu cadena de valor agroalimentaria</li>
@@ -131,22 +131,12 @@
         <!-- BOOKING CARD -->
         <div class="demo-card">
           <div class="demo-card__tabs">
-            <button class="demo-card__tab is-active" data-tab="calendly">Reservar agenda</button>
-            <button class="demo-card__tab" data-tab="form">Escríbenos</button>
+            <button class="demo-card__tab is-active" data-tab="form">Escríbenos</button>
+            <button class="demo-card__tab" data-tab="direct">Llámanos</button>
           </div>
 
-          <!-- Calendly embed -->
-          <div class="demo-card__panel is-active" id="panel-calendly">
-            <div class="demo-card__caption">Elige el hueco que mejor te venga. Calendario en vivo del equipo comercial.</div>
-            <!-- Calendly inline embed (placeholder — sustituir URL real cuando el cliente la confirme) -->
-            <div class="calendly-inline-widget"
-                 data-url="https://calendly.com/visualnacert/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=fd801d"
-                 style="min-width:320px;height:640px;border-radius:14px;overflow:hidden;"></div>
-            <p class="demo-card__fine">Al reservar aceptas nuestra <a href="privacidad.html">política de privacidad</a>. Recibirás un calendario invite y un email de confirmación.</p>
-          </div>
-
-          <!-- Formulario alternativo -->
-          <div class="demo-card__panel" id="panel-form">
+          <!-- Formulario principal -->
+          <div class="demo-card__panel is-active" id="panel-form">
             <form class="demo-form" id="demoForm" novalidate>
               <div class="demo-form__row">
                 <label>
@@ -185,7 +175,7 @@
                 <span>He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</span>
               </label>
               <button type="submit" class="btn btn--primary btn--lg demo-form__submit">
-                <span>Enviar y reservar</span>
+                <span>Enviar solicitud</span>
                 <span class="btn__arrow">→</span>
               </button>
               <p class="demo-form__fine">Respuesta en menos de 24h laborables. Sin spam, sin newsletters automáticos.</p>
@@ -195,6 +185,31 @@
               <h3>Mensaje enviado.</h3>
               <p>Te respondemos en menos de 24h laborables con un par de horarios. Mientras tanto, puedes <a href="clientes.html">ver casos de éxito</a> o <a href="soluciones.html">explorar la plataforma</a>.</p>
             </div>
+          </div>
+
+          <!-- Contacto directo (alternativa al formulario) -->
+          <div class="demo-card__panel" id="panel-direct">
+            <div class="demo-card__caption">Si prefieres ir al grano, hablas directamente con el equipo comercial.</div>
+
+            <div class="direct-row">
+              <span class="direct-row__label">Teléfono directo</span>
+              <a href="tel:+34620472712" class="direct-row__value">+34 620 472 712</a>
+              <span class="direct-row__meta">María Luz Peñarrubia · Directora comercial</span>
+            </div>
+
+            <div class="direct-row">
+              <span class="direct-row__label">Email comercial</span>
+              <a href="mailto:mluz@visualnacert.com" class="direct-row__value">mluz@visualnacert.com</a>
+              <span class="direct-row__meta">Respondemos en menos de 24h laborables.</span>
+            </div>
+
+            <div class="direct-row">
+              <span class="direct-row__label">Centralita</span>
+              <a href="tel:+34961410675" class="direct-row__value">+34 961 410 675</a>
+              <span class="direct-row__meta">Lunes a jueves 8:30–17:30 · Viernes 8:00–15:00 (hora España).</span>
+            </div>
+
+            <p class="demo-card__fine">¿Prefieres reservar agenda online? Estamos integrando reserva directa. Mientras tanto, escríbenos y te enviamos un par de huecos.</p>
           </div>
         </div>
 
@@ -329,14 +344,10 @@
     </footer>
   </main>
 
-  <!-- Calendly widget script -->
-  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=21"></script>
+  <script src="script.js?v=22"></script>
 
   <!-- Tabs + Form -->
   <script>

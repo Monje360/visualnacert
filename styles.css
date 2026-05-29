@@ -3694,3 +3694,39 @@ em {
 @media (max-width: 900px) {
   .demo-team { grid-template-columns: 1fr; gap: 36px; }
 }
+
+/* Panel "Llámanos" — contacto directo en card */
+.direct-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.direct-row:last-of-type { border-bottom: 0; }
+.direct-row__label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mute);
+  font-weight: 500;
+}
+.direct-row__value {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.1;
+  margin-top: 2px;
+  transition: color 0.2s var(--ease);
+}
+.direct-row__value:hover { color: var(--orange); }
+.direct-row__meta {
+  font-size: 13px;
+  color: var(--mute);
+  margin-top: 4px;
+  line-height: 1.45;
+}
