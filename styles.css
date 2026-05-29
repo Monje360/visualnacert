@@ -407,6 +407,13 @@ em {
   background: rgba(243, 237, 224, 0.08);
   border-color: rgba(243, 237, 224, 0.5);
 }
+.btn--ghost-light .btn__play {
+  background: rgba(243, 237, 224, 0.12);
+  color: var(--linen);
+}
+.btn--ghost-light:hover .btn__play {
+  background: rgba(243, 237, 224, 0.22);
+}
 .btn--ghost {
   background: transparent;
   color: var(--ink);
@@ -479,88 +486,112 @@ em {
   position: sticky;
   top: 0;
   height: 100vh;
+  min-height: 720px;
   overflow: hidden;
-  background: var(--cream);
-  display: flex;
-  flex-direction: column;
+  background: var(--ink);
+  color: var(--cream);
+  isolation: isolate;
 }
 
-/* Watermark del isotipo, faint en fondo claro */
-.hero__watermark {
+/* ============ HERO CINEMA ============
+   El vídeo es el protagonista absoluto.
+   Ocupa todo el viewport. El texto va superpuesto. */
+
+.hero__video {
   position: absolute;
-  top: 50%;
-  left: -8%;
-  transform: translateY(-50%) rotate(-12deg);
-  width: 48vw;
-  max-width: 520px;
-  aspect-ratio: 1 / 1;
-  opacity: 0.06;
-  pointer-events: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 0;
-  --mc: var(--ink);
-  --ma: var(--orange);
-  --md: var(--ink);
-}
-.hero__watermark svg { width: 100%; height: 100%; }
-@media (max-width: 768px) {
-  .hero__watermark { display: none; }
+  /* Anti-rural: menos saturación, más contraste, ligeramente más oscuro
+     para que el texto cream/blanco respire encima. */
+  filter: saturate(0.62) contrast(1.12) brightness(0.78);
+  transform: scale(1.04); /* evita borde si el filter genera bordes raros */
 }
 
-/* Grano sutil */
+/* Multi-layer overlay para legibilidad + halo de marca */
+.hero__media-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    /* Gradiente vertical para anclar el texto arriba y abajo */
+    linear-gradient(180deg,
+      rgba(22, 20, 15, 0.55) 0%,
+      rgba(22, 20, 15, 0.20) 25%,
+      rgba(22, 20, 15, 0.25) 60%,
+      rgba(22, 20, 15, 0.78) 100%),
+    /* Halo naranja sutil centrado */
+    radial-gradient(38% 32% at 50% 50%, rgba(253, 128, 29, 0.16), transparent 78%);
+}
+
+/* Vignette de bordes (Mistral/Apple) */
+.hero__vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(130% 90% at 50% 50%, transparent 55%, rgba(22, 20, 15, 0.55) 100%);
+}
+
+/* Grano sutil sobre todo */
 .hero__grain {
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-  opacity: 0.05;
-  mix-blend-mode: multiply;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
 }
 
-/* Grid principal del hero: texto a la izquierda, vídeo a la derecha */
+/* SHELL · texto superpuesto, columna única */
 .hero__shell {
   position: relative;
-  z-index: 2;
-  flex: 1;
+  z-index: 4;
+  height: 100%;
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 130px var(--gutter) 60px;
+  padding: 140px var(--gutter) 100px;
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
   grid-template-rows: auto 1fr auto;
-  gap: 32px 64px;
-  align-items: center;
+  gap: 28px;
+  color: var(--cream);
 }
 
 .hero__top {
-  grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: rgba(245, 241, 234, 0.72);
 }
 .hero__meta {
   font-family: var(--font-sans);
   font-size: 11.5px;
-  letter-spacing: 0.08em;
-  color: var(--mute);
+  letter-spacing: 0.1em;
+  color: rgba(245, 241, 234, 0.55);
   text-transform: uppercase;
 }
 
+/* H1 cinemático — TAMAÑO BRUTAL */
 .hero__title {
-  grid-column: 1;
-  grid-row: 2;
+  align-self: center;
   margin: 0;
-  font-size: clamp(48px, 6.4vw, 108px);
+  font-size: clamp(56px, 9.2vw, 168px);
   font-weight: 500;
-  line-height: 0.96;
-  letter-spacing: -0.04em;
-  color: var(--ink);
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+  color: var(--cream);
+  max-width: 1180px;
+  text-shadow: 0 2px 30px rgba(22, 20, 15, 0.35);
 }
 .hero__line {
   display: block;
   overflow: hidden;
-  padding-bottom: 0.08em;
+  padding-bottom: 0.06em;
 }
 .hero__line > span {
   display: inline-block;
@@ -570,88 +601,41 @@ em {
 .hero__title em {
   font-weight: 500;
   color: var(--orange);
-}
-
-/* Caja del vídeo a la derecha */
-.hero__media {
-  grid-column: 2;
-  grid-row: 2 / 4;
-  position: relative;
-  aspect-ratio: 4 / 5;
-  max-height: 70vh;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--mist);
-  box-shadow: var(--shadow-lg);
-  align-self: center;
-  isolation: isolate;
-}
-.hero__video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background: var(--mist);
-  /* Recalibrado anti-rural: bajamos saturación verde, subimos contraste
-     para que los hexágonos formándose dominen sobre el campo. */
-  filter: saturate(0.72) contrast(1.08) brightness(0.96);
-}
-.hero__media-glow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    /* Tinte ink en la base para enfriar el verde dominante */
-    linear-gradient(180deg, transparent 35%, rgba(22, 20, 15, 0.28) 100%),
-    /* Halo naranja sutil que refuerza el hexágono central */
-    radial-gradient(45% 38% at 50% 55%, rgba(253, 128, 29, 0.18), transparent 75%),
-    /* Vignette tech */
-    radial-gradient(120% 80% at 50% 50%, transparent 55%, rgba(22, 20, 15, 0.22) 100%);
-  z-index: 1;
-  mix-blend-mode: normal;
+  font-style: normal;
 }
 
 .hero__bottom {
-  grid-column: 1;
-  grid-row: 3;
   align-self: end;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
 }
 .hero__lead {
-  max-width: 560px;
+  max-width: 620px;
 }
 .hero__lead p {
-  font-size: clamp(15px, 1.3vw, 18px);
+  font-size: clamp(15px, 1.35vw, 19px);
   line-height: 1.55;
-  color: var(--ink);
-  margin-bottom: 22px;
-  max-width: 480px;
+  color: rgba(245, 241, 234, 0.92);
+  margin: 0 0 24px;
+  max-width: 580px;
 }
+.hero__lead p strong { color: var(--orange); font-weight: 500; }
 
-@media (max-width: 880px) {
-  .hero__shell {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    gap: 28px;
-    padding: 120px var(--gutter) 40px;
-  }
-  .hero__title { grid-column: 1; grid-row: auto; }
-  .hero__media { grid-column: 1; grid-row: auto; aspect-ratio: 4/3; max-height: 60vh; }
-  .hero__bottom { grid-column: 1; grid-row: auto; }
-}
 .hero__pillars {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   font-family: var(--font-mono);
   font-size: 11.5px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--orange);
   margin-bottom: 28px;
   align-items: center;
 }
-.hero__pillars-dot { color: var(--mute); opacity: 0.5; }
+.hero__pillars-dot { color: rgba(245, 241, 234, 0.32); }
+
 .hero__actions {
   display: flex;
   gap: 12px;
@@ -660,22 +644,22 @@ em {
 
 .hero__scroll {
   position: absolute;
-  bottom: 40px;
-  left: var(--gutter);
+  bottom: 28px;
+  right: var(--gutter);
   display: flex;
   align-items: center;
   gap: 14px;
-  color: var(--mute);
+  color: rgba(245, 241, 234, 0.55);
   font-family: var(--font-sans);
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  z-index: 3;
+  z-index: 5;
 }
 .hero__scroll-line {
   width: 60px;
   height: 1px;
-  background: linear-gradient(90deg, var(--mute), transparent);
+  background: linear-gradient(90deg, rgba(245, 241, 234, 0.45), transparent);
   position: relative;
   overflow: hidden;
 }
@@ -683,13 +667,25 @@ em {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--ink);
+  background: var(--orange);
   transform: translateX(-100%);
   animation: scrollLine 2.4s var(--ease) infinite;
 }
 @keyframes scrollLine {
   0% { transform: translateX(-100%); }
   60%, 100% { transform: translateX(100%); }
+}
+
+@media (max-width: 880px) {
+  .hero--scrub .hero__pin { min-height: 560px; }
+  .hero__shell { padding: 120px var(--gutter) 90px; gap: 22px; }
+  .hero__title { font-size: clamp(44px, 12vw, 88px); line-height: 0.98; }
+  .hero__lead p { font-size: 15px; }
+  .hero__scroll { display: none; }
+}
+@media (max-width: 480px) {
+  .hero__top { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .hero__title { font-size: 44px; }
 }
 
 /* ============================================
