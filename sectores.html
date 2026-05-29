@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sectores: cooperativas, hortofrutícolas, industria, frío, bodegas | VisualNACert</title>
+  <meta name="description" content="IA agroalimentaria para cooperativas, hortofrutícolas, industria de procesado, operadores de frío y bodegas. Automatización construida desde dentro de cada vertical." />
+  <meta name="keywords" content="IA cooperativas agrícolas, IA hortofrutícolas, automatización industria agroalimentaria, IA cadena frío, IA bodegas almazaras" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="og-image.jpg" />
+  <link rel="apple-touch-icon" href="og-image.jpg" />
+  <meta name="theme-color" content="#FD801D" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://visualnacert.vercel.app/sectores.html" />
+  <meta property="og:title" content="Sectores agroalimentarios | VisualNACert" />
+  <meta property="og:description" content="IA construida para cada vertical del agroalimentario." />
+  <meta property="og:image" content="https://visualnacert.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="VisualNACert" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sectores agroalimentarios | VisualNACert" />
+  <meta name="twitter:description" content="IA construida para cada vertical del agroalimentario." />
+  <meta name="twitter:image" content="https://visualnacert.vercel.app/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=21" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="m-nucleo" viewBox="0 0 200 200">
+        <polygon points="60,50 50,67.32 30,67.32 20,50 30,32.68 50,32.68"          fill="var(--mc)"/>
+        <polygon points="180,50 170,67.32 150,67.32 140,50 150,32.68 170,32.68"    fill="var(--mc)"/>
+        <polygon points="90,95 80,112.32 60,112.32 50,95 60,77.68 80,77.68"        fill="var(--mc)"/>
+        <polygon points="150,95 140,112.32 120,112.32 110,95 120,77.68 140,77.68"  fill="var(--mc)"/>
+        <polygon points="120,145 110,162.32 90,162.32 80,145 90,127.68 110,127.68" fill="var(--ma)"/>
+        <circle cx="100" cy="145" r="5" fill="var(--md)"/>
+      </symbol>
+      <symbol id="m-hex" viewBox="0 0 40 35">
+        <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__logo"><span class="visual">Visual</span><span class="nacert">NACert</span></div>
+      <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+      <div class="loader__count">0</div>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__pill">
+      <a href="index.html" class="nav__brand">
+        <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+        <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+      </a>
+      <nav class="nav__links">
+        <a href="soluciones.html">Soluciones</a>
+        <a href="sectores.html" class="is-active">Sectores</a>
+        <a href="clientes.html">Casos</a>
+        <div class="nav__dropdown">
+          <span class="nav__dropdown-toggle">Plataforma</span>
+          <div class="nav__dropdown-menu">
+            <span class="dd-cap">Productos</span>
+            <a href="visual-app.html">Visual App</a>
+            <a href="visual-lab.html">Visual Lab</a>
+            <a href="visual-academy.html">Visual Academy</a>
+          </div>
+        </div>
+        <a href="faq.html">Recursos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__lang">ES</button>
+        <a href="demo.html" class="nav__cta">
+          Solicita demo
+          <span class="nav__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="page-hero__media">
+        <div class="page-hero__image" style="background-image: url('img/ai-phone-plants.jpg')"></div>
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__watermark" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#m-nucleo"/></svg></div>
+      </div>
+      <div class="page-hero__shell">
+        <div class="page-hero__top">
+          <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Verticales</span>
+          <span class="page-hero__crumb"><a href="index.html">Inicio</a> · Sectores</span>
+        </div>
+        <h1 class="page-hero__title">
+          IA construida<br />
+          desde dentro del<br />
+          <em>sector</em>.
+        </h1>
+        <p class="page-hero__lead">No somos una consultora generalista que se adapta. Nuestros automatismos entienden los ciclos productivos, la trazabilidad, la variabilidad climática y las exigencias regulatorias de cada vertical del agroalimentario.</p>
+      </div>
+    </section>
+
+    <!-- ANCLAS RÁPIDAS -->
+    <section class="section" style="padding-top:60px; padding-bottom:0;">
+      <div class="container">
+        <div class="sector-toc">
+          <a href="#cooperativas" class="sector-toc__link">01 · Cooperativas</a>
+          <a href="#hortofruticolas" class="sector-toc__link">02 · Hortofrutícolas</a>
+          <a href="#industria" class="sector-toc__link">03 · Industria &amp; procesado</a>
+          <a href="#frio" class="sector-toc__link">04 · Frío &amp; logística</a>
+          <a href="#bodegas" class="sector-toc__link">05 · Bodegas &amp; almazaras</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 · COOPERATIVAS -->
+    <section class="section vertical" id="cooperativas">
+      <div class="container vertical__grid">
+        <div class="vertical__copy">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 01 — Cooperativas agrícolas</span>
+          <h2 class="vertical__title">Tu cooperativa, decidiendo como una <em>multinacional</em>.</h2>
+          <p class="vertical__lead">Coordinar a cientos de socios productores, planificar campañas, optimizar acopio y vender mejor que el competidor de al lado. La IA que iguala a los grandes operadores.</p>
+          <ul class="vertical__features">
+            <li><strong>Planificación de campaña</strong> — Previsión de producción por socio, lote y calidad esperada.</li>
+            <li><strong>Optimización del acopio</strong> — Rutas, ventanas y capacidades de planta sincronizadas.</li>
+            <li><strong>Cuaderno de campo unificado</strong> — Cumple RD 1051/2022 sin papel ni dobles entradas.</li>
+            <li><strong>Reporte CSRD por defecto</strong> — Huella de carbono, agua y energía por kilo producido.</li>
+          </ul>
+          <div class="vertical__stats">
+            <div><strong>+180</strong><span>cooperativas activas</span></div>
+            <div><strong>−27%</strong><span>costes admin/socio</span></div>
+            <div><strong>12 sem</strong><span>implantación media</span></div>
+          </div>
+          <a href="demo.html" class="link-arrow">Demo para cooperativas <span>→</span></a>
+        </div>
+        <div class="vertical__media" style="background-image: url('img/sectors/citrico.jpg')"></div>
+      </div>
+    </section>
+
+    <!-- 02 · HORTOFRUTÍCOLAS -->
+    <section class="section vertical vertical--reverse" id="hortofruticolas" style="background: var(--linen);">
+      <div class="container vertical__grid">
+        <div class="vertical__copy">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 02 — Hortofrutícolas</span>
+          <h2 class="vertical__title">Más rotaciones por hectárea. <em>Sin</em> sumar gente.</h2>
+          <p class="vertical__lead">Cultivos intensivos exigen decisiones diarias. Visión por computador y modelos predictivos para que tu equipo agronómico actúe sobre lo que de verdad importa.</p>
+          <ul class="vertical__features">
+            <li><strong>Detección temprana de plagas</strong> — Visión por computador desde la app, valida tu agrónomo.</li>
+            <li><strong>Dosificación de fertilizantes</strong> — FertiPRO calcula por parcela, agua y análisis de suelo.</li>
+            <li><strong>Predicción de calibre y maduración</strong> — Anticipa el calendario de recolección con 21 días.</li>
+            <li><strong>Trazabilidad lote a lote</strong> — Del cuaderno al cliente final, sin papel.</li>
+          </ul>
+          <div class="vertical__stats">
+            <div><strong>+600K</strong><span>ha gestionadas</span></div>
+            <div><strong>−35%</strong><span>impacto eventos climáticos</span></div>
+            <div><strong>+18%</strong><span>productividad por ha</span></div>
+          </div>
+          <a href="demo.html" class="link-arrow">Demo para hortofrutícolas <span>→</span></a>
+        </div>
+        <div class="vertical__media" style="background-image: url('img/sectors/fruticultura.jpg')"></div>
+      </div>
+    </section>
+
+    <!-- 03 · INDUSTRIA & PROCESADO -->
+    <section class="section vertical" id="industria">
+      <div class="container vertical__grid">
+        <div class="vertical__copy">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 03 — Industria &amp; procesado</span>
+          <h2 class="vertical__title">Del campo a la planta, en el mismo <em>cuadro de mando</em>.</h2>
+          <p class="vertical__lead">Conecta las decisiones agronómicas con la planificación industrial. Modelos que predicen materia prima entrante, capacidad y mermas — antes de que el camión llegue.</p>
+          <ul class="vertical__features">
+            <li><strong>Previsión de materia prima</strong> — Calidad y volumen entrante por hora, lote y línea.</li>
+            <li><strong>Optimización de mermas</strong> — Modelos predictivos por SKU y campaña.</li>
+            <li><strong>Calidad asistida por IA</strong> — Visión por computador en línea, sin parar el ritmo.</li>
+            <li><strong>Trazabilidad bidireccional</strong> — Del lote del campo al pallet del cliente.</li>
+          </ul>
+          <div class="vertical__stats">
+            <div><strong>+85</strong><span>plantas conectadas</span></div>
+            <div><strong>−22%</strong><span>mermas globales</span></div>
+            <div><strong>+31%</strong><span>uso capacidad de planta</span></div>
+          </div>
+          <a href="demo.html" class="link-arrow">Demo para industria <span>→</span></a>
+        </div>
+        <div class="vertical__media" style="background-image: url('img/sectors/frutoseco.jpg')"></div>
+      </div>
+    </section>
+
+    <!-- 04 · FRÍO & LOGÍSTICA -->
+    <section class="section vertical vertical--reverse" id="frio" style="background: var(--linen);">
+      <div class="container vertical__grid">
+        <div class="vertical__copy">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 04 — Frío &amp; logística</span>
+          <h2 class="vertical__title">Cero rupturas en la cadena. <em>24/7</em>.</h2>
+          <p class="vertical__lead">Cámaras, contenedores y rutas con trazabilidad de temperatura, humedad y atmósfera. Alertas que llegan antes que el problema — y antes que la reclamación del cliente.</p>
+          <ul class="vertical__features">
+            <li><strong>Monitorización 24/7</strong> — Temperatura, humedad y CO₂ por contenedor.</li>
+            <li><strong>Alertas predictivas</strong> — Avisa cuando va a ocurrir, no cuando ya pasó.</li>
+            <li><strong>Optimización energética</strong> — Reduce el consumo eléctrico de la cámara sin tocar la calidad.</li>
+            <li><strong>Reporting regulatorio</strong> — HACCP, IFS y BRC, generados automáticamente.</li>
+          </ul>
+          <div class="vertical__stats">
+            <div><strong>99,98%</strong><span>uptime cadena de frío</span></div>
+            <div><strong>−18%</strong><span>consumo energético</span></div>
+            <div><strong>4 min</strong><span>tiempo medio de alerta</span></div>
+          </div>
+          <a href="demo.html" class="link-arrow">Demo para operadores de frío <span>→</span></a>
+        </div>
+        <div class="vertical__media" style="background-image: url('img/sectors/horticultura.jpg')"></div>
+      </div>
+    </section>
+
+    <!-- 05 · BODEGAS & ALMAZARAS -->
+    <section class="section vertical" id="bodegas">
+      <div class="container vertical__grid">
+        <div class="vertical__copy">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> 05 — Bodegas &amp; almazaras</span>
+          <h2 class="vertical__title">Del viñedo a la barrica, con el <em>dato</em> entero.</h2>
+          <p class="vertical__lead">Variabilidad climática extrema, exigencias DO/IGP, decisión de vendimia o molienda en ventana ajustadísima. Modelos entrenados con +850K ha de viñedo y olivar.</p>
+          <ul class="vertical__features">
+            <li><strong>Predicción de maduración</strong> — Calendario óptimo de vendimia y molienda por parcela.</li>
+            <li><strong>Gestión de DO/IGP</strong> — Cumple denominación sin dobles entradas administrativas.</li>
+            <li><strong>Calidad de fruto al entrar</strong> — Visión por computador en tolva y patio.</li>
+            <li><strong>Huella ambiental por botella/litro</strong> — Listo para reporte regulatorio.</li>
+          </ul>
+          <div class="vertical__stats">
+            <div><strong>+850K</strong><span>ha viñedo y olivar</span></div>
+            <div><strong>+15%</strong><span>graduación media</span></div>
+            <div><strong>−20%</strong><span>tiempo de auditoría DO</span></div>
+          </div>
+          <a href="demo.html" class="link-arrow">Demo para bodegas y almazaras <span>→</span></a>
+        </div>
+        <div class="vertical__media" style="background-image: url('img/sectors/viticultura.jpg')"></div>
+      </div>
+    </section>
+
+    <!-- DECISORES -->
+    <section class="section" style="background: var(--ink); color: var(--cream);">
+      <div class="container">
+        <div class="section__head" style="border-color: rgba(245,241,234,0.12);">
+          <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Para quien decide</span>
+          <h2 class="section__title" style="color: var(--cream);">Hablamos el idioma del <em>CEO</em>, del <em>director de operaciones</em> y del <em>responsable de transformación digital</em>.</h2>
+        </div>
+        <div class="decisores-grid">
+          <div class="decisor" data-reveal>
+            <span class="decisor__role">CEO</span>
+            <p>Cuánto, cuándo y con qué margen. Datos consolidados a nivel de empresa, no de parcela.</p>
+          </div>
+          <div class="decisor" data-reveal>
+            <span class="decisor__role">Director de operaciones</span>
+            <p>Capacidad, mermas y cuellos de botella. Decide hoy con datos de hoy — no del cierre de mes.</p>
+          </div>
+          <div class="decisor" data-reveal>
+            <span class="decisor__role">Resp. transformación digital</span>
+            <p>Integración con tu ERP, API abiertas, SLA real y SaaS sin lock-in. La IA no debería ser un proyecto a 18 meses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+      <div class="cta-final__bg" style="background-image: url('img/ai-greenhouse-warm.jpg')"></div>
+      <div class="cta-final__overlay"></div>
+      <div class="container">
+        <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> 30 min · sin compromiso</span>
+        <h2 class="cta-final__title cta-final__title--light" data-reveal>
+          ¿Tu vertical
+          <br />no está <span class="accent">listada</span>?
+        </h2>
+        <p class="cta-final__lead">Es porque aún no hemos hablado contigo. 30 minutos y te decimos dónde la IA tiene sentido en tu operación — y dónde no.</p>
+        <div class="cta-final__actions">
+          <a href="demo.html" class="btn btn--primary btn--lg">
+            <span>Solicita demo</span>
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="tel:+34961410675" class="btn btn--ghost-light">
+            <span>96 141 06 75</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+              <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+            </div>
+            <p>Tu partner IA para el sector agroalimentario.</p>
+            <div class="footer__social" aria-label="Síguenos">
+              <span class="footer__social-label">Síguenos</span>
+              <a href="#" aria-label="LinkedIn">LinkedIn</a>
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="YouTube">YouTube</a>
+              <a href="#" aria-label="X (Twitter)">X</a>
+              <a href="#" aria-label="Facebook">Facebook</a>
+            </div>
+          </div>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h5>Recursos</h5>
+              <a href="faq.html">FAQ · Preguntas frecuentes</a><a href="https://app.visualnacert.com" target="_blank" rel="noopener">Acceso clientes</a><a href="#">Partners</a><a href="#">Trabaja en Visual</a>
+            </div>
+            <div class="footer__col">
+              <h5>Dirección comercial</h5>
+              <span class="footer__contact-line">María Luz Peñarrubia</span>
+              <span class="footer__contact-line footer__contact-meta">Directora comercial</span>
+              <a href="tel:+34620472712">+34 620 472 712</a>
+              <a href="mailto:mluz@visualnacert.com">mluz@visualnacert.com</a>
+            </div>
+            <div class="footer__col">
+              <h5>Oficinas</h5>
+              <span class="footer__contact-line">Calle Mayor 41 · Rafelbunyol</span>
+              <span class="footer__contact-line footer__contact-meta">46138 · Valencia · ES</span>
+              <a href="tel:+34961410675">+34 961 410 675</a>
+              <a href="mailto:contacto@visualnacert.com">contacto@visualnacert.com</a>
+            </div>
+            <div class="footer__col">
+              <h5>Horario</h5>
+              <span class="footer__contact-line">Lunes – Jueves</span>
+              <span class="footer__contact-line footer__contact-meta">8:30 – 17:30</span>
+              <span class="footer__contact-line">Viernes</span>
+              <span class="footer__contact-line footer__contact-meta">8:00 – 15:00 · Hora España</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Visual NAcert · Todos los derechos reservados</span>
+          <span class="footer__legal">
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+          </span>
+        </div>
+        <div class="footer__giant">
+          <span class="visual">Visual</span><span class="nacert">NACert</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js?v=21"></script>
+</body>
+</html>

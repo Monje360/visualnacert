@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20" />
+  <link rel="stylesheet" href="styles.css?v=21" />
 </head>
 <body>
   <!-- Brand mark — referenciable como <use href="#m-nucleo"/> -->
@@ -69,16 +69,24 @@
       </a>
       <nav class="nav__links">
         <a href="soluciones.html">Soluciones</a>
-        <a href="visual-app.html">App</a>
-        <a href="visual-lab.html">Lab</a>
-        <a href="visual-academy.html" class="is-active">Academy</a>
-        <a href="clientes.html">Clientes</a>
+        <a href="sectores.html">Sectores</a>
+        <a href="clientes.html">Casos</a>
+        <div class="nav__dropdown">
+          <span class="nav__dropdown-toggle">Plataforma</span>
+          <div class="nav__dropdown-menu">
+            <span class="dd-cap">Productos</span>
+            <a href="visual-app.html">Visual App</a>
+            <a href="visual-lab.html">Visual Lab</a>
+            <a href="visual-academy.html">Visual Academy</a>
+          </div>
+        </div>
+        <a href="faq.html">Recursos</a>
         <a href="nosotros.html">Nosotros</a>
       </nav>
       <div class="nav__actions">
         <button class="nav__lang">ES</button>
-        <a href="contacto.html" class="nav__cta">
-          Hablemos
+        <a href="demo.html" class="nav__cta">
+          Solicita demo
           <span class="nav__arrow">→</span>
         </a>
       </div>
@@ -328,6 +336,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=20"></script>
+  <script src="script.js?v=21"></script>
 </body>
 </html>
