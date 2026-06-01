@@ -1815,8 +1815,13 @@ em {
   padding-bottom: 100px;
 }
 .page-hero--cinema .page-hero__image {
-  /* Imagen naranja: el cluster de hex se mantiene a la derecha. */
+  /* Imagen naranja: contain para no recortar el cluster + position
+     right center. El fondo se completa con var(--orange) (idéntico
+     al naranja del render), continuidad limpia. */
+  inset: 0;
   background-position: right center;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-color: var(--orange);
 }
 .page-hero--cinema .page-hero__overlay {
@@ -1849,7 +1854,9 @@ em {
 @media (max-width: 880px) {
   .page-hero--cinema { min-height: 78vh; }
   .page-hero--cinema .page-hero__image {
-    /* En móvil, el cluster se centra mejor */
+    /* En móvil mantenemos cover (la imagen llena toda el área)
+       posicionada al 80% para que el cluster quede a la derecha. */
+    background-size: cover;
     background-position: 80% center;
   }
   .page-hero--cinema .page-hero__overlay {
