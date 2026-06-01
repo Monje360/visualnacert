@@ -894,17 +894,38 @@ em {
   position: absolute;
   inset: -5%;
   background-size: cover;
-  background-position: center;
-  background-color: #18241a;
+  /* Composición: el hexágono naranja con la perla queda al lado derecho.
+     El copy en la izquierda respira sobre el oscuro del overlay. */
+  background-position: right center;
+  background-color: var(--ink);
   z-index: 0;
 }
 .brand-statement__overlay {
   position: absolute;
   inset: 0;
+  /* Gradient horizontal: oscuro al lado del texto (izq), más translúcido
+     en el lado del hex naranja (der). Plus tinte general arriba/abajo. */
   background:
-    radial-gradient(900px 600px at 80% 100%, rgba(253, 128, 29, 0.22), transparent 60%),
-    linear-gradient(180deg, rgba(14, 15, 10, 0.7) 0%, rgba(14, 15, 10, 0.6) 50%, rgba(14, 15, 10, 0.88) 100%);
+    linear-gradient(90deg,
+      rgba(22, 20, 15, 0.88) 0%,
+      rgba(22, 20, 15, 0.70) 35%,
+      rgba(22, 20, 15, 0.42) 65%,
+      rgba(22, 20, 15, 0.30) 100%),
+    linear-gradient(180deg,
+      rgba(22, 20, 15, 0.18) 0%,
+      transparent 40%,
+      rgba(22, 20, 15, 0.35) 100%);
   z-index: 1;
+}
+@media (max-width: 880px) {
+  .brand-statement__bg { background-position: 75% center; }
+  .brand-statement__overlay {
+    background:
+      linear-gradient(180deg,
+        rgba(22, 20, 15, 0.78) 0%,
+        rgba(22, 20, 15, 0.55) 45%,
+        rgba(22, 20, 15, 0.82) 100%);
+  }
 }
 .brand-statement__content {
   position: relative;
