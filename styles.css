@@ -653,7 +653,7 @@ em {
   margin: 0 auto;
   /* Padding inferior bien generoso para separar los CTAs del ticker
      negro que viene justo debajo. */
-  padding: 140px var(--gutter) 220px;
+  padding: 140px var(--gutter) 340px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 28px;
@@ -784,7 +784,7 @@ em {
 
 @media (max-width: 880px) {
   .hero--scrub .hero__pin { min-height: 620px; }
-  .hero__shell { padding: 120px var(--gutter) 170px; gap: 20px; }
+  .hero__shell { padding: 120px var(--gutter) 200px; gap: 20px; }
   .hero__title { font-size: clamp(38px, 10vw, 72px); line-height: 1; }
   .hero__lead p { font-size: 15px; }
   .hero__scroll { display: none; }
@@ -800,7 +800,7 @@ em {
 .ticker {
   background: var(--ink);
   color: var(--linen);
-  padding: 22px 0;
+  padding: 36px 0;
   overflow: hidden;
   border-top: 1px solid rgba(243, 237, 224, 0.08);
   border-bottom: 1px solid rgba(243, 237, 224, 0.08);
