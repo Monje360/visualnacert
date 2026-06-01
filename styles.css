@@ -658,13 +658,13 @@ em {
   text-transform: uppercase;
 }
 
-/* H1 cinemático — TAMAÑO BRUTAL */
+/* H1 cinemático — 4 líneas balanceadas */
 .hero__title {
   align-self: center;
   margin: 0;
-  font-size: clamp(56px, 9.2vw, 168px);
+  font-size: clamp(48px, 7.6vw, 138px);
   font-weight: 500;
-  line-height: 0.94;
+  line-height: 0.98;
   letter-spacing: -0.045em;
   color: var(--cream);
   max-width: 1180px;
@@ -673,7 +673,10 @@ em {
 .hero__line {
   display: block;
   overflow: hidden;
-  padding-bottom: 0.06em;
+  /* Padding inferior generoso para no cortar los descenders (g, p)
+     y margin negativo que compensa para mantener el tightness. */
+  padding-bottom: 0.22em;
+  margin-bottom: -0.14em;
 }
 .hero__line > span {
   display: inline-block;
@@ -759,15 +762,15 @@ em {
 }
 
 @media (max-width: 880px) {
-  .hero--scrub .hero__pin { min-height: 560px; }
-  .hero__shell { padding: 120px var(--gutter) 90px; gap: 22px; }
-  .hero__title { font-size: clamp(44px, 12vw, 88px); line-height: 0.98; }
+  .hero--scrub .hero__pin { min-height: 620px; }
+  .hero__shell { padding: 120px var(--gutter) 90px; gap: 20px; }
+  .hero__title { font-size: clamp(38px, 10vw, 72px); line-height: 1; }
   .hero__lead p { font-size: 15px; }
   .hero__scroll { display: none; }
 }
 @media (max-width: 480px) {
   .hero__top { flex-direction: column; align-items: flex-start; gap: 10px; }
-  .hero__title { font-size: 44px; }
+  .hero__title { font-size: 38px; }
 }
 
 /* ============================================
