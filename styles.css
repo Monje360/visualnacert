@@ -575,6 +575,11 @@ em {
   display: block;
   min-height: 260vh;
   overflow: visible;
+  /* Buffer ink al final: separa el último frame del shell del
+     ticker negro que viene después. Antes el ticker quedaba
+     visualmente "cortando" los CTAs cuando el pin se liberaba. */
+  background: var(--ink);
+  padding-bottom: 140px;
 }
 .hero--scrub .hero__pin {
   position: sticky;
@@ -651,9 +656,10 @@ em {
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  /* Padding inferior bien generoso para separar los CTAs del ticker
-     negro que viene justo debajo. */
-  padding: 140px var(--gutter) 340px;
+  /* Padding inferior dentro del pin para los CTAs.
+     La separación con el ticker la garantiza el buffer ink que
+     añade .hero--scrub abajo (padding-bottom). */
+  padding: 140px var(--gutter) 180px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 28px;
