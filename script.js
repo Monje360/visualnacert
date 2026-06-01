@@ -29,16 +29,12 @@ if (typeof Lenis !== "undefined") {
 const cursor = document.querySelector(".cursor");
 const cursorDot = document.querySelector(".cursor-dot");
 
-// Inyecta el isotipo SVG dentro del wrapper .cursor (una sola vez)
+// Inyecta un único hexágono naranja dentro del wrapper .cursor.
+// Tamaño estándar de puntero (~18px) — mismo peso visual que un cursor de SO.
 if (cursor && !cursor.querySelector("svg")) {
   cursor.innerHTML = `
-    <svg viewBox="0 0 200 200" aria-hidden="true">
-      <polygon class="ch ch--0" points="60,50 50,67.32 30,67.32 20,50 30,32.68 50,32.68"/>
-      <polygon class="ch ch--1" points="180,50 170,67.32 150,67.32 140,50 150,32.68 170,32.68"/>
-      <polygon class="ch ch--2" points="90,95 80,112.32 60,112.32 50,95 60,77.68 80,77.68"/>
-      <polygon class="ch ch--3" points="150,95 140,112.32 120,112.32 110,95 120,77.68 140,77.68"/>
-      <polygon class="ch ch--4" points="120,145 110,162.32 90,162.32 80,145 90,127.68 110,127.68"/>
-      <circle class="ch-dot" cx="100" cy="145" r="5"/>
+    <svg viewBox="0 0 40 35" aria-hidden="true">
+      <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0"/>
     </svg>`;
 }
 

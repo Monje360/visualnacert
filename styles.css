@@ -113,62 +113,44 @@ button { font: inherit; cursor: none; border: none; background: none; color: inh
   will-change: transform;
 }
 
-/* Wrapper que contiene el SVG del isotipo */
+/* Wrapper del cursor: un solo hexágono naranja del tamaño de un
+   puntero estándar (~18px). Sustituye al isotipo completo. */
 .cursor {
-  width: 26px;
-  height: 26px;
+  width: 18px;
+  height: 18px;
   transform: translate(-50%, -50%);
   opacity: 1;
-  transition: opacity 0.25s var(--ease);
-  /* Doble drop-shadow para que el cursor se lea sobre cualquier
-     fondo (claro u oscuro) sin recurrir a mix-blend-mode (que
-     invertía el naranja a azul). */
+  transition: opacity 0.2s var(--ease);
+  /* Drop-shadow sutil para legibilidad sobre cualquier fondo */
   filter:
     drop-shadow(0 1px 2px rgba(22, 20, 15, 0.35))
-    drop-shadow(0 0 1px rgba(243, 237, 224, 0.5));
+    drop-shadow(0 0 1px rgba(243, 237, 224, 0.45));
 }
 .cursor svg {
   width: 100%;
   height: 100%;
   display: block;
-  /* 180° base: el núcleo (hex naranja + punto) apunta hacia arriba,
-     hacia donde el usuario "pulsa" — como la punta de un cursor. */
-  transform: rotate(180deg);
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-origin: center;
 }
-/* Hexágonos outer: ink translúcido — visibles sobre fondos claros
-   y velados sobre fondos oscuros (donde el naranja del núcleo
-   manda igualmente). */
-.cursor .ch {
-  fill: rgba(22, 20, 15, 0.55);
-}
-.cursor .ch--4 {
-  /* Hex del "núcleo" (ahora arriba al estar rotado): naranja */
-  fill: var(--orange);
-}
-.cursor .ch-dot {
-  /* Punto del isotipo: también naranja, para consistencia */
+.cursor svg polygon {
   fill: var(--orange);
 }
 
-/* Hover sobre elementos interactivos: el isotipo gira + crece
-   manteniendo la rotación base de 180° (180 + 45 = 225). */
+/* Hover sobre elementos interactivos: el hexágono crece un poco */
 .cursor.is-hover svg {
-  transform: rotate(225deg) scale(1.45);
+  transform: scale(1.4);
 }
 
-/* Punto que sigue al mouse al instante — naranja real, sin blend */
+/* Punto que sigue al mouse al instante — naranja, glow sutil */
 .cursor-dot {
   width: 4px;
   height: 4px;
   background: var(--orange);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.95;
-  box-shadow:
-    0 0 8px rgba(253, 128, 29, 0.6),
-    0 0 2px rgba(243, 237, 224, 0.4);
+  opacity: 0.9;
+  box-shadow: 0 0 6px rgba(253, 128, 29, 0.55);
 }
 
 @media (hover: none), (pointer: coarse) {
@@ -673,10 +655,15 @@ em {
 .hero__title {
   align-self: center;
   margin: 0;
+  font-family: var(--font-sans);
   font-size: clamp(48px, 7.6vw, 138px);
   font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: -0.045em;
+  line-height: 1;
+  /* Tracking aflojado: a tamaño cinemático un -0.045em pegaba
+     los caracteres "li", "te", "nc". Bajamos a -0.02em + kerning
+     y ligaduras activos para una lectura nítida. */
+  letter-spacing: -0.02em;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   color: var(--cream);
   max-width: 1180px;
   text-shadow: 0 2px 30px rgba(22, 20, 15, 0.35);
