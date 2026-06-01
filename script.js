@@ -457,3 +457,32 @@ document.querySelectorAll(".scroller").forEach((scroller) => {
 window.addEventListener("resize", () => {
   ScrollTrigger.refresh();
 });
+
+/* ---------- Sticky CTA pill (home y sectores) ----------
+   Aparece tras 600px de scroll, se oculta cerca del CTA final
+   y de la propia página /demo para no duplicar acción. */
+(() => {
+  const cta = document.querySelector(".sticky-cta");
+  if (!cta) return;
+
+  let visible = false;
+  const SHOW_AFTER = 600;
+  // Si la página tiene un .cta-final o un .demo-hero al final, lo evitamos
+  const stopEl = document.querySelector(".cta-final, .demo-hero, .post-cta");
+
+  function update() {
+    const y = window.scrollY || document.documentElement.scrollTop;
+    let shouldShow = y > SHOW_AFTER;
+    if (stopEl) {
+      const stopTop = stopEl.getBoundingClientRect().top + window.scrollY - window.innerHeight * 0.5;
+      if (y > stopTop) shouldShow = false;
+    }
+    if (shouldShow !== visible) {
+      visible = shouldShow;
+      cta.classList.toggle("is-visible", visible);
+    }
+  }
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+})();

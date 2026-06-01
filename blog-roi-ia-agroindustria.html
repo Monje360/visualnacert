@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo medir el ROI de la IA en agroindustria sin engañarte a ti mismo | VisualNACert</title>
+  <meta name="description" content="Métricas que sí importan, métricas que no, y un framework simple para evaluar un piloto de IA en agroindustria antes de invertir 6 cifras." />
+  <meta name="keywords" content="ROI IA agroindustria, métricas IA agroalimentario, evaluar piloto IA, KPIs automatización agroalimentaria" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="og-image.jpg" />
+  <link rel="apple-touch-icon" href="og-image.jpg" />
+  <meta name="theme-color" content="#FD801D" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://visualnacert.vercel.app/blog-roi-ia-agroindustria.html" />
+  <meta property="og:title" content="Cómo medir el ROI de la IA en agroindustria sin engañarte a ti mismo" />
+  <meta property="og:description" content="Métricas que sí importan, métricas que no, y un framework simple para evaluar un piloto de IA en agroindustria antes de invertir 6 cifras." />
+  <meta property="og:image" content="https://visualnacert.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="VisualNACert" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cómo medir el ROI de la IA en agroindustria sin engañarte a ti mismo" />
+  <meta name="twitter:description" content="Métricas que sí importan, métricas que no, y un framework simple para evaluar un piloto de IA en agroindustria antes de invertir 6 cifras." />
+  <meta name="twitter:image" content="https://visualnacert.vercel.app/og-image.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cómo medir el ROI de la IA en agroindustria sin engañarte a ti mismo",
+    "description": "Métricas que sí importan, métricas que no, y un framework simple para evaluar un piloto de IA en agroindustria antes de invertir 6 cifras.",
+    "datePublished": "2026-05-02",
+    "dateModified": "2026-05-02",
+    "author": { "@type": "Organization", "name": "Visual NAcert" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Visual NAcert",
+      "logo": { "@type": "ImageObject", "url": "https://visualnacert.vercel.app/favicon.svg" }
+    },
+    "image": "https://visualnacert.vercel.app/og-image.jpg",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://visualnacert.vercel.app/blog-roi-ia-agroindustria.html" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=24" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="m-nucleo" viewBox="0 0 200 200">
+        <polygon points="60,50 50,67.32 30,67.32 20,50 30,32.68 50,32.68"          fill="var(--mc)"/>
+        <polygon points="180,50 170,67.32 150,67.32 140,50 150,32.68 170,32.68"    fill="var(--mc)"/>
+        <polygon points="90,95 80,112.32 60,112.32 50,95 60,77.68 80,77.68"        fill="var(--mc)"/>
+        <polygon points="150,95 140,112.32 120,112.32 110,95 120,77.68 140,77.68"  fill="var(--mc)"/>
+        <polygon points="120,145 110,162.32 90,162.32 80,145 90,127.68 110,127.68" fill="var(--ma)"/>
+        <circle cx="100" cy="145" r="5" fill="var(--md)"/>
+      </symbol>
+      <symbol id="m-hex" viewBox="0 0 40 35">
+        <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__logo"><span class="visual">Visual</span><span class="nacert">NACert</span></div>
+      <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+      <div class="loader__count">0</div>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__pill">
+      <a href="index.html" class="nav__brand">
+        <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+        <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+      </a>
+      <nav class="nav__links">
+        <a href="soluciones.html">Soluciones</a>
+        <a href="sectores.html">Sectores</a>
+        <a href="clientes.html">Casos</a>
+        <div class="nav__dropdown">
+          <span class="nav__dropdown-toggle">Plataforma</span>
+          <div class="nav__dropdown-menu">
+            <span class="dd-cap">Productos</span>
+            <a href="visual-app.html">Visual App</a>
+            <a href="visual-lab.html">Visual Lab</a>
+            <a href="visual-academy.html">Visual Academy</a>
+          </div>
+        </div>
+        <a href="blog.html" class="is-active">Recursos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__lang">ES</button>
+        <a href="demo.html" class="nav__cta">
+          Solicita demo
+          <span class="nav__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="post">
+      <header class="post-hero">
+        <div class="container">
+          <div class="post-hero__crumb"><a href="index.html">Inicio</a> · <a href="blog.html">Recursos</a> · ROI &amp; estrategia</div>
+          <span class="blog-cat post-hero__cat">ROI &amp; estrategia</span>
+          <h1 class="post-hero__title">Cómo medir el ROI de la IA en agroindustria sin <em>engañarte a ti mismo</em>.</h1>
+          <p class="post-hero__lead">Métricas que sí importan, métricas que no, y un framework simple para evaluar un proyecto piloto antes de invertir 6 cifras. Sin demos genéricas y sin tampoco resignarte a no medir.</p>
+          <div class="post-hero__meta">
+            <span><strong>Por</strong> María Luz Peñarrubia · Equipo comercial</span>
+            <span class="post-hero__sep">·</span>
+            <span>2 mayo 2026</span>
+            <span class="post-hero__sep">·</span>
+            <span>11 min de lectura</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="container post-layout">
+        <aside class="post-toc">
+          <span class="faq-toc__label">En este artículo</span>
+          <a href="#trampa" class="faq-toc__link is-active">La trampa del piloto</a>
+          <a href="#metricas-malas" class="faq-toc__link">Métricas que no sirven</a>
+          <a href="#metricas-buenas" class="faq-toc__link">Métricas que sí miden ROI</a>
+          <a href="#framework" class="faq-toc__link">Framework de 4 preguntas</a>
+          <a href="#casos" class="faq-toc__link">Cómo lo hacemos nosotros</a>
+          <a href="#conclusion" class="faq-toc__link">Conclusión</a>
+        </aside>
+
+        <div class="post-prose">
+          <h2 id="trampa">La trampa del piloto</h2>
+<p>El patrón se repite. Una empresa agroalimentaria decide "probar IA". Se reúne con un proveedor, se hace un piloto de tres meses, el proveedor presenta resultados — modelo con 94% de precisión, dashboard bonito, mucha visión por computador — y la dirección se queda exactamente en el mismo sitio: sin saber si invertir más o cortar.</p>
+<p>El problema no es el piloto. El problema es que <strong>nadie definió qué tenía que pasar para que el piloto fuera "un éxito"</strong>. Sin esa línea trazada antes, cualquier resultado parece razonable. Y cualquiera, defendible.</p>
+<p>Este artículo intenta ayudar a no caer en esa trampa, desde el lado del cliente. No es marketing nuestro — de hecho, le hemos dicho que no a varios pilotos por esta razón.</p>
+
+<h2 id="metricas-malas">Métricas que no sirven (aunque suenen bien)</h2>
+<ul>
+<li><strong>Precisión del modelo</strong> — Que un modelo tenga 94% de F1 score no te dice nada si no sabes cuál era la línea base humana ni cuál es el coste de los falsos negativos. Un 70% bien aplicado puede valer más que un 95% inutilizable.</li>
+<li><strong>Número de usuarios activos</strong> — Sirve solo si los usuarios activos están tomando decisiones distintas. Si solo abren el dashboard, no es uso, es curiosidad.</li>
+<li><strong>Datos procesados / hectáreas / lotes</strong> — Métricas de volumen sin coste asociado son ruido. La IA no se justifica por cuántos datos digiere.</li>
+<li><strong>Testimonios cualitativos</strong> — "El equipo lo ve útil" es buena señal, pero no una métrica. Pídeles que cuantifiquen en qué los ha ayudado, en horas o euros.</li>
+</ul>
+
+<h2 id="metricas-buenas">Métricas que sí miden ROI</h2>
+<ul>
+<li><strong>Coste evitado por decisión</strong> — Por cada decisión que tomas con la IA en lugar de sin ella, cuánto te ahorra (o te hace ganar). Multiplicado por la frecuencia.</li>
+<li><strong>Tiempo de ciclo del proceso</strong> — Cuánto tardaba antes en cerrarse un proceso (acopio, calidad, reporte regulatorio) vs cuánto tarda ahora. El tiempo es dinero medible.</li>
+<li><strong>Mermas y reproceso</strong> — En porcentaje, comparado con la línea base histórica de la misma campaña en años anteriores. Cuidado con comparar campañas no homologables.</li>
+<li><strong>Capacidad recuperada</strong> — Cuántas horas/persona que antes hacían tarea manual ahora pueden dedicarse a otra cosa. Esto se monetiza fácil.</li>
+<li><strong>Capacidad de venta</strong> — Si la IA te permite cerrar contratos con clientes que exigen trazabilidad o certificaciones que antes no podías ofrecer, eso es ROI puro.</li>
+</ul>
+
+<h2 id="framework">Framework de 4 preguntas antes del piloto</h2>
+<p>Si vas a contratar un piloto de IA, oblígate a contestar estas cuatro preguntas en una página, firmadas por dirección y equipo operativo:</p>
+<ol>
+<li><strong>¿Qué decisión concreta se va a tomar diferente con la IA?</strong> No "qué se va a medir". <em>Qué decisión</em>.</li>
+<li><strong>¿Cuál es el coste hoy de tomar esa decisión sin IA?</strong> En euros, horas o oportunidad perdida. Si no sabes, mide tres meses antes del piloto.</li>
+<li><strong>¿Cómo sabrá el equipo operativo, sin mirar el modelo, que la IA está acertando?</strong> Tiene que haber un indicador independiente del propio sistema.</li>
+<li><strong>¿Qué nivel de impacto te haría escalar la inversión y cuál te haría parar?</strong> Define ambos umbrales antes de empezar. Lo que te haga parar es lo más útil — te protege del optimismo.</li>
+</ol>
+<p>Si no puedes contestar las cuatro, no es un piloto: es una excursión.</p>
+
+<h2 id="casos">Cómo lo hacemos nosotros</h2>
+<p>Por transparencia y porque sospechamos que el lector estará pensándolo: el proceso comercial de Visual NAcert siempre arranca por estas mismas cuatro preguntas. Si no salen claras, decimos honestamente que no es el momento. Es un mensaje incómodo de dar, pero nos ahorra a ambos un proyecto fracasado.</p>
+<p>Cuando sí salen claras, proponemos un piloto de 12 semanas con un único módulo, integración mínima y un comité que se reúne cada 15 días. Si en la semana 8 los números no van por buen camino, paramos. Si van bien, escalamos.</p>
+
+<h2 id="conclusion">Conclusión</h2>
+<p>La IA en agroindustria funciona — pero solo cuando se mide bien. La pregunta no es "¿la IA me dará ROI?", es "¿estoy preparado para medirlo honestamente?". Si la respuesta a la segunda es sí, lo demás cae solo.</p>
+
+          <div class="post-cta">
+            <span class="eyebrow"><span class="eyebrow__dot"></span> ¿Tu caso encaja?</span>
+            <h3>30 minutos con nuestro equipo. Cero powerpoint.</h3>
+            <p>Te decimos exactamente dónde la IA mueve la aguja en tu operación — y dónde no.</p>
+            <a href="demo.html" class="btn btn--primary"><span>Solicita demo</span><span class="btn__arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related -->
+      <section class="section" style="background: var(--linen);">
+        <div class="container">
+          <div class="section__head">
+            <span class="eyebrow"><span class="eyebrow__dot"></span> Sigue leyendo</span>
+            <h2 class="section__title">Más recursos del <em>equipo</em>.</h2>
+          </div>
+          <div class="blog-grid">
+            <a href="blog-ia-cooperativas-hortofruticolas.html" class="blog-card" data-reveal>
+              <div class="blog-card__media" style="background-image: url('img/sectors/fruticultura.jpg')"></div>
+              <div class="blog-card__body">
+                <div class="blog-card__meta">
+                  <span class="blog-cat">Cooperativas</span>
+                  <span class="blog-date">28 mayo 2026 · 9 min</span>
+                </div>
+                <h3 class="blog-card__title">IA en cooperativas hortofrutícolas: 5 procesos que se automatizan en 12 semanas</h3>
+              </div>
+            </a>
+            <a href="blog-trazabilidad-agroalimentaria.html" class="blog-card" data-reveal>
+              <div class="blog-card__media" style="background-image: url('img/sectors/frutoseco.jpg')"></div>
+              <div class="blog-card__body">
+                <div class="blog-card__meta">
+                  <span class="blog-cat">Trazabilidad</span>
+                  <span class="blog-date">15 mayo 2026 · 7 min</span>
+                </div>
+                <h3 class="blog-card__title">Trazabilidad agroalimentaria con IA: del lote del campo al pallet del cliente</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+              <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+            </div>
+            <p>Tu partner IA para el sector agroalimentario.</p>
+            <div class="footer__social" aria-label="Síguenos">
+              <span class="footer__social-label">Síguenos</span>
+              <a href="#" aria-label="LinkedIn">LinkedIn</a>
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="YouTube">YouTube</a>
+              <a href="#" aria-label="X (Twitter)">X</a>
+              <a href="#" aria-label="Facebook">Facebook</a>
+            </div>
+          </div>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h5>Recursos</h5>
+              <a href="blog.html">Blog &amp; Insights</a><a href="faq.html">FAQ · Preguntas frecuentes</a><a href="https://app.visualnacert.com" target="_blank" rel="noopener">Acceso clientes</a><a href="#">Trabaja en Visual</a>
+            </div>
+            <div class="footer__col">
+              <h5>Dirección comercial</h5>
+              <span class="footer__contact-line">María Luz Peñarrubia</span>
+              <span class="footer__contact-line footer__contact-meta">Directora comercial</span>
+              <a href="tel:+34620472712">+34 620 472 712</a>
+              <a href="mailto:mluz@visualnacert.com">mluz@visualnacert.com</a>
+            </div>
+            <div class="footer__col">
+              <h5>Oficinas</h5>
+              <span class="footer__contact-line">Calle Mayor 41 · Rafelbunyol</span>
+              <span class="footer__contact-line footer__contact-meta">46138 · Valencia · ES</span>
+              <a href="tel:+34961410675">+34 961 410 675</a>
+              <a href="mailto:contacto@visualnacert.com">contacto@visualnacert.com</a>
+            </div>
+            <div class="footer__col">
+              <h5>Próxima expansión</h5>
+              <span class="footer__contact-line">Francia · Italia</span>
+              <span class="footer__contact-line">Portugal · Países Bajos</span>
+              <span class="footer__contact-line footer__contact-meta">Iberoamérica en fase 2</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Visual NAcert · Todos los derechos reservados</span>
+          <span class="footer__legal">
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+          </span>
+        </div>
+        <div class="footer__giant">
+          <span class="visual">Visual</span><span class="nacert">NACert</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js?v=24"></script>
+</body>
+</html>

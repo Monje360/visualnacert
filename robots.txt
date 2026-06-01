@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://visualnacert.vercel.app/sitemap.xml
+
+# Bots agresivos: tasa amable
+Crawl-delay: 1
