@@ -2627,10 +2627,13 @@ em {
 }
 .store-badge:hover { background: var(--orange); }
 .store-badge__icon {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 500;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #fff;
 }
+.store-badge__icon svg,
+svg.store-badge__icon { display: block; }
 .store-badge__txt { display: flex; flex-direction: column; line-height: 1.1; }
 .store-badge__txt small { font-size: 10px; opacity: 0.7; letter-spacing: 0.04em; text-transform: uppercase; }
 .store-badge__txt strong {
