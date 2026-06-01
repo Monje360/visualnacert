@@ -1087,20 +1087,22 @@ em {
 .logos__track {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 28px;
   font-family: var(--font-sans);
   font-weight: 600;
-  letter-spacing: 0.04em;
-  font-size: clamp(36px, 5.5vw, 72px);
+  letter-spacing: 0.05em;
+  /* Tamaño más compacto: caben 5-7 marcas a la vez en pantalla
+     en lugar de 2-3, con velocidad de scroll más fluida. */
+  font-size: clamp(18px, 1.8vw, 26px);
   color: var(--ink);
-  animation: ticker 40s linear infinite;
+  animation: ticker 32s linear infinite;
   width: max-content;
-  padding-right: 48px;
+  padding-right: 28px;
 }
 .logos__track .dot { color: var(--orange); opacity: 0.7; }
 .logos__hex {
-  width: 0.42em;
-  height: 0.36em;
+  width: 0.6em;
+  height: 0.52em;
   color: var(--orange);
   flex-shrink: 0;
   display: inline-block;
