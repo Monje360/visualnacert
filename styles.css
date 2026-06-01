@@ -3132,21 +3132,26 @@ em {
 .nav__dropdown-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   cursor: pointer;
   color: var(--ink);
-  opacity: 0.75;
+  opacity: 0.7;
+  /* Igualar exactamente .nav__links a — el toggle es un <span>,
+     no un <a>, así que no hereda automáticamente el font-size. */
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1;
   transition: opacity 0.2s var(--ease), color 0.2s var(--ease);
-  font: inherit;
   user-select: none;
 }
 .nav__dropdown-toggle::after {
   content: '';
-  width: 6px; height: 6px;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
+  width: 5px; height: 5px;
+  border-right: 1.4px solid currentColor;
+  border-bottom: 1.4px solid currentColor;
   transform: rotate(45deg);
-  margin-left: 2px;
+  margin-left: 1px;
   margin-top: -3px;
   transition: transform 0.2s var(--ease), margin-top 0.2s var(--ease);
 }
