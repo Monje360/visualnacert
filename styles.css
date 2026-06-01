@@ -109,7 +109,8 @@ button { font: inherit; cursor: none; border: none; background: none; color: inh
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: 9999;
+  /* Por encima de cualquier modal/overlay (loader 10000, cookies-modal 10000) */
+  z-index: 10050;
   will-change: transform;
 }
 
