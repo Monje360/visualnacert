@@ -2150,11 +2150,93 @@ em {
 }
 @media (max-width: 760px) { .founders { grid-template-columns: 1fr; } }
 
+/* Card destacada de reconocimiento (premio con foto) */
+.recog-feature {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.recog-feature__media {
+  min-height: 380px;
+  background-size: cover;
+  background-position: center top;
+  background-color: var(--ink);
+  position: relative;
+}
+.recog-feature__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(22, 20, 15, 0.10) 0%, transparent 55%);
+}
+.recog-feature__body {
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+.recog-feature__body h3 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.4vw, 34px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--ink);
+}
+.recog-feature__body h3 em { color: var(--orange); font-style: normal; font-weight: 500; }
+.recog-feature__body p {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  opacity: 0.82;
+  margin: 0;
+}
+.recog-feature__body p strong { color: var(--ink); font-weight: 500; opacity: 1; }
+.recog-feature__kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.recog-feature__kpis > div { display: flex; flex-direction: column; }
+.recog-feature__kpis strong {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 500;
+  color: var(--orange);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.recog-feature__kpis span {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  color: var(--mute);
+  letter-spacing: 0.02em;
+}
+@media (max-width: 880px) {
+  .recog-feature { grid-template-columns: 1fr; }
+  .recog-feature__media { min-height: 280px; }
+  .recog-feature__body { padding: 32px 28px; }
+}
+@media (max-width: 520px) {
+  .recog-feature__kpis { grid-template-columns: 1fr; gap: 10px; }
+}
+
 .recogs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
+.recogs--3 { grid-template-columns: repeat(3, 1fr); }
 .recog {
   background: var(--linen);
   border: 1px solid var(--line);

@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=25" />
+  <link rel="stylesheet" href="styles.css?v=26" />
 </head>
 <body>
   <!-- Brand mark — referenciable como <use href="#m-nucleo"/> -->
@@ -237,7 +237,22 @@
           <span class="eyebrow"><span class="eyebrow__dot"></span> 04 — Reconocimientos</span>
           <h2 class="section__title">Validados, no solo <em>vendidos</em>.</h2>
         </div>
-        <div class="recogs">
+        <!-- Reconocimiento destacado · SantanderXChallenge -->
+        <article class="recog-feature" data-reveal>
+          <div class="recog-feature__media" style="background-image: url('img/founders-prize.jpg')" aria-label="Lucía y Mercedes Iborra recogiendo el premio SantanderXChallenge — Desafío DANA"></div>
+          <div class="recog-feature__body">
+            <span class="eyebrow"><span class="eyebrow__dot"></span> Premio · 2025</span>
+            <h3>Ganadores del <em>SantanderXChallenge</em> · Desafío DANA.</h3>
+            <p>Lucía y Mercedes Iborra recogen el galardón por <strong>Visual AgriRecover</strong>, un modelo de IA que evalúa daños agrarios tras episodios climáticos extremos. De la imagen satélite a la indemnización justa, en horas en lugar de semanas.</p>
+            <div class="recog-feature__kpis">
+              <div><strong>48h</strong><span>Evaluación de daños</span></div>
+              <div><strong>+25K</strong><span>Hectáreas evaluadas</span></div>
+              <div><strong>92%</strong><span>Precisión del modelo</span></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="recogs recogs--3">
           <div class="recog" data-reveal>
             <div class="recog__icon">✦</div>
             <h5>Red Endeavor</h5>
@@ -246,17 +261,12 @@
           <div class="recog" data-reveal>
             <div class="recog__icon">✦</div>
             <h5>Pyme Innovadora</h5>
-            <p>Certificación MEIC por nuestro I+D continuo en IA agrícola.</p>
+            <p>Certificación MEIC por nuestro I+D continuo en IA agroalimentaria.</p>
           </div>
           <div class="recog" data-reveal>
             <div class="recog__icon">✦</div>
             <h5>Nación Emprendedora</h5>
             <p>Empresa reconocida dentro de la estrategia España Nación Emprendedora.</p>
-          </div>
-          <div class="recog" data-reveal>
-            <div class="recog__icon">✦</div>
-            <h5>SantanderXChallenge</h5>
-            <p>Ganadores del Desafío DANA con Visual AgriRecover (2025).</p>
           </div>
         </div>
       </div>
@@ -349,6 +359,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=25"></script>
+  <script src="script.js?v=26"></script>
 </body>
 </html>
