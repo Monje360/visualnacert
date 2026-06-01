@@ -575,11 +575,6 @@ em {
   display: block;
   min-height: 260vh;
   overflow: visible;
-  /* Buffer ink al final: separa el último frame del shell del
-     ticker negro que viene después. Antes el ticker quedaba
-     visualmente "cortando" los CTAs cuando el pin se liberaba. */
-  background: var(--ink);
-  padding-bottom: 140px;
 }
 .hero--scrub .hero__pin {
   position: sticky;
@@ -656,13 +651,12 @@ em {
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  /* Padding inferior dentro del pin para los CTAs.
-     La separación con el ticker la garantiza el buffer ink que
-     añade .hero--scrub abajo (padding-bottom). */
-  padding: 140px var(--gutter) 180px;
+  /* Padding inferior generoso para que los CTAs respiren dentro
+     del pin y queden bien separados del ticker que viene después. */
+  padding: 130px var(--gutter) 200px;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 28px;
+  gap: 22px;
   color: var(--cream);
 }
 
@@ -685,12 +679,11 @@ em {
   align-self: center;
   margin: 0;
   font-family: var(--font-sans);
-  font-size: clamp(48px, 7.6vw, 138px);
+  /* Tamaño moderado: caben las 4 líneas con holgura inferior
+     respecto al ticker, sin perder presencia. */
+  font-size: clamp(42px, 6.2vw, 108px);
   font-weight: 500;
   line-height: 1;
-  /* Tracking aflojado: a tamaño cinemático un -0.045em pegaba
-     los caracteres "li", "te", "nc". Bajamos a -0.02em + kerning
-     y ligaduras activos para una lectura nítida. */
   letter-spacing: -0.02em;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   color: var(--cream);
@@ -726,11 +719,13 @@ em {
   max-width: 620px;
 }
 .hero__lead p {
-  font-size: clamp(15px, 1.35vw, 19px);
-  line-height: 1.55;
+  /* Lead compacto: deja respirar al H1 y a los CTAs dentro
+     del viewport del pin sin pegarse al ticker. */
+  font-size: clamp(14px, 1.15vw, 17px);
+  line-height: 1.5;
   color: rgba(245, 241, 234, 0.92);
-  margin: 0 0 24px;
-  max-width: 580px;
+  margin: 0 0 18px;
+  max-width: 560px;
 }
 .hero__lead p strong { color: var(--orange); font-weight: 500; }
 
@@ -739,11 +734,11 @@ em {
   flex-wrap: wrap;
   gap: 10px;
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--orange);
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   align-items: center;
 }
 .hero__pillars-dot { color: rgba(245, 241, 234, 0.32); }
