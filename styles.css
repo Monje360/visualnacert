@@ -598,9 +598,9 @@ em {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  /* Anti-rural: menos saturación, más contraste, ligeramente más oscuro
-     para que el texto cream/blanco respire encima. */
-  filter: saturate(0.62) contrast(1.12) brightness(0.78);
+  /* Anti-rural: menos saturación, más contraste, más oscuro
+     para que el texto cream/blanco respire encima del vídeo. */
+  filter: saturate(0.62) contrast(1.12) brightness(0.7);
   transform: scale(1.04); /* evita borde si el filter genera bordes raros */
 }
 
@@ -611,14 +611,16 @@ em {
   pointer-events: none;
   z-index: 1;
   background:
+    /* Capa plana de oscuro a tamaño completo (sutil) */
+    rgba(22, 20, 15, 0.22),
     /* Gradiente vertical para anclar el texto arriba y abajo */
     linear-gradient(180deg,
-      rgba(22, 20, 15, 0.55) 0%,
-      rgba(22, 20, 15, 0.20) 25%,
-      rgba(22, 20, 15, 0.25) 60%,
-      rgba(22, 20, 15, 0.78) 100%),
+      rgba(22, 20, 15, 0.6) 0%,
+      rgba(22, 20, 15, 0.28) 28%,
+      rgba(22, 20, 15, 0.32) 60%,
+      rgba(22, 20, 15, 0.82) 100%),
     /* Halo naranja sutil centrado */
-    radial-gradient(38% 32% at 50% 50%, rgba(253, 128, 29, 0.16), transparent 78%);
+    radial-gradient(38% 32% at 50% 50%, rgba(253, 128, 29, 0.14), transparent 78%);
 }
 
 /* Vignette de bordes (Mistral/Apple) */
@@ -627,7 +629,7 @@ em {
   inset: 0;
   pointer-events: none;
   z-index: 2;
-  background: radial-gradient(130% 90% at 50% 50%, transparent 55%, rgba(22, 20, 15, 0.55) 100%);
+  background: radial-gradient(130% 90% at 50% 50%, transparent 50%, rgba(22, 20, 15, 0.62) 100%);
 }
 
 /* Grano sutil sobre todo */
