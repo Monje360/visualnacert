@@ -1161,157 +1161,85 @@ em {
 }
 .solutions__head .link-arrow--light { color: var(--orange); }
 
-/* ===== Anillo hexagonal ===== */
-.hex-ring {
+/* ===== Grid hexagonal · 2 filas × 3 columnas (minimal) ===== */
+.hex-grid {
   position: relative;
   z-index: 2;
-  width: 100%;
-  max-width: 880px;
-  aspect-ratio: 1 / 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1080px;
   margin: 0 auto;
-  /* La rotación del anillo se controla desde JS vía CSS variable.
-     Cada hex contra-rotará para mantener su contenido vertical. */
-  --ring-rot: 0deg;
 }
-.hex-ring__core {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 28%;
-  height: 28%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-align: center;
-  z-index: 3;
+.hex-card {
+  position: relative;
+  aspect-ratio: 1.08 / 1;
 }
-.hex-ring__core svg {
-  width: 56px;
-  height: 56px;
-  opacity: 0.95;
-  --mc: rgba(243, 237, 224, 0.4);
-  --ma: var(--orange);
-  --md: rgba(243, 237, 224, 0.95);
-}
-.hex-ring__core span {
-  font-family: var(--font-wordmark);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-  color: rgba(243, 237, 224, 0.85);
-}
-
-.hex-node {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* Tamaño de cada nodo del anillo (relativo al radio del ring) */
-  width: 36%;
-  height: 36%;
-  /* Posicionamiento angular: cada nodo a --n * 60° con el radio
-     ajustado para que los hex se toquen sin solaparse demasiado. */
-  --angle: calc(var(--n) * 60deg);
-  transform:
-    translate(-50%, -50%)
-    rotate(calc(var(--angle) + var(--ring-rot)))
-    translateY(-104%)
-    rotate(calc(-1 * (var(--angle) + var(--ring-rot))));
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.hex-node__inner {
+.hex-card__inner {
   width: 100%;
   height: 100%;
-  /* Forma de hexágono con clip-path (flat-top, mismo que el isotipo) */
+  /* Hexágono flat-top (idéntico al isotipo del logo) */
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  background: linear-gradient(135deg, rgba(253, 128, 29, 0.18), rgba(255, 255, 255, 0.04));
-  border: 0;
-  padding: 14% 16%;
+  background: rgba(243, 237, 234, 0.045);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  gap: 6px;
-  text-align: left;
+  align-items: center;
+  text-align: center;
+  padding: 14% 16%;
+  gap: 4px;
   color: var(--linen);
-  position: relative;
-  transition: transform 0.4s var(--ease), background 0.4s var(--ease);
-  /* Doble capa: un borde "fake" interno + el fondo principal */
-  box-shadow:
-    inset 0 0 0 1px rgba(243, 237, 224, 0.10),
-    0 30px 60px rgba(22, 20, 15, 0.35);
+  transition: background 0.35s var(--ease), transform 0.35s var(--ease);
+  /* Borde interno fino simulado con inset shadow + halo sutil */
+  box-shadow: inset 0 0 0 1px rgba(243, 237, 224, 0.08);
 }
-.hex-node:hover .hex-node__inner {
-  background: linear-gradient(135deg, rgba(253, 128, 29, 0.42), rgba(253, 128, 29, 0.08));
-  transform: scale(1.04);
+.hex-card:hover .hex-card__inner {
+  background: rgba(253, 128, 29, 0.10);
+  transform: scale(1.02);
+  box-shadow: inset 0 0 0 1px rgba(253, 128, 29, 0.5);
 }
-.hex-node__num {
+.hex-card__num {
   font-family: var(--font-mono);
-  font-size: 10.5px;
+  font-size: 11px;
   letter-spacing: 0.14em;
   color: var(--orange);
+  margin-bottom: 4px;
 }
-.hex-node__tag {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(243, 237, 224, 0.6);
-}
-.hex-node h4 {
+.hex-card h4 {
   font-family: var(--font-display);
-  font-size: clamp(15px, 1.55vw, 22px);
+  font-size: clamp(17px, 1.6vw, 22px);
   font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 1.05;
-  margin: 4px 0 4px;
+  line-height: 1.1;
+  margin: 0 0 4px;
   color: var(--linen);
+  max-width: 80%;
 }
-.hex-node p {
-  font-size: clamp(11px, 0.85vw, 13px);
-  line-height: 1.35;
+.hex-card__tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(243, 237, 224, 0.5);
+  margin-bottom: 8px;
+}
+.hex-card p {
+  font-size: clamp(11.5px, 0.9vw, 13px);
+  line-height: 1.4;
   color: rgba(243, 237, 224, 0.72);
   margin: 0;
+  max-width: 78%;
 }
 
-/* Variantes de hue rotativas por nodo para diferenciar (sutil) */
-.hex-node[style*="--n:0"] .hex-node__inner { background: linear-gradient(135deg, rgba(253, 128, 29, 0.32), rgba(253, 128, 29, 0.05)); }
-.hex-node[style*="--n:1"] .hex-node__inner { background: linear-gradient(135deg, rgba(253, 128, 29, 0.22), rgba(255, 255, 255, 0.04)); }
-.hex-node[style*="--n:2"] .hex-node__inner { background: linear-gradient(135deg, rgba(253, 128, 29, 0.15), rgba(255, 255, 255, 0.06)); }
-.hex-node[style*="--n:3"] .hex-node__inner { background: linear-gradient(135deg, rgba(253, 128, 29, 0.10), rgba(255, 255, 255, 0.05)); }
-.hex-node[style*="--n:4"] .hex-node__inner { background: linear-gradient(135deg, rgba(253, 128, 29, 0.18), rgba(255, 255, 255, 0.04)); }
-.hex-node[style*="--n:5"] .hex-node__inner { background: linear-gradient(135deg, rgba(253, 128, 29, 0.25), rgba(255, 255, 255, 0.05)); }
-
-/* Mobile · anillo se desactiva, se vuelve grid 2 columnas */
 @media (max-width: 760px) {
-  .hex-ring {
-    aspect-ratio: auto;
-    max-width: 560px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-  .hex-ring__core {
-    position: relative;
-    transform: none;
-    top: auto; left: auto;
-    width: 100%;
-    grid-column: 1 / -1;
-    margin-bottom: 8px;
-    flex-direction: row;
-  }
-  .hex-ring__core svg { width: 36px; height: 36px; }
-  .hex-node {
-    position: relative;
-    top: auto; left: auto;
-    transform: none !important;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-  }
-  .hex-node__inner { padding: 18% 14%; }
+  .hex-grid { grid-template-columns: 1fr 1fr; gap: 10px; max-width: 540px; }
+  .hex-card { aspect-ratio: 1 / 1; }
+  .hex-card__inner { padding: 14% 12%; gap: 2px; }
+  .hex-card h4 { font-size: 16px; }
+  .hex-card p { font-size: 11.5px; }
+}
+@media (max-width: 420px) {
+  .hex-grid { grid-template-columns: 1fr; max-width: 320px; }
 }
 
 /* ============================================
