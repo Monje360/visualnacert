@@ -4306,6 +4306,269 @@ em {
   .sticky-cta { bottom: 20px; right: 20px; padding: 12px 18px; font-size: 13px; }
 }
 
+/* ============================================
+   COOKIES — modal granular + chip de reapertura
+   ============================================ */
+body.is-cookies-modal { overflow: hidden; }
+
+.cookies-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+.cookies-modal.is-visible { opacity: 1; }
+.cookies-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 20, 15, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+.cookies-modal__panel {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 720px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  padding: 36px 36px 28px;
+  box-shadow: 0 30px 80px rgba(22, 20, 15, 0.25);
+  transform: translateY(16px) scale(0.98);
+  transition: transform 0.3s var(--ease);
+}
+.cookies-modal.is-visible .cookies-modal__panel { transform: translateY(0) scale(1); }
+.cookies-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 14px;
+  color: var(--mute);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.cookies-modal__close:hover { background: var(--cream); color: var(--ink); }
+.cookies-modal__title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 4px 0 20px;
+  color: var(--ink);
+}
+.cookies-modal__intro {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  opacity: 0.78;
+  margin: 0 0 24px;
+}
+
+/* Filas de categorías */
+.cookies-row {
+  background: var(--paper);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.cookies-row__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 18px 20px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  color: var(--ink);
+  text-align: left;
+}
+.cookies-row__name {
+  flex: 1;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.cookies-row__status--always {
+  font-size: 13px;
+  color: #16a34a;
+  font-weight: 500;
+}
+.cookies-row__caret {
+  width: 10px;
+  height: 10px;
+  border-right: 1.5px solid var(--mute);
+  border-bottom: 1.5px solid var(--mute);
+  transform: rotate(45deg);
+  transition: transform 0.25s var(--ease);
+  flex-shrink: 0;
+}
+.cookies-row.is-open .cookies-row__caret { transform: rotate(-135deg); }
+.cookies-row__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s var(--ease), padding 0.3s var(--ease);
+  padding: 0 20px;
+}
+.cookies-row.is-open .cookies-row__body {
+  max-height: 240px;
+  padding: 0 20px 18px;
+}
+.cookies-row__body p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  opacity: 0.78;
+  margin: 0;
+}
+
+/* Switch */
+.cookies-switch {
+  width: 44px;
+  height: 24px;
+  border-radius: 100px;
+  background: rgba(22, 20, 15, 0.85);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.25s var(--ease);
+  flex-shrink: 0;
+  display: inline-block;
+}
+.cookies-switch__knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.25s var(--ease);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.cookies-switch.is-on { background: var(--orange); }
+.cookies-switch.is-on .cookies-switch__knob { transform: translateX(20px); }
+
+/* Acciones inferiores */
+.cookies-modal__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 22px 0 18px;
+}
+.cookies-modal__actions .btn {
+  justify-content: center;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+.cookies-modal__actions .btn--ghost {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+}
+.cookies-modal__actions .btn--ghost:hover {
+  background: var(--orange-deep, #e06b00);
+  border-color: var(--orange-deep, #e06b00);
+}
+
+.cookies-modal__legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.cookies-modal__legal a {
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.78;
+  transition: color 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+.cookies-modal__legal a:hover { color: var(--orange); opacity: 1; }
+
+@media (max-width: 600px) {
+  .cookies-modal__panel { padding: 28px 22px 22px; border-radius: 14px; }
+  .cookies-modal__actions { grid-template-columns: 1fr; }
+  .cookies-modal__legal { gap: 12px; font-size: 12px; }
+}
+
+/* Chip flotante "Cookies" (reabrir modal cuando ya hay consentimiento) */
+.cookies-chip {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 80;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px rgba(22, 20, 15, 0.10);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), background 0.2s, color 0.2s;
+}
+.cookies-chip.is-visible { opacity: 0.85; transform: translateY(0); }
+.cookies-chip:hover {
+  opacity: 1;
+  background: var(--ink);
+  color: var(--orange);
+}
+.cookies-chip svg { width: 22px; height: 22px; }
+
+/* ============================================
+   NAV · BOTÓN CLIENTES (acceso al portal)
+   ============================================ */
+.nav__clients {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border: 1.5px solid var(--orange);
+  border-radius: 100px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--orange);
+  background: transparent;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.nav__clients:hover {
+  background: var(--orange);
+  color: #fff;
+}
+.nav__clients svg { width: 14px; height: 14px; }
+@media (max-width: 760px) {
+  .nav__clients span { display: none; }
+  .nav__clients { padding: 9px 11px; }
+}
+
 /* Panel "Llámanos" — contacto directo en card */
 .direct-row {
   display: flex;

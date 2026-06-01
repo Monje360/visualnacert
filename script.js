@@ -414,13 +414,36 @@ document.querySelectorAll(".scroller").forEach((scroller) => {
   });
 })();
 
-/* ---------- Cookie consent banner ---------- */
+/* ---------- Cookie consent · banner + modal granular ---------- */
 (() => {
   const KEY = "vn-cookie-consent";
-  const stored = (() => { try { return localStorage.getItem(KEY); } catch (_) { return null; } })();
-  if (stored === "accepted" || stored === "rejected") return;
 
-  const html = `
+  // Estado por defecto
+  const DEFAULTS = { functional: true, statistics: false, marketing: false };
+
+  function loadConsent() {
+    try {
+      const raw = localStorage.getItem(KEY);
+      if (!raw) return null;
+      const obj = JSON.parse(raw);
+      if (!obj || typeof obj !== "object") return null;
+      return Object.assign({}, DEFAULTS, obj);
+    } catch (_) { return null; }
+  }
+  function saveConsent(state) {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({
+        functional: true, // siempre
+        statistics: !!state.statistics,
+        marketing: !!state.marketing,
+        timestamp: new Date().toISOString(),
+      }));
+    } catch (_) {}
+  }
+
+  // -------- BANNER COMPACTO (primera visita) --------
+  function showBanner() {
+    const html = `
     <div class="cookies" role="dialog" aria-labelledby="cookies-title" aria-describedby="cookies-desc">
       <div class="cookies__panel">
         <div class="cookies__icon" aria-hidden="true">
@@ -428,9 +451,10 @@ document.querySelectorAll(".scroller").forEach((scroller) => {
         </div>
         <div class="cookies__body">
           <h3 id="cookies-title">Cookies</h3>
-          <p id="cookies-desc">Usamos cookies propias y de terceros para mejorar la experiencia, analizar el tráfico y personalizar contenidos. Puedes aceptarlas, rechazarlas o consultar la <a href="#" class="cookies__link">política de cookies</a>.</p>
+          <p id="cookies-desc">Usamos cookies propias y de terceros para habilitar funciones, analizar tráfico y entender cómo se usa el sitio. Puedes aceptar todas, rechazar las no esenciales o configurar tus preferencias. <a href="cookies.html" class="cookies__link">Política de cookies</a>.</p>
         </div>
         <div class="cookies__actions">
+          <button class="btn btn--ghost cookies__btn" data-cookies="configure">Configurar</button>
           <button class="btn btn--ghost cookies__btn" data-cookies="reject">Rechazar</button>
           <button class="btn btn--primary cookies__btn" data-cookies="accept">
             <span>Aceptar todas</span>
@@ -440,24 +464,180 @@ document.querySelectorAll(".scroller").forEach((scroller) => {
       </div>
     </div>`;
 
-  const tmp = document.createElement("div");
-  tmp.innerHTML = html.trim();
-  const banner = tmp.firstChild;
-  document.body.appendChild(banner);
+    const tmp = document.createElement("div");
+    tmp.innerHTML = html.trim();
+    const banner = tmp.firstChild;
+    document.body.appendChild(banner);
+    requestAnimationFrame(() => banner.classList.add("is-visible"));
 
-  // Entrada animada
-  requestAnimationFrame(() => banner.classList.add("is-visible"));
+    function dismiss() {
+      banner.classList.remove("is-visible");
+      setTimeout(() => banner.remove(), 400);
+    }
 
-  function dismiss(value) {
-    try { localStorage.setItem(KEY, value); } catch (_) {}
-    banner.classList.remove("is-visible");
-    setTimeout(() => banner.remove(), 400);
+    banner.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-cookies]");
+      if (!btn) return;
+      const action = btn.dataset.cookies;
+      if (action === "accept") {
+        saveConsent({ statistics: true, marketing: true });
+        dismiss();
+        showReopenChip();
+      } else if (action === "reject") {
+        saveConsent({ statistics: false, marketing: false });
+        dismiss();
+        showReopenChip();
+      } else if (action === "configure") {
+        dismiss();
+        showModal();
+      }
+    });
   }
 
-  banner.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-cookies]");
-    if (!btn) return;
-    dismiss(btn.dataset.cookies === "accept" ? "accepted" : "rejected");
+  // -------- MODAL GRANULAR (gestión avanzada) --------
+  function showModal(state) {
+    const current = state || loadConsent() || DEFAULTS;
+
+    const html = `
+    <div class="cookies-modal" role="dialog" aria-labelledby="cookies-modal-title" aria-modal="true">
+      <div class="cookies-modal__overlay" data-cookies-close></div>
+      <div class="cookies-modal__panel">
+        <button class="cookies-modal__close" data-cookies-close aria-label="Cerrar">✕</button>
+        <h3 id="cookies-modal-title" class="cookies-modal__title">Cookies</h3>
+        <p class="cookies-modal__intro">Utilizamos cookies y tecnologías similares para habilitar los servicios y la funcionalidad de nuestro sitio y para comprender tu interacción con nuestro servicio.</p>
+
+        <div class="cookies-row">
+          <button class="cookies-row__header" data-cookies-toggle="functional">
+            <span class="cookies-row__name">Funcionales</span>
+            <span class="cookies-row__status cookies-row__status--always">Siempre activo</span>
+            <span class="cookies-row__caret" aria-hidden="true"></span>
+          </button>
+          <div class="cookies-row__body">
+            <p>Son imprescindibles para que el sitio funcione: sesión, idioma seleccionado, recuerdo de tu elección de cookies. No requieren consentimiento.</p>
+          </div>
+        </div>
+
+        <div class="cookies-row">
+          <button class="cookies-row__header" data-cookies-toggle="statistics">
+            <span class="cookies-row__name">Estadísticas</span>
+            <span class="cookies-switch ${current.statistics ? "is-on" : ""}" data-cookies-switch="statistics" role="switch" aria-checked="${current.statistics}" tabindex="0"><span class="cookies-switch__knob"></span></span>
+            <span class="cookies-row__caret" aria-hidden="true"></span>
+          </button>
+          <div class="cookies-row__body">
+            <p>Nos ayudan a entender de forma anónima cómo se usa el sitio (páginas visitadas, tiempo medio, dispositivos). Sin esto, no podemos mejorar la experiencia.</p>
+          </div>
+        </div>
+
+        <div class="cookies-row">
+          <button class="cookies-row__header" data-cookies-toggle="marketing">
+            <span class="cookies-row__name">Marketing</span>
+            <span class="cookies-switch ${current.marketing ? "is-on" : ""}" data-cookies-switch="marketing" role="switch" aria-checked="${current.marketing}" tabindex="0"><span class="cookies-switch__knob"></span></span>
+            <span class="cookies-row__caret" aria-hidden="true"></span>
+          </button>
+          <div class="cookies-row__body">
+            <p>Permiten mostrar contenido y mensajes relevantes para tus intereses. No las usamos por defecto.</p>
+          </div>
+        </div>
+
+        <div class="cookies-modal__actions">
+          <button class="btn btn--primary" data-cookies-action="accept-all"><span>Acepto</span></button>
+          <button class="btn btn--ghost" data-cookies-action="reject-all"><span>Descartar</span></button>
+          <button class="btn btn--primary" data-cookies-action="save"><span>Guardar preferencias</span></button>
+        </div>
+
+        <div class="cookies-modal__legal">
+          <a href="cookies.html">Política de cookies</a>
+          <a href="privacidad.html">Política de privacidad</a>
+          <a href="aviso-legal.html">Privacidad y términos legales</a>
+        </div>
+      </div>
+    </div>`;
+
+    const tmp = document.createElement("div");
+    tmp.innerHTML = html.trim();
+    const modal = tmp.firstChild;
+    document.body.appendChild(modal);
+    document.body.classList.add("is-cookies-modal");
+    requestAnimationFrame(() => modal.classList.add("is-visible"));
+
+    const local = Object.assign({}, current);
+
+    function close(persist) {
+      modal.classList.remove("is-visible");
+      document.body.classList.remove("is-cookies-modal");
+      setTimeout(() => modal.remove(), 350);
+      if (persist) showReopenChip();
+    }
+
+    // Toggles
+    modal.querySelectorAll("[data-cookies-switch]").forEach((sw) => {
+      const cat = sw.dataset.cookiesSwitch;
+      const toggle = () => {
+        local[cat] = !local[cat];
+        sw.classList.toggle("is-on", local[cat]);
+        sw.setAttribute("aria-checked", local[cat]);
+      };
+      sw.addEventListener("click", (e) => { e.stopPropagation(); toggle(); });
+      sw.addEventListener("keydown", (e) => {
+        if (e.key === " " || e.key === "Enter") { e.preventDefault(); toggle(); }
+      });
+    });
+
+    // Expand/collapse rows
+    modal.querySelectorAll("[data-cookies-toggle]").forEach((header) => {
+      header.addEventListener("click", (e) => {
+        // No expandir si el click viene del switch
+        if (e.target.closest("[data-cookies-switch]")) return;
+        const row = header.parentElement;
+        row.classList.toggle("is-open");
+      });
+    });
+
+    // Cerrar
+    modal.querySelectorAll("[data-cookies-close]").forEach((el) => {
+      el.addEventListener("click", () => close(false));
+    });
+
+    // Acciones inferiores
+    modal.querySelectorAll("[data-cookies-action]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const action = btn.dataset.cookiesAction;
+        if (action === "accept-all") {
+          saveConsent({ statistics: true, marketing: true });
+        } else if (action === "reject-all") {
+          saveConsent({ statistics: false, marketing: false });
+        } else if (action === "save") {
+          saveConsent(local);
+        }
+        close(true);
+      });
+    });
+  }
+
+  // -------- Chip flotante "Cookies" (cuando ya hay consentimiento)
+  function showReopenChip() {
+    if (document.querySelector(".cookies-chip")) return;
+    const chip = document.createElement("button");
+    chip.className = "cookies-chip";
+    chip.setAttribute("aria-label", "Configurar cookies");
+    chip.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="10" r="1.2" fill="currentColor"/><circle cx="14" cy="9" r="1" fill="currentColor"/><circle cx="15.5" cy="14" r="1.4" fill="currentColor"/><circle cx="10.5" cy="15" r="0.9" fill="currentColor"/></svg>`;
+    chip.addEventListener("click", () => showModal());
+    document.body.appendChild(chip);
+    requestAnimationFrame(() => chip.classList.add("is-visible"));
+  }
+
+  // Init
+  const stored = loadConsent();
+  if (!stored) {
+    showBanner();
+  } else {
+    showReopenChip();
+  }
+
+  // Hook global para enlaces "configurar cookies" en footer/legal
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest('[data-open-cookies]');
+    if (trigger) { e.preventDefault(); showModal(); }
   });
 })();
 
