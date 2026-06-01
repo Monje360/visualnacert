@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=39" />
+  <link rel="stylesheet" href="styles.css?v=40" />
 
   <!-- Schema.org Organization -->
   <script type="application/ld+json">
@@ -348,80 +348,82 @@
       </div>
     </section>
 
-    <!-- SOLUCIONES (pinned reveal) -->
-    <section class="solutions" id="soluciones">
+    <!-- SOLUCIONES — Anillo hexagonal con rotación al scroll -->
+    <section class="solutions solutions--ring" id="soluciones">
       <div class="solutions__bg"></div>
       <div class="container">
-        <div class="solutions__sticky">
-          <div class="solutions__intro">
-            <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> 03 — Plataforma</span>
-            <h3 class="solutions__title">Una plataforma. <em>Toda</em> la cadena de valor.</h3>
-            <p class="solutions__lead">Módulos integrados que comparten datos, modelos y agronomía. Activa lo que necesitas hoy, escala mañana. Diseñado para cooperativas, hortofrutícolas, industria de procesado, frío, bodegas y almazaras.</p>
-            <a href="demo.html" class="link-arrow link-arrow--light">Solicita demo <span>→</span></a>
-          </div>
 
-          <div class="solutions__list">
-            <article class="sol" data-reveal>
-              <div class="sol__top">
-                <span class="sol__num">01</span>
-                <span class="sol__tag">Núcleo IA</span>
-              </div>
-              <h4 class="sol__name">FertiPRO</h4>
-              <p class="sol__desc">Dosis precisas de nutrientes por parcela. Cumple el RD 1051/2022 con análisis de suelo y agua integrados.</p>
-              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
-            </article>
-
-            <article class="sol" data-reveal>
-              <div class="sol__top">
-                <span class="sol__num">02</span>
-                <span class="sol__tag">Datos</span>
-              </div>
-              <h4 class="sol__name">Visual Sensor</h4>
-              <p class="sol__desc">Red IoT propia para humedad, temperatura, conductividad y nutrientes. Decisiones de riego y fertilización en tiempo real.</p>
-              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
-            </article>
-
-            <article class="sol" data-reveal>
-              <div class="sol__top">
-                <span class="sol__num">03</span>
-                <span class="sol__tag">IA Predictiva</span>
-              </div>
-              <h4 class="sol__name">Riesgos Climáticos</h4>
-              <p class="sol__desc">Modelos que anticipan heladas, sequía y plagas. Reduce hasta un 35% el impacto operativo de eventos climáticos.</p>
-              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
-            </article>
-
-            <article class="sol" data-reveal>
-              <div class="sol__top">
-                <span class="sol__num">04</span>
-                <span class="sol__tag">Analytics</span>
-              </div>
-              <h4 class="sol__name">Visual Analytics</h4>
-              <p class="sol__desc">Cuadro de mando agronómico y financiero unificado. Toma decisiones con la misma información que tu CFO y tu técnico.</p>
-              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
-            </article>
-
-            <article class="sol" data-reveal>
-              <div class="sol__top">
-                <span class="sol__num">05</span>
-                <span class="sol__tag">Operación</span>
-              </div>
-              <h4 class="sol__name">Enterprise Suite</h4>
-              <p class="sol__desc">Gestión integral de compras, calidad y costes para grandes operadores agroindustriales.</p>
-              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
-            </article>
-
-            <article class="sol" data-reveal>
-              <div class="sol__top">
-                <span class="sol__num">06</span>
-                <span class="sol__tag">Sostenibilidad</span>
-              </div>
-              <h4 class="sol__name">CSRD Report</h4>
-              <p class="sol__desc">Informes de sostenibilidad alineados con CSRD y los ODS. Cumple la nueva regulación sin fricción.</p>
-              <div class="sol__foot"><span>Explorar</span><span class="sol__arrow">→</span></div>
-            </article>
-          </div>
+        <div class="solutions__head">
+          <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> 03 — Plataforma</span>
+          <h3 class="solutions__title">Una plataforma. <em>Toda</em> la cadena de valor.</h3>
+          <p class="solutions__lead">Seis módulos que comparten datos, modelos y agronomía. Activa lo que necesitas hoy, escala mañana.</p>
+          <a href="demo.html" class="link-arrow link-arrow--light">Solicita demo <span>→</span></a>
         </div>
+
+        <!-- Anillo hexagonal: 6 hexes rotando alrededor del núcleo central.
+             El conjunto gira con scroll, los hexes individuales contra-rotan
+             para que el texto se mantenga legible. -->
+        <div class="hex-ring" id="hexRing">
+          <div class="hex-ring__core">
+            <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#m-nucleo"/></svg>
+            <span>Visual<br/>NACert</span>
+          </div>
+
+          <article class="hex-node" style="--n:0">
+            <div class="hex-node__inner">
+              <span class="hex-node__num">01</span>
+              <span class="hex-node__tag">Núcleo IA</span>
+              <h4>FertiPRO</h4>
+              <p>Dosis precisas por parcela. Cumple RD 1051/2022.</p>
+            </div>
+          </article>
+
+          <article class="hex-node" style="--n:1">
+            <div class="hex-node__inner">
+              <span class="hex-node__num">02</span>
+              <span class="hex-node__tag">Datos</span>
+              <h4>Visual Sensor</h4>
+              <p>Red IoT propia. Decisiones de riego en tiempo real.</p>
+            </div>
+          </article>
+
+          <article class="hex-node" style="--n:2">
+            <div class="hex-node__inner">
+              <span class="hex-node__num">03</span>
+              <span class="hex-node__tag">IA Predictiva</span>
+              <h4>Riesgos<br/>Climáticos</h4>
+              <p>Anticipa heladas, sequía y plagas. −35% impacto.</p>
+            </div>
+          </article>
+
+          <article class="hex-node" style="--n:3">
+            <div class="hex-node__inner">
+              <span class="hex-node__num">04</span>
+              <span class="hex-node__tag">Analytics</span>
+              <h4>Visual<br/>Analytics</h4>
+              <p>Cuadro de mando agronómico y financiero unificado.</p>
+            </div>
+          </article>
+
+          <article class="hex-node" style="--n:4">
+            <div class="hex-node__inner">
+              <span class="hex-node__num">05</span>
+              <span class="hex-node__tag">Operación</span>
+              <h4>Enterprise<br/>Suite</h4>
+              <p>Compras, calidad y costes para grandes operadores.</p>
+            </div>
+          </article>
+
+          <article class="hex-node" style="--n:5">
+            <div class="hex-node__inner">
+              <span class="hex-node__num">06</span>
+              <span class="hex-node__tag">Sostenibilidad</span>
+              <h4>CSRD<br/>Report</h4>
+              <p>Reporting CSRD y ODS sin fricción ni doble entrada.</p>
+            </div>
+          </article>
+        </div>
+
       </div>
     </section>
 
@@ -606,6 +608,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=39"></script>
+  <script src="script.js?v=40"></script>
 </body>
 </html>

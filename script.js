@@ -641,6 +641,32 @@ document.querySelectorAll(".scroller").forEach((scroller) => {
   });
 })();
 
+/* ---------- Hex Ring · rotación con scroll (Solutions) ----------
+   El anillo de 6 hexágonos gira alrededor del núcleo central
+   mientras se hace scroll por la sección. Cada nodo individual
+   contra-rota internamente para mantener el texto vertical
+   (eso lo hace el CSS con el transform compuesto). */
+(() => {
+  const ring = document.getElementById("hexRing");
+  if (!ring) return;
+  // Desactivar en mobile (CSS desactiva la transformación con !important)
+  const mq = window.matchMedia("(max-width: 760px)");
+  if (mq.matches) return;
+
+  ScrollTrigger.create({
+    trigger: ring.closest(".solutions"),
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: 1,
+    onUpdate: (self) => {
+      // Una vuelta completa (360°) repartida en todo el recorrido.
+      // El usuario percibe rotación clara sin marear.
+      const rot = self.progress * 360;
+      ring.style.setProperty("--ring-rot", rot + "deg");
+    },
+  });
+})();
+
 /* ---------- Resize handler ---------- */
 window.addEventListener("resize", () => {
   ScrollTrigger.refresh();
