@@ -114,9 +114,20 @@ button { font: inherit; cursor: none; border: none; background: none; color: inh
   top: 0;
   left: 0;
   pointer-events: none;
-  /* Por encima de cualquier modal/overlay (loader 10000, cookies-modal 10000) */
+  /* Por encima de cualquier modal/overlay (cookies-modal 10000),
+     pero NO durante el loader (10000) — se oculta mientras body
+     no tenga .is-ready (lo añade el JS al terminar la carga). */
   z-index: 10050;
   will-change: transform;
+  /* Estado inicial: oculto. Aparece al terminar el loader. */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s var(--ease), visibility 0.35s var(--ease);
+}
+body.is-ready .cursor,
+body.is-ready .cursor-dot {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Wrapper del cursor: un solo hexágono naranja del tamaño de un
@@ -125,8 +136,8 @@ button { font: inherit; cursor: none; border: none; background: none; color: inh
   width: 18px;
   height: 18px;
   transform: translate(-50%, -50%);
-  opacity: 1;
-  transition: opacity 0.2s var(--ease);
+  /* La opacity la gestiona el bloque .cursor,.cursor-dot de arriba
+     en función de body.is-ready (oculto durante el loader). */
   /* Drop-shadow sutil para legibilidad sobre cualquier fondo */
   filter:
     drop-shadow(0 1px 2px rgba(22, 20, 15, 0.35))
@@ -155,9 +166,11 @@ button { font: inherit; cursor: none; border: none; background: none; color: inh
   background: var(--orange);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.9;
+  /* La opacity la gestiona el bloque global en función de
+     body.is-ready (oculto durante el loader). */
   box-shadow: 0 0 6px rgba(253, 128, 29, 0.55);
 }
+body.is-ready .cursor-dot { opacity: 0.9; }
 
 @media (hover: none), (pointer: coarse) {
   body { cursor: auto; }
