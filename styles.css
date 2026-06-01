@@ -1168,151 +1168,135 @@ em {
 }
 .solutions__head .link-arrow--light { color: var(--orange); }
 
-/* ===== Grid hexagonal · estilo Apple/visionOS sobre fondo ink ===== */
-.hex-grid {
+/* ===== Grid Plataforma · cards rectangulares estilo Apple ===== */
+.platform-grid {
   position: relative;
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px 22px;
+  gap: 16px;
   max-width: 1120px;
   margin: 0 auto;
 }
-.hex-card {
+.platform-card {
   position: relative;
-  aspect-ratio: 1.12 / 1;
-  /* Para que los box-shadow exterior se vean (clip-path los recorta,
-     usamos filter:drop-shadow al wrapper) */
-  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.45));
-  transition: filter 0.5s var(--ease), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.hex-card__inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  /* Hexágono flat-top (idéntico al isotipo del logo) */
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  /* Gradient diagonal sutil: ligeramente más claro arriba-izquierda,
-     más profundo abajo-derecha. Da sensación de superficie 3D
-     iluminada desde arriba, sin saturar. */
+  padding: 38px 34px 34px;
+  min-height: 280px;
+  border-radius: 22px;
+  color: var(--linen);
+  overflow: hidden;
+  /* Glassmorphism sutil sobre fondo ink: ligeramente más claro
+     arriba-izquierda, neutro al centro, profundo abajo-derecha. */
   background:
     linear-gradient(160deg,
-      rgba(255, 255, 255, 0.045) 0%,
-      rgba(255, 255, 255, 0.015) 38%,
-      rgba(0, 0, 0, 0.20) 100%);
+      rgba(255, 255, 255, 0.055) 0%,
+      rgba(255, 255, 255, 0.018) 40%,
+      rgba(0, 0, 0, 0.18) 100%);
+  /* Borde "lit" Apple: highlight 1px arriba + outline general fino
+     + sombra exterior profunda para flotar sobre el fondo. */
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 18px 30px rgba(0, 0, 0, 0.42);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 14% 14% 13%;
-  gap: 5px;
-  color: var(--linen);
-  transition: background 0.5s var(--ease);
+  gap: 4px;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s var(--ease),
+    background 0.5s var(--ease);
 }
 
-/* Borde "lit": un trazo claro arriba y un trazo oscuro abajo,
-   simulado con dos inset shadows. Sensación cristal Apple. */
-.hex-card__inner::before {
+/* Glow naranja sutil que sube desde abajo en hover (pseudo) */
+.platform-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  clip-path: inherit;
   pointer-events: none;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.10),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
-    inset 0 -40px 60px rgba(0, 0, 0, 0.25);
-}
-
-/* Glow naranja sutil que aparece desde abajo en hover */
-.hex-card__inner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  clip-path: inherit;
-  pointer-events: none;
-  background: radial-gradient(60% 50% at 50% 100%,
-    rgba(253, 128, 29, 0.0) 0%,
-    rgba(253, 128, 29, 0.0) 60%,
-    rgba(253, 128, 29, 0.0) 100%);
+  border-radius: inherit;
+  background: radial-gradient(70% 50% at 50% 110%,
+    transparent 0%,
+    transparent 100%);
   transition: background 0.5s var(--ease);
+  z-index: 0;
 }
-.hex-card:hover { transform: translateY(-4px); filter: drop-shadow(0 28px 44px rgba(0, 0, 0, 0.55)); }
-.hex-card:hover .hex-card__inner {
+.platform-card > * { position: relative; z-index: 1; }
+
+.platform-card:hover {
+  transform: translateY(-4px);
   background:
     linear-gradient(160deg,
-      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.085) 0%,
       rgba(255, 255, 255, 0.02) 40%,
-      rgba(0, 0, 0, 0.18) 100%);
+      rgba(0, 0, 0, 0.16) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 0 0 1px rgba(253, 128, 29, 0.42),
+    0 28px 44px rgba(0, 0, 0, 0.5);
 }
-.hex-card:hover .hex-card__inner::after {
-  background: radial-gradient(60% 50% at 50% 100%,
-    rgba(253, 128, 29, 0.32) 0%,
-    rgba(253, 128, 29, 0.10) 45%,
-    transparent 75%);
+.platform-card:hover::after {
+  background: radial-gradient(70% 50% at 50% 110%,
+    rgba(253, 128, 29, 0.28) 0%,
+    rgba(253, 128, 29, 0.06) 50%,
+    transparent 80%);
 }
 
-/* Tipografía dentro del hex */
-.hex-card__num {
+/* Tipografía */
+.platform-card__num {
   font-family: var(--font-mono);
-  font-size: 10.5px;
+  font-size: 11px;
   letter-spacing: 0.18em;
   color: var(--orange);
   font-weight: 500;
-  opacity: 0.85;
-  margin-bottom: 6px;
+  opacity: 0.9;
+  margin-bottom: 8px;
 }
-.hex-card h4 {
+.platform-card h4 {
   font-family: var(--font-display);
-  font-size: clamp(18px, 1.65vw, 24px);
+  font-size: clamp(20px, 1.85vw, 28px);
   font-weight: 500;
   letter-spacing: -0.022em;
   line-height: 1.1;
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   color: #fff;
-  max-width: 82%;
 }
-.hex-card__tag {
+.platform-card__tag {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 10.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(243, 237, 224, 0.42);
-  margin-bottom: 12px;
+  color: rgba(243, 237, 224, 0.45);
+  padding-bottom: 16px;
+  margin-bottom: 4px;
   position: relative;
-  padding-bottom: 12px;
+  display: inline-block;
 }
-.hex-card__tag::after {
-  /* Línea hairline divisoria estilo Apple */
+.platform-card__tag::after {
+  /* Hairline divisor estilo Apple */
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 28px;
   height: 1px;
   background: rgba(243, 237, 224, 0.18);
 }
-.hex-card p {
-  font-size: clamp(12px, 0.92vw, 13.5px);
-  line-height: 1.5;
-  color: rgba(243, 237, 224, 0.66);
-  margin: 0;
-  max-width: 80%;
+.platform-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(243, 237, 224, 0.72);
+  margin: 6px 0 0;
 }
 
-@media (max-width: 760px) {
-  .hex-grid { grid-template-columns: 1fr 1fr; gap: 14px 12px; max-width: 560px; }
-  .hex-card { aspect-ratio: 1.05 / 1; filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.4)); }
-  .hex-card__inner { padding: 14% 12% 13%; gap: 3px; }
-  .hex-card h4 { font-size: 16px; }
-  .hex-card__tag { margin-bottom: 8px; padding-bottom: 8px; }
-  .hex-card p { font-size: 11.5px; line-height: 1.45; }
+@media (max-width: 880px) {
+  .platform-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .platform-card { min-height: 240px; padding: 30px 26px 26px; }
+  .platform-card h4 { font-size: 20px; }
 }
-@media (max-width: 420px) {
-  .hex-grid { grid-template-columns: 1fr; max-width: 340px; }
-  .hex-card { aspect-ratio: 1.2 / 1; }
+@media (max-width: 480px) {
+  .platform-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .platform-card { min-height: 200px; padding: 28px 24px 24px; }
+  .platform-card p { font-size: 13.5px; }
 }
 
 /* ============================================
