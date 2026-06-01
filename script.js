@@ -54,7 +54,6 @@ document.querySelectorAll("a, button, .sector, .sol, .step").forEach((el) => {
 
 /* ---------- Loader ---------- */
 const loader = document.getElementById("loader");
-const loaderFill = loader.querySelector(".loader__bar-fill");
 const loaderCount = loader.querySelector(".loader__count");
 
 let p = 0;
@@ -65,7 +64,6 @@ const loaderInterval = setInterval(() => {
     clearInterval(loaderInterval);
     finishLoader();
   }
-  loaderFill.style.transform = `scaleX(${p / 100})`;
   loaderCount.textContent = `${Math.floor(p)}`;
 }, 110);
 

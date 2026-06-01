@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=29" />
+  <link rel="stylesheet" href="styles.css?v=30" />
 </head>
 <body>
   <!-- Brand mark — referenciable como <use href="#m-nucleo"/> -->
@@ -55,8 +55,15 @@
 
   <div class="loader" id="loader">
     <div class="loader__inner">
-      <div class="loader__logo"><span class="visual">Visual</span><span class="nacert">NACert</span></div>
-      <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+      <svg class="loader__mark" viewBox="0 0 200 200" aria-hidden="true">
+        <polygon class="loader-hex" style="--i:0" points="60,50 50,67.32 30,67.32 20,50 30,32.68 50,32.68"/>
+        <polygon class="loader-hex" style="--i:1" points="180,50 170,67.32 150,67.32 140,50 150,32.68 170,32.68"/>
+        <polygon class="loader-hex" style="--i:2" points="90,95 80,112.32 60,112.32 50,95 60,77.68 80,77.68"/>
+        <polygon class="loader-hex" style="--i:3" points="150,95 140,112.32 120,112.32 110,95 120,77.68 140,77.68"/>
+        <polygon class="loader-hex loader-hex--center" style="--i:4" points="120,145 110,162.32 90,162.32 80,145 90,127.68 110,127.68"/>
+        <circle class="loader-dot" cx="100" cy="145" r="5"/>
+      </svg>
+      <div class="loader__wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></div>
       <div class="loader__count">0</div>
     </div>
   </div>
@@ -343,6 +350,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=29"></script>
+  <script src="script.js?v=30"></script>
 </body>
 </html>
