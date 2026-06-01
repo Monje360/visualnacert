@@ -600,7 +600,7 @@ em {
   z-index: 0;
   /* Anti-rural: menos saturación, más contraste, más oscuro
      para que el texto cream/blanco respire encima del vídeo. */
-  filter: saturate(0.62) contrast(1.12) brightness(0.7);
+  filter: saturate(0.62) contrast(1.12) brightness(0.6);
   transform: scale(1.04); /* evita borde si el filter genera bordes raros */
 }
 
