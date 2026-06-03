@@ -1342,7 +1342,10 @@ em {
    PROCESS
    ============================================ */
 .process {
-  background: var(--paper);
+  /* Fondo cream warm para que las step cards blancas/glass
+     destaquen y se genere un "cambio de modo" claro tras la
+     sección Plataforma (ink). */
+  background: var(--cream);
   padding: 140px 0 160px;
 }
 .process__head {
@@ -1367,51 +1370,114 @@ em {
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
+/* Step cards · misma estética glass que .platform-card pero
+   en modo claro sobre fondo paper/cream. */
 .step {
-  background: var(--linen);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 32px 28px 36px;
+  position: relative;
+  padding: 38px 32px 34px;
+  min-height: 280px;
+  border-radius: 22px;
+  color: var(--ink);
+  overflow: hidden;
+  /* Glass claro: blanco con tinte mist en la diagonal opuesta */
+  background:
+    linear-gradient(160deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.78) 45%,
+      rgba(233, 228, 217, 0.55) 100%);
+  /* Highlight superior + outline interna fina + sombra exterior */
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 0 1px rgba(22, 20, 15, 0.06),
+    0 18px 30px rgba(22, 20, 15, 0.07);
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  transition: background 0.4s var(--ease), color 0.4s var(--ease), transform 0.4s var(--ease);
+  gap: 4px;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s var(--ease),
+    background 0.5s var(--ease);
 }
+
+/* Glow naranja sutil desde abajo en hover */
+.step::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(70% 50% at 50% 110%,
+    transparent 0%,
+    transparent 100%);
+  transition: background 0.5s var(--ease);
+  z-index: 0;
+}
+.step > * { position: relative; z-index: 1; }
+
 .step:hover {
-  background: var(--ink);
-  color: #fff;
   transform: translateY(-4px);
+  background:
+    linear-gradient(160deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 250, 240, 0.95) 45%,
+      rgba(255, 231, 206, 0.5) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 0 0 1px rgba(253, 128, 29, 0.42),
+    0 28px 44px rgba(253, 128, 29, 0.14);
 }
-.step:hover .step__num { color: rgba(255, 255, 255, 0.5); }
-.step:hover p { color: rgba(255, 255, 255, 0.7); }
+.step:hover::after {
+  background: radial-gradient(70% 50% at 50% 110%,
+    rgba(253, 128, 29, 0.14) 0%,
+    rgba(253, 128, 29, 0.04) 50%,
+    transparent 80%);
+}
 
 .step__num {
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--mute);
+  letter-spacing: 0.18em;
+  color: var(--orange);
+  font-weight: 500;
+  opacity: 0.9;
+  margin-bottom: 12px;
 }
 .step__icon {
-  width: 64px;
-  height: 56px;
+  width: 56px;
+  height: 50px;
   display: block;
   color: var(--ink);
-  margin: 12px 0 32px;
+  margin: 4px 0 24px;
   overflow: visible;
-  transition: color 0.4s var(--ease);
+  transition: transform 0.5s var(--ease);
 }
-.step:hover .step__icon { color: #fff; }
+.step:hover .step__icon { transform: scale(1.06); }
 .step h4 {
-  font-size: 24px;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 1.85vw, 26px);
   font-weight: 500;
-  letter-spacing: -0.02em;
-  margin-bottom: 4px;
+  letter-spacing: -0.022em;
+  line-height: 1.1;
+  margin: 0 0 14px;
+  padding-bottom: 14px;
+  position: relative;
+  color: var(--ink);
+}
+.step h4::after {
+  /* Hairline divisor estilo Apple, consistente con .platform-card */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 1px;
+  background: rgba(22, 20, 15, 0.18);
 }
 .step p {
   font-size: 14px;
   line-height: 1.55;
   color: var(--mute);
-  transition: color 0.4s var(--ease);
+  margin: 0;
 }
 @media (max-width: 960px) {
   .process__row { grid-template-columns: repeat(2, 1fr); }
