@@ -3570,6 +3570,18 @@ svg.store-badge__icon { display: block; }
    NAV DROPDOWN — "Plataforma" submenu
    ============================================ */
 .nav__dropdown { position: relative; display: inline-flex; align-items: center; }
+/* Bridge invisible debajo del toggle: extiende el área de hover
+   sobre el gap entre el toggle y el menú, evitando que el menú se
+   cierre cuando el cursor cruza el hueco. */
+.nav__dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  right: -10px;
+  height: 22px;
+  pointer-events: auto;
+}
 .nav__dropdown-toggle {
   display: inline-flex;
   align-items: center;
