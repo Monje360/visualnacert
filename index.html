@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=72" />
+  <link rel="stylesheet" href="styles.css?v=73" />
 
   <!-- Schema.org Organization -->
   <script type="application/ld+json">
@@ -423,7 +423,8 @@
           <div class="step" data-reveal>
             <span class="step__num">01</span>
             <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
-              <polygon points="20,0 10,0 0,17.32 10,34.64 20,34.64" fill="var(--orange)"/>
+              <!-- 25% · cuarto superior derecho (centro → top-mid → top-right → right) -->
+              <polygon points="20,17.32 20,0 30,0 40,17.32" fill="var(--orange)"/>
               <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
             </svg>
             <h4>Capturar</h4>
@@ -432,7 +433,8 @@
           <div class="step" data-reveal>
             <span class="step__num">02</span>
             <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
-              <polygon points="20,0 30,0 40,17.32 30,34.64 20,34.64" fill="var(--orange)"/>
+              <!-- 50% · mitad derecha completa (Q1 + Q2 en sentido horario) -->
+              <polygon points="20,17.32 20,0 30,0 40,17.32 30,34.64 20,34.64" fill="var(--orange)"/>
               <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
             </svg>
             <h4>Aprender</h4>
@@ -441,7 +443,8 @@
           <div class="step" data-reveal>
             <span class="step__num">03</span>
             <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
-              <polygon points="0,17.32 40,17.32 30,34.64 10,34.64" fill="var(--orange)"/>
+              <!-- 75% · todo el hex MENOS el cuarto superior izquierdo -->
+              <polygon points="20,17.32 20,0 30,0 40,17.32 30,34.64 10,34.64 0,17.32" fill="var(--orange)"/>
               <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
             </svg>
             <h4>Recomendar</h4>
@@ -450,7 +453,8 @@
           <div class="step" data-reveal>
             <span class="step__num">04</span>
             <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
-              <polygon points="0,17.32 10,0 30,0 40,17.32" fill="var(--orange)"/>
+              <!-- 100% · hexágono completo relleno -->
+              <polygon points="10,0 30,0 40,17.32 30,34.64 10,34.64 0,17.32" fill="var(--orange)"/>
               <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
             </svg>
             <h4>Medir</h4>
@@ -589,6 +593,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=72"></script>
+  <script src="script.js?v=73"></script>
 </body>
 </html>
