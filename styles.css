@@ -3691,17 +3691,20 @@ svg.store-badge__icon { display: block; }
   margin-top: 4px;
   padding: 12px 14px !important;
   text-align: center;
-  background: var(--ink);
+  background: var(--orange) !important;
   color: #fff !important;
   border-radius: 10px;
   font-size: 13px !important;
   letter-spacing: 0.02em;
-  font-weight: 500;
-  transition: background 0.2s var(--ease);
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(253, 128, 29, 0.25);
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
 .nav__dropdown-cta:hover {
-  background: var(--orange) !important;
+  background: var(--ink) !important;
   color: #fff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(22, 20, 15, 0.28);
 }
 @media (max-width: 720px) {
   .nav__dropdown-menu--mega { min-width: 320px; grid-template-columns: 1fr; }
