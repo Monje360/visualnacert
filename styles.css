@@ -1591,6 +1591,18 @@ em {
 .sector:hover { transform: scale(0.98); }
 .sector:hover::after { opacity: 1; }
 
+/* Variante sin foto: gradient brand + isotipo grabado */
+.sector--alt {
+  background: var(--grad-ink, linear-gradient(135deg, #1c1a14 0%, #2a2620 100%));
+}
+.sector--alt::before {
+  background: linear-gradient(180deg, rgba(253, 128, 29, 0.10) 0%, rgba(10, 12, 8, 0.55) 70%, rgba(10, 12, 8, 0.95) 100%);
+}
+.sector--alt .sector__name {
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
 .sector__name {
   position: relative;
   z-index: 2;
