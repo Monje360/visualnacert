@@ -2011,6 +2011,13 @@ em {
   max-width: 900px;
 }
 .section__title em { color: var(--orange); font-weight: 500; }
+.section__lead {
+  max-width: 760px;
+  margin: -32px 0 56px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink-soft, #555);
+}
 
 /* ============================================
    CONTACTO
