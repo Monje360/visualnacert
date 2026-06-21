@@ -674,3 +674,50 @@ window.addEventListener("resize", () => {
   window.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", update);
 })();
+
+/* ============================================
+   CULTIVOS · preview lateral con hover + parallax
+   ============================================ */
+(function cultivosPreview() {
+  const list = document.querySelector(".cultivos__list");
+  const preview = document.querySelector(".cultivos__preview");
+  if (!list || !preview) return;
+
+  const img = preview.querySelector(".cultivos__preview-img");
+  const rows = list.querySelectorAll(".cultivo-row");
+  let activeImg = img.style.backgroundImage || "";
+
+  rows.forEach((row) => {
+    row.addEventListener("mouseenter", () => {
+      const src = row.getAttribute("data-img");
+      if (src) {
+        const url = `url('${src}')`;
+        if (url !== activeImg) {
+          img.style.backgroundImage = url;
+          activeImg = url;
+        }
+        preview.classList.remove("is-empty");
+      } else {
+        preview.classList.add("is-empty");
+      }
+    });
+  });
+
+  // Parallax sutil mientras se hace scroll dentro de la sección
+  const section = document.querySelector(".cultivos");
+  if (section) {
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const r = section.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const progress = Math.max(-1, Math.min(1, (vh / 2 - (r.top + r.height / 2)) / (vh / 2 + r.height / 2)));
+        img.style.transform = `translateY(${progress * 6}%)`;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+})();

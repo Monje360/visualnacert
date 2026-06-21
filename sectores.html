@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=89" />
+  <link rel="stylesheet" href="styles.css?v=90" />
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -140,52 +140,74 @@
       </div>
     </section>
 
-    <!-- 9 CULTIVOS -->
-    <section class="sectors" id="cultivos">
+    <!-- 9 CULTIVOS · índice editorial -->
+    <section class="cultivos" id="cultivos">
       <div class="container">
-        <div class="sectors__head">
+        <div class="section__head">
           <span class="eyebrow"><span class="eyebrow__dot"></span> 01 — Cultivos</span>
-          <h2 class="sectors__title">Nueve cultivos, <em>nueve agronomías</em> distintas.</h2>
-          <p class="section__lead" style="margin: 24px 0 0;">Cada uno con módulo especializado: ciclo, plagas, enfermedades, ventanas óptimas y normativa específica. Los modelos los entrenamos con datos reales de cada cultivo — no con una receta genérica.</p>
+          <h2 class="section__title">Nueve cultivos, <em>nueve agronomías</em>.</h2>
         </div>
-        <div class="sectors__grid">
-          <a href="demo.html" class="sector" id="vina" data-reveal style="background-image: url('img/sectors/viticultura.jpg')">
-            <span class="sector__name">Viña</span>
-            <span class="sector__meta">+850K ha</span>
-          </a>
-          <a href="demo.html" class="sector" id="citricos" data-reveal style="background-image: url('img/sectors/citrico.jpg')">
-            <span class="sector__name">Cítricos</span>
-            <span class="sector__meta">DO/IGP</span>
-          </a>
-          <a href="demo.html" class="sector sector--alt" id="extensivo" data-reveal>
-            <span class="sector__name">Cultivo extensivo</span>
-            <span class="sector__meta">Cereales · oleaginosas</span>
-          </a>
-          <a href="demo.html" class="sector" id="horticolas" data-reveal style="background-image: url('img/sectors/horticultura.jpg')">
-            <span class="sector__name">Hortícolas</span>
-            <span class="sector__meta">Intensivo</span>
-          </a>
-          <a href="demo.html" class="sector sector--alt" id="tropical" data-reveal>
-            <span class="sector__name">Fruta tropical</span>
-            <span class="sector__meta">Aguacate · mango</span>
-          </a>
-          <a href="demo.html" class="sector" id="hueso" data-reveal style="background-image: url('img/sectors/fruticultura.jpg')">
-            <span class="sector__name">Fruta de hueso</span>
-            <span class="sector__meta">Melocotón · ciruela</span>
-          </a>
-          <a href="demo.html" class="sector sector--alt" id="tuberculos" data-reveal>
-            <span class="sector__name">Tubérculos</span>
-            <span class="sector__meta">Patata · zanahoria</span>
-          </a>
-          <a href="demo.html" class="sector" id="olivar" data-reveal style="background-image: url('img/sectors/olivar.jpg')">
-            <span class="sector__name">Olivar</span>
-            <span class="sector__meta">Tradicional · intensivo</span>
-          </a>
-          <a href="demo.html" class="sector" id="frutosecos" data-reveal style="background-image: url('img/sectors/frutoseco.jpg')">
-            <span class="sector__name">Frutos secos</span>
-            <span class="sector__meta">Almendra · pistacho</span>
-          </a>
-        </div>
+        <p class="section__lead">Cada uno con módulo especializado: ciclo, plagas, enfermedades, ventanas óptimas y normativa específica. Los modelos los entrenamos con datos reales de cada cultivo — no con una receta genérica.</p>
+      </div>
+
+      <div class="cultivos__layout container">
+        <ol class="cultivos__list">
+          <li><a class="cultivo-row" href="demo.html" id="vina" data-img="img/sectors/viticultura.jpg">
+            <span class="cultivo-row__num">01</span>
+            <span class="cultivo-row__name">Viña</span>
+            <span class="cultivo-row__meta">+850K ha</span>
+          </a></li>
+          <li><a class="cultivo-row" href="demo.html" id="citricos" data-img="img/sectors/citrico.jpg">
+            <span class="cultivo-row__num">02</span>
+            <span class="cultivo-row__name">Cítricos</span>
+            <span class="cultivo-row__meta">DO/IGP</span>
+          </a></li>
+          <li><a class="cultivo-row" href="demo.html" id="extensivo" data-img="">
+            <span class="cultivo-row__num">03</span>
+            <span class="cultivo-row__name">Cultivo extensivo</span>
+            <span class="cultivo-row__meta">Cereales · oleaginosas</span>
+          </a></li>
+          <li><a class="cultivo-row" href="demo.html" id="horticolas" data-img="img/sectors/horticultura.jpg">
+            <span class="cultivo-row__num">04</span>
+            <span class="cultivo-row__name">Hortícolas</span>
+            <span class="cultivo-row__meta">Intensivo</span>
+          </a></li>
+          <li><a class="cultivo-row" href="demo.html" id="tropical" data-img="">
+            <span class="cultivo-row__num">05</span>
+            <span class="cultivo-row__name">Fruta tropical</span>
+            <span class="cultivo-row__meta">Aguacate · mango</span>
+          </a></li>
+          <li><a class="cultivo-row" href="demo.html" id="hueso" data-img="img/sectors/fruticultura.jpg">
+            <span class="cultivo-row__num">06</span>
+            <span class="cultivo-row__name">Fruta de hueso</span>
+            <span class="cultivo-row__meta">Melocotón · ciruela</span>
+          </a></li>
+          <li><a class="cultivo-row" href="demo.html" id="tuberculos" data-img="">
+            <span class="cultivo-row__num">07</span>
+            <span class="cultivo-row__name">Tubérculos</span>
+            <span class="cultivo-row__meta">Patata · zanahoria</span>
+          </a></li>
+          <li><a class="cultivo-row" href="demo.html" id="olivar" data-img="img/sectors/olivar.jpg">
+            <span class="cultivo-row__num">08</span>
+            <span class="cultivo-row__name">Olivar</span>
+            <span class="cultivo-row__meta">+1.7M ha</span>
+          </a></li>
+          <li><a class="cultivo-row" href="demo.html" id="frutosecos" data-img="img/sectors/frutoseco.jpg">
+            <span class="cultivo-row__num">09</span>
+            <span class="cultivo-row__name">Frutos secos</span>
+            <span class="cultivo-row__meta">Almendra · pistacho</span>
+          </a></li>
+        </ol>
+
+        <aside class="cultivos__preview" aria-hidden="true">
+          <div class="cultivos__preview-stage">
+            <div class="cultivos__preview-img" style="background-image: url('img/sectors/viticultura.jpg')"></div>
+            <div class="cultivos__preview-fallback">
+              <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#m-nucleo"/></svg>
+            </div>
+          </div>
+          <span class="cultivos__preview-label">Pasa el cursor sobre cada cultivo</span>
+        </aside>
       </div>
     </section>
 
@@ -336,6 +358,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=89"></script>
+  <script src="script.js?v=90"></script>
 </body>
 </html>
