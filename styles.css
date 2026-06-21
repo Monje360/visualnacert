@@ -1603,6 +1603,42 @@ em {
   font-style: italic;
 }
 
+/* Variante scroll horizontal · selector compacto */
+.sectors--scroll .sectors__head { margin-bottom: 48px; }
+.sectors__scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: max(24px, calc((100vw - 1280px) / 2 + 24px));
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+.sectors__scroller::-webkit-scrollbar { display: none; }
+.sectors__track {
+  display: flex;
+  gap: 14px;
+  padding: 0 max(24px, calc((100vw - 1280px) / 2 + 24px));
+}
+.sector--mini {
+  flex: 0 0 240px;
+  aspect-ratio: 3 / 4;
+  scroll-snap-align: start;
+  padding: 20px;
+}
+.sector--mini .sector__name {
+  font-size: clamp(20px, 2vw, 26px);
+}
+.sector--mini .sector__meta {
+  top: 16px;
+  right: 16px;
+  font-size: 10px;
+  padding: 5px 8px;
+}
+@media (max-width: 720px) {
+  .sector--mini { flex-basis: 200px; }
+}
+
 .sector__name {
   position: relative;
   z-index: 2;
