@@ -1735,64 +1735,62 @@ em {
    ============================================ */
 .footer__seals {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  margin-top: 56px;
-  padding: 40px 36px;
+  gap: 28px;
+  margin: 48px auto 0;
+  max-width: 760px;
+  padding: 18px 28px;
   background: var(--orange);
-  border-radius: 18px;
+  border-radius: 12px;
   overflow: hidden;
 }
 .footer__seals::before {
   content: "Avalado por";
   position: absolute;
-  top: 14px;
-  left: 24px;
+  top: 6px;
+  left: 12px;
   font-family: var(--font-mono, monospace);
-  font-size: 10px;
-  letter-spacing: 0.18em;
+  font-size: 9px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.7);
 }
 .seal {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 96px;
 }
 .seal img {
-  max-height: 88px;
-  max-width: 100%;
+  max-height: 44px;
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
 }
-/* Logos rasterizados a color (PYME, Nación Emprendedora): card crema
-   para que respiren sobre el naranja sin pelearse con sus colores */
+/* Logos rasterizados a color (PYME, Nación Emprendedora): card blanca
+   compacta para que respiren sobre el naranja */
 .seal:nth-child(1) img,
 .seal:nth-child(2) img {
   background: #FFFFFF;
-  padding: 10px 14px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(22, 20, 15, 0.10);
+  padding: 5px 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(22, 20, 15, 0.08);
 }
-.seal:nth-child(2) img { max-height: 56px; }
-/* Logo Generalitat-IVF ya es blanco transparente: sin card sobre el naranja */
-.seal:nth-child(3) img {
-  max-height: 52px;
-}
+.seal:nth-child(1) img { max-height: 52px; }
+.seal:nth-child(2) img { max-height: 32px; }
+/* Logo Generalitat-IVF ya es blanco transparente: sin card */
+.seal:nth-child(3) img { max-height: 30px; }
+
 @media (max-width: 880px) {
   .footer__seals {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding: 44px 24px 28px;
-    border-radius: 14px;
+    gap: 18px;
+    padding: 22px 18px 14px;
+    border-radius: 10px;
   }
-  .footer__seals::before { left: 20px; top: 16px; }
-  .seal { min-height: 0; }
+  .footer__seals::before { left: 14px; top: 8px; }
 }
 
 /* Variante scroll horizontal · selector compacto */
