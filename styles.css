@@ -1603,6 +1603,67 @@ em {
   font-style: italic;
 }
 
+/* ============================================
+   FOOTER · banda de reconocimientos
+   ============================================ */
+.footer__seals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 56px;
+  padding: 28px 0;
+  border-top: 1px solid rgba(245, 241, 234, 0.10);
+  border-bottom: 1px solid rgba(245, 241, 234, 0.10);
+}
+.seal {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 4px 0;
+}
+.seal__mark {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  color: var(--orange);
+  margin-top: 2px;
+}
+.seal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.seal__cat {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  opacity: 0.85;
+}
+.seal__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--linen, #F5F1EA);
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+}
+.seal__org,
+.seal__valid {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: rgba(245, 241, 234, 0.62);
+}
+.seal__valid {
+  font-family: var(--font-mono, monospace);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+@media (max-width: 880px) {
+  .footer__seals { grid-template-columns: 1fr; gap: 22px; }
+}
+
 /* Variante scroll horizontal · selector compacto */
 .sectors--scroll .sectors__head { margin-bottom: 48px; }
 .sectors__scroller {
