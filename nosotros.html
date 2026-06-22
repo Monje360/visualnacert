@@ -31,6 +31,63 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=93" />
+
+  <!-- Schema.org AboutPage + Person founders -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "url": "https://visualnacert.vercel.app/nosotros.html",
+        "name": "Nosotros — VisualNACert",
+        "description": "Historia, fundadoras y equipo de VisualNACert. Diez años aplicando IA al sector agroalimentario desde Valencia.",
+        "inLanguage": "es-ES",
+        "about": {
+          "@id": "https://visualnacert.vercel.app/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://visualnacert.vercel.app/nosotros.html#lucia-iborra",
+        "name": "Lucía Iborra",
+        "jobTitle": "Cofundadora",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "VisualNACert"
+        },
+        "knowsAbout": [
+          "Inteligencia artificial",
+          "Sector agroalimentario",
+          "Gestión de explotaciones"
+        ],
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "NormaAgrícola"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://visualnacert.vercel.app/nosotros.html#mercedes-iborra",
+        "name": "Mercedes Iborra",
+        "jobTitle": "Cofundadora",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "VisualNACert"
+        },
+        "knowsAbout": [
+          "Sector agroalimentario",
+          "Certificación agraria",
+          "Sostenibilidad"
+        ],
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "NormaAgrícola"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Brand mark — referenciable como <use href="#m-nucleo"/> -->

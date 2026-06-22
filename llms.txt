@@ -1,0 +1,96 @@
+# VisualNACert
+
+> Plataforma de gestión de datos en campo construida sobre IA para el sector agroalimentario. Diez años entrenando modelos con datos reales de campo en España.
+
+VisualNACert es la capa de inteligencia artificial del sector agroalimentario español. Diseñamos, entrenamos y operamos una plataforma que cubre el ciclo completo de la operación agrícola: conocimiento de parcela, gestión en campo, fertilización precisa, anticipación con IA, cumplimiento normativo, control de costes, registro de jornada, interoperabilidad y resiliencia ante catástrofes.
+
+No comercializamos modelos propios de IA. Entrenamos modelos con contexto agronómico propio y con los datos de cada cliente, para que la experiencia sea cada vez más precisa y personalizada. Toda la plataforma es multiplataforma (móvil, tablet, web · online y offline) y bidireccionalmente interoperable con ERP, CRM, BI, maquinaria y bases de datos externas.
+
+## Datos clave (2026)
+
+- 4M+ hectáreas digitalizadas en España
+- 400+ empresas clientes
+- 200K+ usuarios activos en la plataforma
+- 10+ años aplicando IA al sector agroalimentario
+- Fundada en 2014, sede en Rafelbunyol (Valencia, España)
+- Equipo fundador: Lucía Iborra y Mercedes Iborra, tras 15 años en NormaAgrícola (entidad de certificación ENAC)
+
+## Apps / productos
+
+- [Visual](https://visualnacert.vercel.app/visual-app.html): el núcleo de la plataforma. Cuaderno de campo, mapas de decisión, SIGPAC automático y captura desde cualquier parcela. Funciona online y offline.
+- [Sensor](https://visualnacert.vercel.app/ecosistema.html#sensor): red de sensores físicos y virtuales para suelo, planta y ambiente. Decisiones de riego y nutrición en tiempo real.
+- [Selphi](https://visualnacert.vercel.app/ecosistema.html#selphi): captura de fotos geolocalizadas con análisis automático por visión por computador. Detección temprana, validación de campo y trazabilidad visual.
+- [Academy](https://visualnacert.vercel.app/visual-academy.html): formación oficial con certificación. El conocimiento se queda en el equipo del cliente.
+- [FertiPRO](https://visualnacert.vercel.app/ecosistema.html#fertipro): cálculo de dosis de fertilización por parcela integrando análisis de suelo, agua y materia orgánica. Cumple el RD 1051/2022 sin trabajo extra.
+- [Agrovrain](https://visualnacert.vercel.app/ecosistema.html#agrovrain): previsión agroclimática de precisión, riesgos climáticos, recomendaciones de riego y ventanas óptimas para tratamientos.
+
+## Soluciones · lo que resolvemos
+
+1. **Conocimiento de parcela**: SIGPAC automático, mapas, fotos geolocalizadas, rutas, mediciones — online y offline.
+2. **Gestión en campo sin papel**: tratamientos, riegos, fertilizaciones, visitas, incidencias. Módulos especializados por especie (viña, cítricos, hortícolas, olivar, fruta de hueso, tropical, tubérculos, frutos secos y extensivos).
+3. **Fertilización precisa**: cálculo de dosis por parcela y cumplimiento RD 1051/2022.
+4. **Anticipación con IA**: imágenes Copernicus ESA cada 5 días, alertas push, previsión agroclimática por ubicación exacta y +2.000 estaciones climáticas con índices agronómicos.
+5. **Cumplimiento normativo automático**: Cuaderno de Campo Digital SIEX, gestión de purines, variedades protegidas y reporte CSRD (Directiva 2022/2464) generado desde los datos ya existentes.
+6. **Control de costes parcela a parcela**: insumos, mano de obra, maquinaria, partes de trabajo y cuadrillas.
+7. **Registro de jornada multiplataforma**: fichaje móvil/tablet/web, con o sin cobertura, biométrico opcional.
+8. **Interoperabilidad bidireccional**: API propia + integración con APIs de ERP, CRM, BI, maquinaria y bases de datos externas.
+9. **Resiliencia ante catástrofes**: evaluación rápida de daños georreferenciados y gestión de ayudas tras desastres naturales.
+
+## Cultivos con módulo especializado
+
+Viña · Cítricos · Cultivo extensivo (cereales, oleaginosas) · Hortícolas · Fruta tropical (aguacate, mango) · Fruta de hueso (melocotón, ciruela) · Tubérculos (patata, zanahoria) · Olivar · Frutos secos (almendra, pistacho).
+
+## Sectores de actividad
+
+Cooperativas agrícolas, hortofrutícolas, bodegas, almazaras, productores de frutos secos, gestores varietales, asesores agronómicos.
+
+## Cumplimiento normativo cubierto
+
+- **RD 1051/2022** (BOE) — Plan de fertilización y cuaderno digital
+- **CSRD · Directiva 2022/2464** — Sostenibilidad corporativa
+- **SIGPAC** (FEGA) — Catastro de parcelas
+- **SIEX** — Sistema de Información de Explotaciones agrarias
+- Gestión de purines y libros de fertilizantes
+- Variedades protegidas y licencias
+
+## Páginas clave del sitio
+
+- [Inicio](https://visualnacert.vercel.app/) — propuesta de valor y resumen del ecosistema
+- [Ecosistema · 6 apps + 9 soluciones](https://visualnacert.vercel.app/ecosistema.html) — catálogo completo de productos y soluciones
+- [Cultivos](https://visualnacert.vercel.app/sectores.html) — nueve cultivos con módulo especializado
+- [Clientes y casos de éxito](https://visualnacert.vercel.app/clientes.html) — más de 60 empresas listadas por sector
+- [Nosotros](https://visualnacert.vercel.app/nosotros.html) — historia, fundadoras, pilares, finca experimental
+- [Blog](https://visualnacert.vercel.app/blog.html) — análisis sobre IA aplicada al agro
+- [FAQ](https://visualnacert.vercel.app/faq.html) — preguntas frecuentes técnicas y comerciales
+- [Demo](https://visualnacert.vercel.app/demo.html) — solicitud de demo de 30 minutos
+- [Contacto](https://visualnacert.vercel.app/contacto.html) — direcciones y vías de contacto
+
+## Posts del blog
+
+- [IA en cooperativas hortofrutícolas](https://visualnacert.vercel.app/blog-ia-cooperativas-hortofruticolas.html)
+- [ROI de la IA en agroindustria](https://visualnacert.vercel.app/blog-roi-ia-agroindustria.html)
+- [Trazabilidad agroalimentaria automatizada](https://visualnacert.vercel.app/blog-trazabilidad-agroalimentaria.html)
+
+## Contacto
+
+- **Email general**: contacto@visualnacert.com
+- **Teléfono general**: +34 961 410 675
+- **Oficina**: Calle Mayor 41, 46138 Rafelbunyol, Valencia, España
+- **Dirección comercial**: María Luz Peñarrubia · mluz@visualnacert.com · +34 620 472 712
+- **Acceso clientes**: https://visual.visualnacert.com
+
+## Reconocimientos y financiación
+
+- **PYME Innovadora** — Ministerio de Ciencia, Innovación y Universidades (Gobierno de España). Vigencia 30/11/2025 — 29/11/2028.
+- **España Nación Emprendedora** — Alto Comisionado (Gobierno de España).
+- **Financiación pública**: Institut Valencià de Finances (IVF) · Generalitat Valenciana.
+
+## Términos clave para entender el dominio
+
+- **SIGPAC**: Sistema de Información Geográfica de Parcelas Agrícolas (FEGA, España).
+- **SIEX**: Sistema de Información de Explotaciones agrarias, ganaderas y de la producción agraria.
+- **RD 1051/2022**: Real Decreto sobre nutrición sostenible en suelos agrarios.
+- **CSRD**: Corporate Sustainability Reporting Directive (UE 2022/2464).
+- **Copernicus**: Programa europeo de observación de la Tierra (ESA).
+- **FertiPRO**: Producto propio de VisualNACert para fertilización precisa.
+- **Cuaderno de campo digital**: registro electrónico obligatorio de actividades agrarias.

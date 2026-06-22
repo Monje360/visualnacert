@@ -1,105 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- HOME -->
   <url>
     <loc>https://visualnacert.vercel.app/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- CORE -->
   <url>
-    <loc>https://visualnacert.vercel.app/soluciones.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://visualnacert.vercel.app/ecosistema.html</loc>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://visualnacert.vercel.app/sectores.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://visualnacert.vercel.app/clientes.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://visualnacert.vercel.app/demo.html</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://visualnacert.vercel.app/nosotros.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://visualnacert.vercel.app/demo.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://visualnacert.vercel.app/contacto.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://visualnacert.vercel.app/soluciones.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 
-  <!-- PLATAFORMA -->
+  <!-- APPS -->
   <url>
     <loc>https://visualnacert.vercel.app/visual-app.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://visualnacert.vercel.app/visual-lab.html</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://visualnacert.vercel.app/visual-academy.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.80</priority>
   </url>
 
   <!-- BLOG -->
   <url>
     <loc>https://visualnacert.vercel.app/blog.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://visualnacert.vercel.app/blog-ia-cooperativas-hortofruticolas.html</loc>
     <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://visualnacert.vercel.app/blog-trazabilidad-agroalimentaria.html</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://visualnacert.vercel.app/blog-roi-ia-agroindustria.html</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
 
   <!-- FAQ -->
   <url>
     <loc>https://visualnacert.vercel.app/faq.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.75</priority>
   </url>
 
   <!-- LEGAL -->
@@ -107,19 +106,19 @@
     <loc>https://visualnacert.vercel.app/aviso-legal.html</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.30</priority>
   </url>
   <url>
     <loc>https://visualnacert.vercel.app/privacidad.html</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.30</priority>
   </url>
   <url>
     <loc>https://visualnacert.vercel.app/cookies.html</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.30</priority>
   </url>
 
 </urlset>
