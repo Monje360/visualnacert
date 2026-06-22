@@ -1608,8 +1608,8 @@ em {
   background: linear-gradient(180deg, rgba(253, 128, 29, 0.10) 0%, rgba(10, 12, 8, 0.55) 70%, rgba(10, 12, 8, 0.95) 100%);
 }
 .sector--alt .sector__name {
-  font-family: var(--font-display);
-  font-style: italic;
+  font-family: inherit;
+  font-style: normal;
 }
 
 /* ============================================
