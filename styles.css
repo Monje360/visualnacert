@@ -1101,6 +1101,15 @@ em {
 @media (max-width: 540px) {
   .stats__grid { grid-template-columns: 1fr; }
 }
+.stats__source {
+  margin: 48px 0 0;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft, rgba(245, 241, 234, 0.4));
+  text-align: center;
+}
 
 /* ============================================
    LOGOS
@@ -2826,6 +2835,116 @@ em {
 }
 @media (max-width: 880px) {
   .founders-showcase { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* Bios detalladas E-E-A-T */
+.founders-bios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 64px;
+}
+.founder-bio {
+  background: var(--linen);
+  border-radius: 18px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid rgba(22, 20, 15, 0.06);
+}
+.founder-bio__head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(22, 20, 15, 0.08);
+}
+.founder-bio__role {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.founder-bio__head h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2vw, 28px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.founder-bio__facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.founder-bio__facts li {
+  font-size: 14.5px;
+  line-height: 1.5;
+  padding-left: 18px;
+  position: relative;
+  color: var(--ink);
+}
+.founder-bio__facts li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background: var(--orange);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.founder-bio__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink-soft, #555);
+  border-left: 2px solid var(--orange);
+  padding-left: 14px;
+  margin: 4px 0 0;
+}
+@media (max-width: 880px) {
+  .founders-bios { grid-template-columns: 1fr; gap: 18px; margin-top: 40px; }
+  .founder-bio { padding: 24px; }
+}
+
+/* Footer · fuentes oficiales con enlaces normativos */
+.footer__sources {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(245, 241, 234, 0.08);
+}
+.footer__sources-label {
+  display: block;
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 234, 0.55);
+  margin-bottom: 16px;
+}
+.footer__sources-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.footer__sources-list a {
+  font-size: 12px;
+  color: rgba(245, 241, 234, 0.6);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(245, 241, 234, 0.2);
+  padding-bottom: 1px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.footer__sources-list a:hover {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
 }
 
 .founders {
