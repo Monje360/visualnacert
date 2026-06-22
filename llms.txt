@@ -61,7 +61,8 @@ Cooperativas agrícolas, hortofrutícolas, bodegas, almazaras, productores de fr
 - [Clientes y casos de éxito](https://visualnacert.vercel.app/clientes.html) — más de 60 empresas listadas por sector
 - [Nosotros](https://visualnacert.vercel.app/nosotros.html) — historia, fundadoras, pilares, finca experimental
 - [Blog](https://visualnacert.vercel.app/blog.html) — análisis sobre IA aplicada al agro
-- [FAQ](https://visualnacert.vercel.app/faq.html) — preguntas frecuentes técnicas y comerciales
+- [FAQ](https://visualnacert.vercel.app/faq.html) — preguntas frecuentes técnicas y comerciales (64 Q&A)
+- [Glosario](https://visualnacert.vercel.app/glosario.html) — 32 términos clave del sector y la IA agroalimentaria
 - [Demo](https://visualnacert.vercel.app/demo.html) — solicitud de demo de 30 minutos
 - [Contacto](https://visualnacert.vercel.app/contacto.html) — direcciones y vías de contacto
 

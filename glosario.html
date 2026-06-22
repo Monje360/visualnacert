@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glosario · IA agroalimentaria | VisualNACert</title>
+  <meta name="description" content="Glosario de términos clave en IA aplicada al sector agroalimentario: SIGPAC, CSRD, RD 1051/2022, SIEX, Copernicus, NDVI, fertirrigación, trazabilidad bidireccional y más." />
+  <meta name="keywords" content="glosario IA agroalimentaria, SIGPAC, CSRD, RD 1051/2022, SIEX, Copernicus, NDVI, trazabilidad agroalimentaria, fertirrigación, cuaderno de campo digital" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <meta name="theme-color" content="#FD801D" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://visualnacert.vercel.app/glosario.html" />
+  <meta property="og:title" content="Glosario · IA agroalimentaria | VisualNACert" />
+  <meta property="og:description" content="Definiciones de términos clave del sector agroalimentario y la IA aplicada al campo." />
+  <meta property="og:image" content="https://visualnacert.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="VisualNACert" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Glosario · IA agroalimentaria | VisualNACert" />
+  <meta name="twitter:description" content="Definiciones de términos clave del sector agroalimentario y la IA aplicada al campo." />
+  <meta name="twitter:image" content="https://visualnacert.vercel.app/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=96" />
+
+  <!-- Schema.org DefinedTermSet -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "Glosario IA agroalimentaria · VisualNACert",
+    "description": "Términos clave para entender la IA aplicada al sector agroalimentario.",
+    "url": "https://visualnacert.vercel.app/glosario.html",
+    "inLanguage": "es-ES",
+    "publisher": {"@id": "https://visualnacert.vercel.app/#organization"}
+  }
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="m-nucleo" viewBox="0 0 200 200">
+        <polygon points="60,50 50,67.32 30,67.32 20,50 30,32.68 50,32.68"          fill="var(--mc)"/>
+        <polygon points="180,50 170,67.32 150,67.32 140,50 150,32.68 170,32.68"    fill="var(--mc)"/>
+        <polygon points="90,95 80,112.32 60,112.32 50,95 60,77.68 80,77.68"        fill="var(--mc)"/>
+        <polygon points="150,95 140,112.32 120,112.32 110,95 120,77.68 140,77.68"  fill="var(--mc)"/>
+        <polygon points="120,145 110,162.32 90,162.32 80,145 90,127.68 110,127.68" fill="var(--ma)"/>
+        <circle cx="100" cy="145" r="5" fill="var(--md)"/>
+      </symbol>
+      <symbol id="m-hex" viewBox="0 0 40 35">
+        <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <svg class="loader__mark" viewBox="0 0 200 200" aria-hidden="true">
+        <polygon class="loader-hex" style="--i:0" points="60,50 50,67.32 30,67.32 20,50 30,32.68 50,32.68"/>
+        <polygon class="loader-hex" style="--i:1" points="180,50 170,67.32 150,67.32 140,50 150,32.68 170,32.68"/>
+        <polygon class="loader-hex" style="--i:2" points="90,95 80,112.32 60,112.32 50,95 60,77.68 80,77.68"/>
+        <polygon class="loader-hex" style="--i:3" points="150,95 140,112.32 120,112.32 110,95 120,77.68 140,77.68"/>
+        <polygon class="loader-hex loader-hex--center" style="--i:4" points="120,145 110,162.32 90,162.32 80,145 90,127.68 110,127.68"/>
+        <circle class="loader-dot" cx="100" cy="145" r="5"/>
+      </svg>
+      <div class="loader__wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></div>
+      <div class="loader__count">0</div>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__pill">
+      <a href="index.html" class="nav__brand">
+        <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+        <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+      </a>
+      <nav class="nav__links">
+        <a href="nosotros.html">Nosotros</a>
+        <div class="nav__dropdown">
+          <span class="nav__dropdown-toggle">Ecosistema</span>
+          <div class="nav__dropdown-menu nav__dropdown-menu--mega">
+            <div class="nav__dropdown-col">
+              <span class="dd-cap">Apps</span>
+              <a href="ecosistema.html#visual">Visual</a>
+              <a href="ecosistema.html#sensor">Sensor</a>
+              <a href="ecosistema.html#selphi">Selphi</a>
+              <a href="ecosistema.html#academy">Academy</a>
+              <a href="ecosistema.html#fertipro">FertiPRO</a>
+              <a href="ecosistema.html#agrovrain">Agrovrain</a>
+            </div>
+            <div class="nav__dropdown-col">
+              <span class="dd-cap">Soluciones</span>
+              <a href="ecosistema.html#sol-parcelas">Conoce tus parcelas</a>
+              <a href="ecosistema.html#sol-campo">Gestión en campo</a>
+              <a href="ecosistema.html#sol-fertiliza">Fertilización precisa</a>
+              <a href="ecosistema.html#sol-anticipa">Anticipación con IA</a>
+              <a href="ecosistema.html#sol-normativa">Normativa sin esfuerzo</a>
+              <a href="ecosistema.html#sol-costes">Costes por parcela</a>
+              <a href="ecosistema.html#sol-jornada">Registro de jornada</a>
+              <a href="ecosistema.html#sol-conecta">Interoperabilidad</a>
+              <a href="ecosistema.html#sol-respuesta">Resiliencia ante crisis</a>
+            </div>
+            <a href="ecosistema.html" class="nav__dropdown-cta">Conocer más →</a>
+          </div>
+        </div>
+        <a href="sectores.html">Sectores</a>
+        <a href="clientes.html">Casos</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="https://visual.visualnacert.com/?_gl=1*1wccikq*_ga*MzMyODkwMzkyLjE3NzQ4NTU3MTc.*_ga_GHK0G9NX4G*czE3ODAzMTEyODkkbzIyJGcwJHQxNzgwMzExMjg5JGo2MCRsMCRoMA.." target="_blank" rel="noopener" class="nav__clients" aria-label="Acceso clientes">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-3 0-9 1.5-9 4.5V21h18v-2.5c0-3-6-4.5-9-4.5Z" fill="currentColor"/></svg>
+          <span>Clientes</span>
+        </a>
+        <button class="nav__lang">ES</button>
+        <a href="demo.html" class="nav__cta">
+          Solicita demo
+          <span class="nav__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO compacto -->
+    <section class="page-hero">
+      <div class="page-hero__media">
+        <div class="page-hero__image" style="background-image: url('img/ai-phone-plants.jpg')"></div>
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__watermark" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#m-nucleo"/></svg></div>
+      </div>
+      <div class="page-hero__shell">
+        <div class="page-hero__top">
+          <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Referencia</span>
+          <span class="page-hero__crumb"><a href="index.html">Inicio</a> · Glosario</span>
+        </div>
+        <h1 class="page-hero__title">
+          Glosario<br />
+          <em>IA agroalimentaria</em>.
+        </h1>
+        <p class="page-hero__lead">Treinta y dos términos clave para entender la IA aplicada al sector agroalimentario: normativa, indicadores satelitales, sistemas de información, integraciones y conceptos propios de la plataforma.</p>
+      </div>
+    </section>
+
+    <!-- GLOSARIO -->
+    <section class="glosario">
+      <div class="container">
+
+        <nav class="glosario__index" aria-label="Índice alfabético">
+          <a href="#a">A</a><a href="#c">C</a><a href="#d">D</a><a href="#e">E</a><a href="#f">F</a><a href="#g">G</a><a href="#i">I</a><a href="#l">L</a><a href="#m">M</a><a href="#n">N</a><a href="#p">P</a><a href="#r">R</a><a href="#s">S</a><a href="#t">T</a><a href="#v">V</a>
+        </nav>
+
+        <dl class="glosario__list">
+
+          <h2 class="glosario__letter" id="a">A</h2>
+
+          <div class="glosario__entry">
+            <dt id="api-bidireccional">API bidireccional</dt>
+            <dd>Interfaz de programación que permite el flujo de datos en ambas direcciones entre dos sistemas. En VisualNACert, la API bidireccional conecta la plataforma con tu ERP, CRM, BI y maquinaria: enviamos datos de campo y recibimos datos de gestión sin doble entrada. Ver <a href="ecosistema.html#sol-conecta">solución de interoperabilidad</a>.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="agrovrain">Agrovrain</dt>
+            <dd>App del ecosistema VisualNACert especializada en previsión agroclimática de precisión. Calcula riesgos climáticos por parcela, recomienda riegos y detecta ventanas óptimas para tratamientos fitosanitarios. <a href="ecosistema.html#agrovrain">Ver Agrovrain</a>.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="c">C</h2>
+
+          <div class="glosario__entry">
+            <dt id="copernicus">Copernicus</dt>
+            <dd>Programa europeo de observación de la Tierra coordinado por la <a href="https://www.copernicus.eu/es" target="_blank" rel="noopener nofollow">Agencia Espacial Europea (ESA)</a>. VisualNACert usa los satélites Sentinel del programa Copernicus para entregar imágenes de cada parcela cada 5 días, con histórico desde diciembre de 2016.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="csrd">CSRD · Corporate Sustainability Reporting Directive</dt>
+            <dd>Directiva europea <a href="https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32022L2464" target="_blank" rel="noopener nofollow">2022/2464</a> que obliga a grandes empresas a reportar su impacto ambiental y social con criterios estandarizados. VisualNACert genera los informes CSRD automáticamente desde los datos agronómicos ya registrados: huella de carbono, agua y energía por kilo producido.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="cuaderno-campo">Cuaderno de campo digital</dt>
+            <dd>Registro electrónico obligatorio de todas las actividades realizadas en explotaciones agrarias en España (tratamientos, riegos, fertilizaciones, recolección). Conectado al <a href="#siex">SIEX</a> del MAPA. VisualNACert lo genera automáticamente a partir de la operación diaria, en formatos Word, Excel y PDF.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="d">D</h2>
+
+          <div class="glosario__entry">
+            <dt id="dana">DANA · Depresión Aislada en Niveles Altos</dt>
+            <dd>Fenómeno meteorológico que provoca lluvias torrenciales y daños severos en explotaciones agrícolas. VisualNACert evalúa daños rápidamente sobre datos georreferenciados históricos. El sistema AgriRecover desarrollado por VisualNACert fue reconocido en el SantanderXChallenge: Desafío DANA (2025).</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="e">E</h2>
+
+          <div class="glosario__entry">
+            <dt id="enac">ENAC · Entidad Nacional de Acreditación</dt>
+            <dd>Organismo español responsable de acreditar a entidades de certificación, inspección y laboratorios bajo estándares internacionales. <a href="https://enac.es/" target="_blank" rel="noopener nofollow">enac.es</a>. Las fundadoras de VisualNACert provienen de NormaAgrícola, entidad acreditada por ENAC.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="erp">ERP · Enterprise Resource Planning</dt>
+            <dd>Sistema de planificación de recursos empresariales que centraliza la información de finanzas, compras, ventas y producción. VisualNACert no reemplaza tu ERP: se integra con él vía API bidireccional para que el dato del campo llegue a finanzas y el dato del ERP llegue al campo.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="f">F</h2>
+
+          <div class="glosario__entry">
+            <dt id="fega">FEGA · Fondo Español de Garantía Agraria</dt>
+            <dd>Organismo del MAPA responsable de la gestión y pago de las ayudas de la Política Agraria Común (PAC). Mantiene y publica el <a href="#sigpac">SIGPAC</a>.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="fertipro">FertiPRO</dt>
+            <dd>App del ecosistema VisualNACert para el cálculo de dosis de fertilización por parcela. Integra análisis de suelo, agua y materia orgánica, y genera informes conformes al <a href="#rd-1051">RD 1051/2022</a> listos para presentar. <a href="ecosistema.html#fertipro">Ver FertiPRO</a>.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="fertirrigacion">Fertirrigación</dt>
+            <dd>Técnica que combina riego y fertilización mediante la inyección controlada de fertilizantes solubles en el agua de riego. VisualNACert se integra con sistemas de fertirrigación automáticos para registrar dosis aplicadas y vincularlas al plan de fertilización.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="fitosanitario">Fitosanitario</dt>
+            <dd>Producto químico o biológico empleado para proteger los cultivos de plagas, enfermedades y malas hierbas. En España, los autorizados están listados por el MAPA y se actualizan mensualmente en VisualNACert junto al histórico de productos retirados (consultable en auditorías).</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="g">G</h2>
+
+          <div class="glosario__entry">
+            <dt id="geoportal-gis">Geoportal · GIS</dt>
+            <dd>Sistema de Información Geográfica (GIS) integrado en VisualNACert que permite consultar capas de mapa propias y externas vía estándares OGC (WMS, WFS): SIGPAC, usos de suelo, zonas vulnerables a nitratos, IGN y otros.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="i">I</h2>
+
+          <div class="glosario__entry">
+            <dt id="ia-agroalimentaria">IA agroalimentaria</dt>
+            <dd>Aplicación de la inteligencia artificial al ciclo agrícola e industrial: visión por computador para detección de plagas, modelos predictivos de cosecha, alertas climáticas y optimización de costes. VisualNACert entrena modelos con contexto agronómico propio y los datos de cada cliente — no comercializa modelos genéricos.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="interoperabilidad-bidireccional">Interoperabilidad bidireccional</dt>
+            <dd>Capacidad de un sistema para intercambiar datos con otros sistemas en ambas direcciones. VisualNACert combina API propia con integración con APIs externas (ERP, CRM, BI, maquinaria), de modo que el dato fluye sin silos. Ver <a href="ecosistema.html#sol-conecta">solución de interoperabilidad</a>.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="l">L</h2>
+
+          <div class="glosario__entry">
+            <dt id="lai">LAI · Leaf Area Index</dt>
+            <dd>Índice de área foliar, indicador derivado de imágenes satelitales que mide la densidad de cobertura vegetal de un cultivo. Útil para estimar fase de crecimiento y vigor. Disponible en mapas web y app de VisualNACert.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="m">M</h2>
+
+          <div class="glosario__entry">
+            <dt id="mapa">MAPA · Ministerio de Agricultura, Pesca y Alimentación</dt>
+            <dd>Departamento del Gobierno de España responsable de la política agraria, ganadera y pesquera. Mantiene los listados oficiales de fitosanitarios, las directrices SIEX y el SIGPAC vía el FEGA. <a href="https://www.mapa.gob.es/" target="_blank" rel="noopener nofollow">mapa.gob.es</a>.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="multiplataforma">Multiplataforma</dt>
+            <dd>Característica de una aplicación que funciona en distintos dispositivos y sistemas operativos. Todas las apps de VisualNACert son multiplataforma (web, iOS, Android) y operan online y offline con sincronización automática.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="n">N</h2>
+
+          <div class="glosario__entry">
+            <dt id="ndvi">NDVI · Normalized Difference Vegetation Index</dt>
+            <dd>Índice de vigor vegetal derivado del contraste entre la luz roja e infrarroja cercana reflejada por la cubierta vegetal. Indicador estándar para detectar zonas de estrés en una parcela. VisualNACert lo entrega cada 5 días por parcela usando imágenes Copernicus, con histórico desde 2016.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="ndii">NDII · Normalized Difference Infrared Index</dt>
+            <dd>Índice satelital que detecta el contenido de humedad en la cubierta vegetal y permite identificar estrés hídrico en planta antes de que sea visible al ojo. Disponible en VisualNACert junto con NDVI y LAI.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="p">P</h2>
+
+          <div class="glosario__entry">
+            <dt id="plan-fertilizacion">Plan de fertilización</dt>
+            <dd>Documento técnico que detalla las dosis, productos y fechas de aplicación de fertilizantes por parcela y campaña. Obligatorio bajo el <a href="#rd-1051">RD 1051/2022</a> para explotaciones que superen ciertos umbrales. FertiPRO lo calcula y emite automáticamente.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="purines">Purines</dt>
+            <dd>Residuos orgánicos de origen ganadero que se aplican como fertilizante. Su gestión está regulada (libro de fertilizantes, geolocalización de granjas, trazabilidad). VisualNACert incluye un módulo específico para gestión de purines en explotaciones ganadero-agrícolas.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="r">R</h2>
+
+          <div class="glosario__entry">
+            <dt id="rd-1051">RD 1051/2022</dt>
+            <dd>Real Decreto sobre nutrición sostenible en los suelos agrarios (BOE, <a href="https://www.boe.es/eli/es/rd/2022/12/27/1051" target="_blank" rel="noopener nofollow">27 diciembre 2022</a>). Establece requisitos de planificación y registro de fertilización para reducir emisiones y mejorar la calidad del suelo. VisualNACert genera los informes conformes al RD 1051/2022 automáticamente.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="s">S</h2>
+
+          <div class="glosario__entry">
+            <dt id="selphi">Selphi</dt>
+            <dd>App del ecosistema VisualNACert para captura de fotografías geolocalizadas con análisis automático por visión por computador. Detección temprana de plagas, validación de campo y trazabilidad visual. <a href="ecosistema.html#selphi">Ver Selphi</a>.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="sentinel">Sentinel</dt>
+            <dd>Familia de satélites de observación de la Tierra del programa Copernicus de la ESA. Sentinel-2 (multiespectral, 10 m de resolución) es la fuente principal de los índices NDVI, LAI y NDII que VisualNACert sirve a sus clientes.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="sigpac">SIGPAC · Sistema de Información Geográfica de Parcelas Agrícolas</dt>
+            <dd>Catastro oficial de parcelas agrícolas de España, mantenido por el <a href="#fega">FEGA</a>. Se utiliza como referencia para identificar polígono, parcela y recinto en las solicitudes de ayudas PAC. VisualNACert actualiza el SIGPAC anualmente de forma automática y hace la intersección con las geometrías propias del cliente.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="siex">SIEX · Sistema de Información de Explotaciones Agrarias</dt>
+            <dd>Sistema español que centraliza el registro de explotaciones, sus actividades y datos de producción. VisualNACert genera el cuaderno de campo digital compatible con SIEX a partir de las actividades registradas en la plataforma.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="t">T</h2>
+
+          <div class="glosario__entry">
+            <dt id="trazabilidad-bidireccional">Trazabilidad bidireccional</dt>
+            <dd>Capacidad de rastrear un producto agroalimentario en ambos sentidos: desde el lote del campo hasta el pallet en cliente final, y desde el cliente final hasta la parcela y el momento exacto de origen. VisualNACert conecta cuaderno de campo, planta de procesado y cliente final sin doble entrada. Ver <a href="blog-trazabilidad-agroalimentaria.html">post sobre trazabilidad</a>.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="tratamiento-cero">Tratamiento 0</dt>
+            <dd>Objetivo estratégico de la finca experimental de VisualNACert: producir con calidad sin recurrir a fitosanitarios ni fertilizantes químicos. Conseguido mediante cubiertas vegetales, fauna auxiliar, sensórica IoT y modelos predictivos. <a href="nosotros.html#finca-experimental">Ver finca experimental</a>.</dd>
+          </div>
+
+          <h2 class="glosario__letter" id="v">V</h2>
+
+          <div class="glosario__entry">
+            <dt id="visual">Visual</dt>
+            <dd>App núcleo del ecosistema VisualNACert: cuaderno de campo, mapas de decisión, SIGPAC automático y captura desde cualquier parcela. Online y offline. <a href="visual-app.html">Ver Visual</a>.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="visualnacert">VisualNACert</dt>
+            <dd>Empresa fundada en 2014 en Rafelbunyol (Valencia) por Lucía y Mercedes Iborra. Desarrolla una plataforma de gestión de datos en campo construida sobre IA para el sector agroalimentario. Más de 400 empresas clientes, +4 millones de hectáreas gestionadas. <a href="nosotros.html">Ver Nosotros</a>.</dd>
+          </div>
+
+          <div class="glosario__entry">
+            <dt id="vision-por-computador">Visión por computador</dt>
+            <dd>Rama de la IA que entrena modelos para interpretar imágenes y vídeo. En el agroalimentario se aplica a detección de plagas en hoja, control de calidad en tolva y patio, identificación de variedades y verificación visual de aplicaciones. <a href="ecosistema.html#selphi">Disponible en Selphi</a>.</dd>
+          </div>
+
+        </dl>
+
+        <p class="glosario__source">¿Echas en falta un término? <a href="contacto.html">Escríbenos</a> y lo añadimos.</p>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+      <div class="cta-final__bg" style="background-image: url('img/ai-greenhouse-warm.jpg')"></div>
+      <div class="cta-final__overlay"></div>
+      <div class="container">
+        <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Vamos al grano</span>
+        <h2 class="cta-final__title cta-final__title--light" data-reveal>
+          ¿Quieres ver cómo<br />
+          aplicamos esto en <span class="accent">tu finca</span>?
+        </h2>
+        <p class="cta-final__lead">30 minutos con nuestro equipo. Te enseñamos los términos en acción — sobre datos reales — y te decimos si encajamos.</p>
+        <div class="cta-final__actions">
+          <a href="demo.html" class="btn btn--primary btn--lg">
+            <span>Solicita demo</span>
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="faq.html" class="btn btn--ghost-light">
+            <span>FAQ · preguntas frecuentes</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <svg class="brand-mark" viewBox="0 0 200 200"><use href="#m-nucleo"/></svg>
+              <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
+            </div>
+            <p>Tu partner IA para el sector agroalimentario.</p>
+            <div class="footer__social" aria-label="Síguenos">
+              <span class="footer__social-label">Síguenos</span>
+              <a href="#" aria-label="LinkedIn">LinkedIn</a>
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="YouTube">YouTube</a>
+              <a href="#" aria-label="X (Twitter)">X</a>
+              <a href="#" aria-label="Facebook">Facebook</a>
+            </div>
+          </div>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h5>Recursos</h5>
+              <a href="faq.html">FAQ · Preguntas frecuentes</a><a href="glosario.html">Glosario</a><a href="https://visual.visualnacert.com" target="_blank" rel="noopener">Acceso clientes</a><a href="#">Trabaja en Visual</a>
+            </div>
+            <div class="footer__col">
+              <h5>Dirección comercial</h5>
+              <span class="footer__contact-line">María Luz Peñarrubia</span>
+              <span class="footer__contact-line footer__contact-meta">Directora comercial</span>
+              <a href="tel:+34620472712">+34 620 472 712</a>
+              <a href="mailto:mluz@visualnacert.com">mluz@visualnacert.com</a>
+            </div>
+            <div class="footer__col">
+              <h5>Oficinas</h5>
+              <span class="footer__contact-line">Calle Mayor 41 · Rafelbunyol</span>
+              <span class="footer__contact-line footer__contact-meta">46138 · Valencia · ES</span>
+              <a href="tel:+34961410675">+34 961 410 675</a>
+              <a href="mailto:contacto@visualnacert.com">contacto@visualnacert.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__seals" aria-label="Reconocimientos y financiación">
+          <div class="seal">
+            <img src="img/sellos/pyme-innovadora.png" alt="PYME Innovadora · Ministerio de Ciencia, Innovación y Universidades · Gobierno de España. Vigencia 30/11/2025 — 29/11/2028" loading="lazy" />
+          </div>
+          <div class="seal">
+            <img src="img/sellos/nacion-emprendedora.png" alt="España Nación Emprendedora · Alto Comisionado · Gobierno de España" loading="lazy" />
+          </div>
+          <div class="seal">
+            <img src="img/sellos/generalitat-ivf.png" alt="Generalitat Valenciana · Institut Valencià de Finances — Esta empresa recibe financiación del IVF" loading="lazy" />
+          </div>
+        </div>
+        <div class="footer__sources">
+          <span class="footer__sources-label">Fuentes y normativa</span>
+          <div class="footer__sources-list">
+            <a href="https://www.boe.es/eli/es/rd/2022/12/27/1051" target="_blank" rel="noopener nofollow">RD 1051/2022 · Fertilización (BOE)</a>
+            <a href="https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32022L2464" target="_blank" rel="noopener nofollow">CSRD · Directiva 2022/2464 (EUR-Lex)</a>
+            <a href="https://www.fega.gob.es/es/PwfGcp/es/iberpix/sigpac/" target="_blank" rel="noopener nofollow">SIGPAC · FEGA</a>
+            <a href="https://www.mapa.gob.es/es/agricultura/temas/sistema-de-informacion-de-explotaciones-agrarias-siex/" target="_blank" rel="noopener nofollow">SIEX · MAPA</a>
+            <a href="https://www.copernicus.eu/es" target="_blank" rel="noopener nofollow">Copernicus · ESA</a>
+            <a href="https://enac.es/" target="_blank" rel="noopener nofollow">ENAC · Acreditación</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Visual NAcert · Todos los derechos reservados</span>
+          <span class="footer__legal">
+            <a href="aviso-legal.html">Aviso legal</a>
+            <a href="privacidad.html">Privacidad</a>
+            <a href="cookies.html">Cookies</a>
+          </span>
+        </div>
+        <div class="footer__giant">
+          <span class="visual">Visual</span><span class="nacert">NACert</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sticky CTA flotante -->
+    <a href="demo.html" class="sticky-cta" aria-label="Solicita demo">
+      <svg viewBox="0 0 40 35" aria-hidden="true"><use href="#m-hex"/></svg>
+      <span>Solicita demo</span>
+    </a>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js?v=96"></script>
+</body>
+</html>
