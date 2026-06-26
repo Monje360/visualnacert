@@ -15,26 +15,25 @@ No comercializamos modelos propios de IA. Entrenamos modelos con contexto agron�
 - Fundada en 2014, sede en Rafelbunyol (Valencia, España)
 - Equipo fundador: Lucía Iborra y Mercedes Iborra, tras 15 años en NormaAgrícola (entidad de certificación ENAC)
 
-## Apps / productos
+## Ecosistema Visual — 8 productos integrados
 
-- [Visual](https://visualnacert.vercel.app/visual-app.html): el núcleo de la plataforma. Cuaderno de campo, mapas de decisión, SIGPAC automático y captura desde cualquier parcela. Funciona online y offline.
-- [Sensor](https://visualnacert.vercel.app/ecosistema.html#sensor): red de sensores físicos y virtuales para suelo, planta y ambiente. Decisiones de riego y nutrición en tiempo real.
-- [Selphi](https://visualnacert.vercel.app/ecosistema.html#selphi): captura de fotos geolocalizadas con análisis automático por visión por computador. Detección temprana, validación de campo y trazabilidad visual.
-- [Academy](https://visualnacert.vercel.app/visual-academy.html): formación oficial con certificación. El conocimiento se queda en el equipo del cliente.
-- [FertiPRO](https://visualnacert.vercel.app/ecosistema.html#fertipro): cálculo de dosis de fertilización por parcela integrando análisis de suelo, agua y materia orgánica. Cumple el RD 1051/2022 sin trabajo extra.
-- [Agrovrain](https://visualnacert.vercel.app/ecosistema.html#agrovrain): previsión agroclimática de precisión, riesgos climáticos, recomendaciones de riego y ventanas óptimas para tratamientos.
+- [Visual](https://visualnacert.vercel.app/ecosistema.html#visual): plataforma central de gestión e inteligencia agroalimentaria. Cuaderno de campo, mapas de decisión, SIGPAC automático y operaciones — online y offline.
+- [Agrovrain](https://visualnacert.vercel.app/ecosistema.html#agrovrain): motor de IA especializado en agricultura. Previsión agroclimática, modelos predictivos de plagas, cosecha y riesgos climáticos.
+- [MCP Visual](https://visualnacert.vercel.app/ecosistema.html#mcp): infraestructura contextual que conecta datos, conocimiento experto y modelos de IA dentro del ecosistema.
+- [Agentes IA](https://visualnacert.vercel.app/ecosistema.html#agentes): automatización especializada para procesos agroalimentarios (cumplimiento, detección, dosis, planificación, reporting).
+- [FertiPRO](https://visualnacert.vercel.app/ecosistema.html#fertipro): cálculo de dosis de fertilización por parcela con cumplimiento RD 1051/2022.
+- [Selphi Control Horario](https://visualnacert.vercel.app/ecosistema.html#selphi): fichaje y gestión digital de equipos, jornadas y operaciones. Online, offline y biométrico opcional.
+- [Visual Sensor](https://visualnacert.vercel.app/ecosistema.html#sensor): captura desde sensores físicos y virtuales (suelo, planta, ambiente, IoT).
+- [API VisualNACert](https://visualnacert.vercel.app/ecosistema.html#api): integración bidireccional con ERP, CRM, BI, maquinaria y bases de datos externas.
 
-## Soluciones · lo que resolvemos
+## Capacidades · lo que resolvemos
 
-1. **Conocimiento de parcela**: SIGPAC automático, mapas, fotos geolocalizadas, rutas, mediciones — online y offline.
-2. **Gestión en campo sin papel**: tratamientos, riegos, fertilizaciones, visitas, incidencias. Módulos especializados por especie (viña, cítricos, hortícolas, olivar, fruta de hueso, tropical, tubérculos, frutos secos y extensivos).
-3. **Fertilización precisa**: cálculo de dosis por parcela y cumplimiento RD 1051/2022.
-4. **Anticipación con IA**: imágenes Copernicus ESA cada 5 días, alertas push, previsión agroclimática por ubicación exacta y +2.000 estaciones climáticas con índices agronómicos.
-5. **Cumplimiento normativo automático**: Cuaderno de Campo Digital SIEX, gestión de purines, variedades protegidas y reporte CSRD (Directiva 2022/2464) generado desde los datos ya existentes.
-6. **Control de costes parcela a parcela**: insumos, mano de obra, maquinaria, partes de trabajo y cuadrillas.
-7. **Registro de jornada multiplataforma**: fichaje móvil/tablet/web, con o sin cobertura, biométrico opcional.
-8. **Interoperabilidad bidireccional**: API propia + integración con APIs de ERP, CRM, BI, maquinaria y bases de datos externas.
-9. **Resiliencia ante catástrofes**: evaluación rápida de daños georreferenciados y gestión de ayudas tras desastres naturales.
+1. **Agronómica**: gestión de cultivos, fertilización (FertiPRO), riego, plagas, fenología y monitorización satelital.
+2. **Operativa**: costes, equipos, control horario (Selphi), gestión de tareas y operaciones.
+3. **Climática y Territorial**: riesgos climáticos, monitorización satelital (Copernicus / Sentinel) y evaluación de daños.
+4. **Cumplimiento**: cuaderno SIEX, RD 1051/2022, certificación, trazabilidad y gestión documental.
+5. **Sostenibilidad**: huella de carbono e hídrica, ESG y reporte CSRD.
+6. **Varietal**: licencias, regalías y auditorías de variedades protegidas.
 
 ## Cultivos con módulo especializado
 
