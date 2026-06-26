@@ -3030,6 +3030,99 @@ em {
   .glosario__entry { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
 }
 
+/* ============================================
+   CAPACIDADES · página Qué hacemos
+   ============================================ */
+.capacity-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px;
+  background: var(--paper, #FFFFFF);
+  border: 1px solid rgba(22, 20, 15, 0.08);
+  border-radius: 14px;
+  margin-bottom: 0;
+}
+.capacity-toc__link {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--linen);
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.capacity-toc__link:hover {
+  background: var(--orange);
+  color: #fff;
+}
+.capacity {
+  padding: 100px 0;
+  scroll-margin-top: 100px;
+}
+.capacity__head {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.capacity__head .section__title {
+  margin-top: 12px;
+}
+.capacity__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 48px;
+}
+.capacity__col-title {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin: 0 0 16px;
+}
+.capacity__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.capacity__list li {
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: 18px;
+  position: relative;
+  color: var(--ink);
+}
+.capacity__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background: var(--orange);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.capacity__foot {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 880px) {
+  .capacity { padding: 60px 0; }
+  .capacity__grid { grid-template-columns: 1fr; gap: 28px; }
+  .capacity-toc { flex-direction: column; }
+  .capacity-toc__link { text-align: left; }
+}
+
 /* Bloque "Glosario relacionado" para blog posts */
 .glosario-related .glosario-related__title {
   font-family: var(--font-display);
