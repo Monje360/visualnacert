@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=110" />
+  <link rel="stylesheet" href="styles.css?v=111" />
 
   <!-- Schema.org ItemList con 6 Services -->
   <script type="application/ld+json">
@@ -92,7 +92,7 @@
       </a>
       <nav class="nav__links">
         <div class="nav__dropdown">
-          <span class="nav__dropdown-toggle">Qué hacemos</span>
+          <span class="nav__dropdown-toggle">Capacidades</span>
           <div class="nav__dropdown-menu">
             <a href="que-hacemos.html#agronomica">Capacidad Agronómica</a>
             <a href="que-hacemos.html#operativa">Capacidad Operativa</a>
@@ -144,470 +144,76 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="page-hero page-hero--cinema">
+    <!-- HERO compacto -->
+    <section class="page-hero">
       <div class="page-hero__media">
         <div class="page-hero__image" style="background-image: url('img/soluciones-hero.jpg')"></div>
         <div class="page-hero__overlay"></div>
+        <div class="page-hero__watermark" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#m-nucleo"/></svg></div>
       </div>
       <div class="page-hero__shell">
         <div class="page-hero__top">
-          <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Qué hacemos</span>
-          <span class="page-hero__crumb"><a href="index.html">Inicio</a> · Qué hacemos</span>
+          <span class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span> Capacidades</span>
+          <span class="page-hero__crumb"><a href="index.html">Inicio</a> · Capacidades</span>
         </div>
         <h1 class="page-hero__title">
-          Transformamos<br />
-          información compleja en<br />
-          <em>decisiones</em> más inteligentes.
+          Seis <em>capacidades</em><br />
+          para el sector agroalimentario.
         </h1>
-        <p class="page-hero__lead">Combinamos datos de campo, sensores, imágenes satelitales y conocimiento agronómico con inteligencia artificial entrenada en contexto sectorial. Seis capacidades, una sola plataforma.</p>
+        <p class="page-hero__lead">Sobre el Ecosistema Visual activamos seis capacidades de inteligencia artificial. Cada una resuelve un problema concreto del sector y se puede activar por separado o combinada con el resto.</p>
       </div>
     </section>
 
-    <!-- TL;DR -->
-    <section class="section" style="padding: 0; margin: 0;">
+    <!-- 6 CAPACIDADES · grid compacto -->
+    <section class="cap-section">
       <div class="container">
-        <div class="tldr">
-          <div class="tldr__eyebrow">TL;DR · En pocas palabras</div>
-          <div class="tldr__body">
-            <p>VisualNACert convierte información compleja en decisiones accionables a través de <strong>seis capacidades</strong> que comparten núcleo agronómico y se activan por separado o combinadas.</p>
-            <p><strong>Agronómica</strong> · <strong>Operativa</strong> · <strong>Climática y Territorial</strong> · <strong>Cumplimiento</strong> · <strong>Sostenibilidad</strong> · <strong>Varietal</strong>. Cada capacidad responde a un problema concreto del sector con tecnologías propias del Ecosistema Visual.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="cap-grid">
 
-    <!-- ÍNDICE 6 capacidades -->
-    <section class="section" style="padding-top: 80px;">
-      <div class="container">
-        <nav class="capacity-toc" aria-label="Capacidades">
-          <a href="#agronomica" class="capacity-toc__link">01 · Agronómica</a>
-          <a href="#operativa" class="capacity-toc__link">02 · Operativa</a>
-          <a href="#climatica" class="capacity-toc__link">03 · Climática y Territorial</a>
-          <a href="#cumplimiento" class="capacity-toc__link">04 · Cumplimiento</a>
-          <a href="#sostenibilidad" class="capacity-toc__link">05 · Sostenibilidad</a>
-          <a href="#varietal" class="capacity-toc__link">06 · Varietal</a>
-        </nav>
-      </div>
-    </section>
+          <article class="cap-card" id="agronomica" data-reveal>
+            <span class="cap-card__num">01</span>
+            <span class="cap-card__tag">Agronómica</span>
+            <h2 class="cap-card__title">Comprende cada cultivo.</h2>
+            <p class="cap-card__desc">Interpretamos datos de campo, satélite y sensores para decidir sobre fertilización, riego, plagas y monitorización del estado vegetativo.</p>
+          </article>
 
-    <!-- 01 · AGRONÓMICA -->
-    <section class="section capacity" id="agronomica">
-      <div class="container">
-        <div class="capacity__head">
-          <span class="eyebrow"><span class="eyebrow__dot"></span> 01 — Capacidad Agronómica</span>
-          <h2 class="section__title">Comprender mejor lo que ocurre en cada <em>cultivo</em>.</h2>
-        </div>
-        <p class="section__lead">La gestión agronómica moderna exige interpretar volúmenes crecientes de información procedente de fuentes muy distintas. La transformamos en conocimiento accionable para optimizar el rendimiento y respaldar cada decisión técnica.</p>
+          <article class="cap-card" id="operativa" data-reveal>
+            <span class="cap-card__num">02</span>
+            <span class="cap-card__tag">Operativa</span>
+            <h2 class="cap-card__title">Gestiona equipos y costes.</h2>
+            <p class="cap-card__desc">Visibilidad sobre recursos, jornadas, partes de trabajo y productividad por parcela. Eficiencia operativa con datos consolidados.</p>
+          </article>
 
-        <div class="capacity__grid">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Aplicaciones</h3>
-            <ul class="capacity__list">
-              <li>Gestión agronómica</li>
-              <li>Fertilización (FertiPRO)</li>
-              <li>Riego</li>
-              <li>Seguimiento fenológico</li>
-              <li>Plagas y enfermedades</li>
-              <li>Evaluación del estado vegetativo</li>
-              <li>Monitorización satelital</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Información utilizada</h3>
-            <ul class="capacity__list">
-              <li>Datos de campo</li>
-              <li>Imágenes satelitales (Copernicus)</li>
-              <li>Análisis agronómicos</li>
-              <li>Históricos productivos</li>
-              <li>Sensores físicos y virtuales</li>
-              <li>Información climática</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Sectores donde se aplica</h3>
-            <ul class="capacity__list">
-              <li>Producción agrícola</li>
-              <li>Cooperativas</li>
-              <li>Frutos secos</li>
-              <li>Olivar</li>
-              <li>Viñedo</li>
-              <li>Hortícolas</li>
-            </ul>
-          </div>
-        </div>
-        <div class="capacity__grid capacity__grid--secondary">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Decisiones que ayuda a tomar</h3>
-            <ul class="capacity__list">
-              <li>Cuándo regar y cuánto, por parcela</li>
-              <li>Qué dosis exacta de fertilizante aplicar</li>
-              <li>Cuándo intervenir ante una plaga emergente</li>
-              <li>Cuándo recolectar y con qué calibre esperado</li>
-              <li>Qué variedad cultivar en cada parcela</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Tecnologías implicadas</h3>
-            <ul class="capacity__list">
-              <li>Modelos predictivos (Agrovrain)</li>
-              <li>Visión por computador (Selphi)</li>
-              <li>Sensores IoT (Visual Sensor)</li>
-              <li>Satélite Sentinel · Copernicus ESA</li>
-              <li>SIGPAC automático y analítica agronómica</li>
-            </ul>
-          </div>
+          <article class="cap-card" id="climatica" data-reveal>
+            <span class="cap-card__num">03</span>
+            <span class="cap-card__tag">Climática y Territorial</span>
+            <h2 class="cap-card__title">Anticipa el clima.</h2>
+            <p class="cap-card__desc">Previsión agroclimática hiperlocal, riesgos por parcela, satélite Sentinel cada 5 días y evaluación rápida de daños tras eventos extremos.</p>
+          </article>
+
+          <article class="cap-card" id="cumplimiento" data-reveal>
+            <span class="cap-card__num">04</span>
+            <span class="cap-card__tag">Cumplimiento</span>
+            <h2 class="cap-card__title">Cumple la normativa.</h2>
+            <p class="cap-card__desc">Cuaderno de Campo Digital SIEX, RD 1051/2022, certificaciones y trazabilidad generados desde los datos que ya registras.</p>
+          </article>
+
+          <article class="cap-card" id="sostenibilidad" data-reveal>
+            <span class="cap-card__num">05</span>
+            <span class="cap-card__tag">Sostenibilidad</span>
+            <h2 class="cap-card__title">Mide y demuestra.</h2>
+            <p class="cap-card__desc">Huella de carbono e hídrica, indicadores ESG y reporte CSRD (Directiva 2022/2464) a partir de la operación ya digitalizada.</p>
+          </article>
+
+          <article class="cap-card" id="varietal" data-reveal>
+            <span class="cap-card__num">06</span>
+            <span class="cap-card__tag">Varietal</span>
+            <h2 class="cap-card__title">Trazabilidad de variedades.</h2>
+            <p class="cap-card__desc">Licencias, regalías y auditorías de variedades protegidas con geolocalización de licenciatarios y verificación satelital.</p>
+          </article>
+
         </div>
 
-        <div class="capacity__foot">
-          <a href="demo.html" class="link-arrow">Habla con un consultor agronómico <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 02 · OPERATIVA -->
-    <section class="section capacity" id="operativa" style="background: var(--linen);">
-      <div class="container">
-        <div class="capacity__head">
-          <span class="eyebrow"><span class="eyebrow__dot"></span> 02 — Capacidad Operativa</span>
-          <h2 class="section__title">Gestionar mejor recursos, equipos y <em>operaciones</em>.</h2>
-        </div>
-        <p class="section__lead">Las organizaciones agroalimentarias generan información constante sobre personas, tareas, costes y operaciones. La convertimos en visibilidad ejecutiva para tomar decisiones más rápidas y reducir costes.</p>
-
-        <div class="capacity__grid">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Aplicaciones</h3>
-            <ul class="capacity__list">
-              <li>Control de costes de producción</li>
-              <li>Gestión de equipos</li>
-              <li>Control horario (Selphi)</li>
-              <li>Gestión de tareas</li>
-              <li>Seguimiento de operaciones</li>
-              <li>Productividad por hectárea</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Información utilizada</h3>
-            <ul class="capacity__list">
-              <li>Registros operativos</li>
-              <li>Partes de trabajo</li>
-              <li>Datos de maquinaria y flota</li>
-              <li>Coste de insumos</li>
-              <li>Datos de fichaje biométrico</li>
-              <li>ERP y CRM conectados</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Sectores donde se aplica</h3>
-            <ul class="capacity__list">
-              <li>Producción agrícola</li>
-              <li>Cooperativas</li>
-              <li>Industria agroalimentaria</li>
-              <li>Empresas de servicios agrarios</li>
-            </ul>
-          </div>
-        </div>
-        <div class="capacity__grid capacity__grid--secondary">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Decisiones que ayuda a tomar</h3>
-            <ul class="capacity__list">
-              <li>Cómo asignar cuadrillas y planificar rutas</li>
-              <li>Dónde está el coste real por hectárea</li>
-              <li>Qué tareas priorizar la próxima semana</li>
-              <li>Cuándo invertir o renovar maquinaria</li>
-              <li>Si una explotación es rentable parcela a parcela</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Tecnologías implicadas</h3>
-            <ul class="capacity__list">
-              <li>Selphi Control Horario</li>
-              <li>Visual (costes, tareas, partes de trabajo)</li>
-              <li>API · integración ERP / CRM / BI</li>
-              <li>Geolocalización y verificación biométrica</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="capacity__foot">
-          <a href="demo.html" class="link-arrow">Pide una demo operativa <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 03 · CLIMÁTICA Y TERRITORIAL -->
-    <section class="section capacity" id="climatica">
-      <div class="container">
-        <div class="capacity__head">
-          <span class="eyebrow"><span class="eyebrow__dot"></span> 03 — Climática y Territorial</span>
-          <h2 class="section__title">Anticipar los <em>riesgos</em> del territorio.</h2>
-        </div>
-        <p class="section__lead">El clima decide buena parte de lo que pasa en una explotación. Combinamos previsión agroclimática, monitorización satelital y análisis de riesgo para que tu organización actúe antes — no después.</p>
-
-        <div class="capacity__grid">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Aplicaciones</h3>
-            <ul class="capacity__list">
-              <li>Riesgos climáticos por parcela</li>
-              <li>Monitorización territorial</li>
-              <li>Imágenes satélite Copernicus cada 5 días</li>
-              <li>Previsión agroclimática hiperlocal</li>
-              <li>Evaluación de daños tras catástrofes</li>
-              <li>Recomendación de riego</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Información utilizada</h3>
-            <ul class="capacity__list">
-              <li>+2.000 estaciones climáticas</li>
-              <li>Imágenes Sentinel (ESA)</li>
-              <li>Históricos climáticos por ubicación</li>
-              <li>Geometrías SIGPAC</li>
-              <li>Modelos predictivos propios</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Sectores donde se aplica</h3>
-            <ul class="capacity__list">
-              <li>Producción agrícola</li>
-              <li>Administraciones públicas</li>
-              <li>Aseguradoras agrarias</li>
-              <li>Cooperativas y agroindustria</li>
-            </ul>
-          </div>
-        </div>
-        <div class="capacity__grid capacity__grid--secondary">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Decisiones que ayuda a tomar</h3>
-            <ul class="capacity__list">
-              <li>Si aplicar o no un tratamiento esta semana</li>
-              <li>Cómo proteger cultivos ante un evento extremo</li>
-              <li>Qué parcelas concentran más riesgo este año</li>
-              <li>Dónde reforzar inversión en seguros agrarios</li>
-              <li>Cuánto reclamar tras una catástrofe natural</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Tecnologías implicadas</h3>
-            <ul class="capacity__list">
-              <li>Agrovrain (motor IA climática)</li>
-              <li>Satélites Sentinel · Copernicus ESA</li>
-              <li>+2.000 estaciones climáticas</li>
-              <li>Modelos de riesgo georreferenciados</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="capacity__foot">
-          <a href="demo.html" class="link-arrow">Habla con un experto climático <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 04 · CUMPLIMIENTO -->
-    <section class="section capacity" id="cumplimiento" style="background: var(--linen);">
-      <div class="container">
-        <div class="capacity__head">
-          <span class="eyebrow"><span class="eyebrow__dot"></span> 04 — Capacidad de Cumplimiento</span>
-          <h2 class="section__title">Cumplir la <em>normativa</em> sin trabajo extra.</h2>
-        </div>
-        <p class="section__lead">La normativa agraria europea y española cambia cada año. Generamos cuadernos de campo digitales, certificaciones, trazabilidad y documentación a partir de los datos que ya registras — sin doble entrada ni auditorías a contrarreloj.</p>
-
-        <div class="capacity__grid">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Aplicaciones</h3>
-            <ul class="capacity__list">
-              <li>Cuaderno de Campo Digital</li>
-              <li>Certificación (GLOBALG.A.P., IFS, BRC)</li>
-              <li>Trazabilidad bidireccional</li>
-              <li>Gestión documental</li>
-              <li>Auditorías y controles</li>
-              <li>Reporte regulatorio</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Normativa cubierta</h3>
-            <ul class="capacity__list">
-              <li>RD 1051/2022 (fertilización)</li>
-              <li>SIEX (MAPA)</li>
-              <li>SIGPAC (FEGA)</li>
-              <li>HACCP / IFS / BRC</li>
-              <li>Libros de fertilizantes</li>
-              <li>Gestión de purines</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Sectores donde se aplica</h3>
-            <ul class="capacity__list">
-              <li>Producción agroalimentaria</li>
-              <li>Cooperativas</li>
-              <li>Industria de procesado</li>
-              <li>Bodegas y almazaras</li>
-              <li>Retail y distribución</li>
-            </ul>
-          </div>
-        </div>
-        <div class="capacity__grid capacity__grid--secondary">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Decisiones que ayuda a tomar</h3>
-            <ul class="capacity__list">
-              <li>Si una práctica cumple el RD 1051/2022</li>
-              <li>Cómo presentar documentación de auditoría</li>
-              <li>Cuándo registrar un dato para no perder trazabilidad</li>
-              <li>Qué cambios normativos aplican esta campaña</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Tecnologías implicadas</h3>
-            <ul class="capacity__list">
-              <li>Cuaderno de Campo Digital SIEX</li>
-              <li>FertiPRO · planes de fertilización RD 1051</li>
-              <li>MCP Visual · contexto normativo</li>
-              <li>Agentes IA de cumplimiento</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="capacity__foot">
-          <a href="demo.html" class="link-arrow">Resuelve tu cumplimiento <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 05 · SOSTENIBILIDAD -->
-    <section class="section capacity" id="sostenibilidad">
-      <div class="container">
-        <div class="capacity__head">
-          <span class="eyebrow"><span class="eyebrow__dot"></span> 05 — Capacidad de Sostenibilidad</span>
-          <h2 class="section__title">Medir, demostrar y mejorar lo <em>ambiental</em>.</h2>
-        </div>
-        <p class="section__lead">La CSRD y la presión del cliente final han hecho de la sostenibilidad un requisito operativo. Generamos reportes de huella ambiental e indicadores ESG a partir de los datos agronómicos que ya tienes en la plataforma.</p>
-
-        <div class="capacity__grid">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Aplicaciones</h3>
-            <ul class="capacity__list">
-              <li>Huella de carbono</li>
-              <li>Huella hídrica</li>
-              <li>Gestión de purines</li>
-              <li>Indicadores ESG</li>
-              <li>Reporte CSRD</li>
-              <li>Sostenibilidad por kilo producido</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Información utilizada</h3>
-            <ul class="capacity__list">
-              <li>Consumos de insumos</li>
-              <li>Energía y maquinaria</li>
-              <li>Datos de aplicación de fertilizantes</li>
-              <li>Datos de riego</li>
-              <li>Geometrías de parcela</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Normativa cubierta</h3>
-            <ul class="capacity__list">
-              <li>CSRD · Directiva UE 2022/2464</li>
-              <li>ESG estándar internacional</li>
-              <li>Real Decreto purines</li>
-              <li>Pacto Verde Europeo</li>
-            </ul>
-          </div>
-        </div>
-        <div class="capacity__grid capacity__grid--secondary">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Decisiones que ayuda a tomar</h3>
-            <ul class="capacity__list">
-              <li>Cómo bajar la huella de carbono por kilo producido</li>
-              <li>Qué inversión sostenible da más retorno</li>
-              <li>Cómo demostrar el origen al cliente final</li>
-              <li>Qué prácticas reportar a la directiva CSRD</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Tecnologías implicadas</h3>
-            <ul class="capacity__list">
-              <li>Agentes IA de reporting CSRD</li>
-              <li>Visual · registro de insumos, energía y maquinaria</li>
-              <li>API · BI corporativo y reportería ESG</li>
-              <li>Indicadores ESG estándar internacional</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="capacity__foot">
-          <a href="demo.html" class="link-arrow">Calcula tu reporte CSRD <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 06 · VARIETAL -->
-    <section class="section capacity" id="varietal" style="background: var(--linen);">
-      <div class="container">
-        <div class="capacity__head">
-          <span class="eyebrow"><span class="eyebrow__dot"></span> 06 — Capacidad Varietal</span>
-          <h2 class="section__title">Gestionar programas de <em>variedades protegidas</em>.</h2>
-        </div>
-        <p class="section__lead">Los obtentores y gestores varietales necesitan trazar dónde se planta cada variedad, cobrar regalías y auditar el ecosistema productivo. Construimos esa capa con geolocalización, contratos y supervisión continua.</p>
-
-        <div class="capacity__grid">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Aplicaciones</h3>
-            <ul class="capacity__list">
-              <li>Licencias varietales</li>
-              <li>Regalías y royalties</li>
-              <li>Auditorías de variedad</li>
-              <li>Supervisión varietal</li>
-              <li>Geolocalización de licenciatarios</li>
-              <li>Histórico de variedad por parcela</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Información utilizada</h3>
-            <ul class="capacity__list">
-              <li>Contratos de licencia</li>
-              <li>Geometrías de parcela</li>
-              <li>Datos de vivero</li>
-              <li>Reportes de producción</li>
-              <li>Datos satelitales de verificación</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Sectores donde se aplica</h3>
-            <ul class="capacity__list">
-              <li>Obtentores varietales</li>
-              <li>Viveros</li>
-              <li>Organismos de control</li>
-              <li>Cítricos, fruta de hueso, fruta tropical</li>
-              <li>Asesores y gestores varietales</li>
-            </ul>
-          </div>
-        </div>
-        <div class="capacity__grid capacity__grid--secondary">
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Decisiones que ayuda a tomar</h3>
-            <ul class="capacity__list">
-              <li>Dónde se está plantando realmente cada variedad</li>
-              <li>Quién cumple y quién no las licencias</li>
-              <li>Cuándo intervenir ante una infracción</li>
-              <li>Cómo escalar un programa varietal a otra geografía</li>
-            </ul>
-          </div>
-          <div class="capacity__col">
-            <h3 class="capacity__col-title">Tecnologías implicadas</h3>
-            <ul class="capacity__list">
-              <li>MCP Visual · trazabilidad varietal</li>
-              <li>Sentinel · verificación satelital de plantaciones</li>
-              <li>Agentes IA varietales</li>
-              <li>Visual · gestión de licenciatarios y regalías</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="capacity__foot">
-          <a href="demo.html" class="link-arrow">Habla con un experto varietal <span>→</span></a>
-        </div>
+        <p class="cap-section__foot">¿Quieres ver cómo se activa una capacidad en tu sector? <a href="demo.html">Habla con un consultor →</a></p>
       </div>
     </section>
 
@@ -720,6 +326,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=110"></script>
+  <script src="script.js?v=111"></script>
 </body>
 </html>
