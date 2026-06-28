@@ -3147,27 +3147,45 @@ em {
   line-height: 1.55;
   color: rgba(245, 241, 234, 0.72);
 }
-.partners__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+/* Scroll horizontal con snap — sale del container para tocar bordes */
+.partners__scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: max(24px, calc((100vw - 1440px) / 2 + 24px));
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+  margin-top: -32px;
+}
+.partners__scroller::-webkit-scrollbar { display: none; }
+.partners__track {
+  display: flex;
   gap: 12px;
+  padding: 0 max(24px, calc((100vw - 1440px) / 2 + 24px));
 }
 .partner {
+  flex: 0 0 240px;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 6px;
+  gap: 8px;
   padding: 28px 22px;
   background: rgba(245, 241, 234, 0.03);
   border: 1px solid rgba(245, 241, 234, 0.08);
   border-radius: 14px;
-  min-height: 110px;
-  transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
+  min-height: 130px;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease), transform 0.25s var(--ease);
 }
 .partner:hover {
   background: rgba(245, 241, 234, 0.06);
-  border-color: rgba(253, 128, 29, 0.32);
+  border-color: rgba(253, 128, 29, 0.45);
+  transform: translateY(-3px);
+}
+@media (max-width: 720px) {
+  .partner { flex-basis: 220px; }
 }
 .partner__tag {
   font-family: var(--font-mono, monospace);
