@@ -873,6 +873,12 @@ em {
     object-position: center 78%;
     transform: scale(1.15);
   }
+  /* Swap lead: en mobile mostramos sólo la versión corta */
+  .hero__lead-full { display: none; }
+  .hero__lead-short { display: block; }
+}
+@media (min-width: 881px) {
+  .hero__lead-short { display: none; }
   /* Velo oscuro denso en la mitad superior (donde está el copy)
      y más translúcido abajo para dejar respirar el hex animado. */
   .hero__media-glow {
