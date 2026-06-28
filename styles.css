@@ -3122,7 +3122,36 @@ em {
   flex-direction: column;
   gap: 14px;
   min-height: 240px;
+  overflow: hidden;
+  isolation: isolate;
 }
+.diff__card__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.22;
+  z-index: 0;
+  pointer-events: none;
+}
+.diff__card__veil {
+  /* Wash blanco con mayor opacidad arriba (donde está num + h3 + el
+     grueso del párrafo) y un poco más translúcido abajo, donde
+     se permite que asome el detalle de la foto (atardecer/objeto). */
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(255, 255, 255, 0.82) 55%,
+      rgba(255, 255, 255, 0.52) 100%),
+    radial-gradient(45% 40% at 85% 95%, rgba(253, 128, 29, 0.05), transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+.diff__card > .diff__num,
+.diff__card > h3,
+.diff__card > p { position: relative; z-index: 2; }
 .diff__num {
   font-family: var(--font-mono, monospace);
   font-size: 13px;
