@@ -721,3 +721,95 @@ window.addEventListener("resize", () => {
     onScroll();
   }
 })();
+
+/* ---------- Mobile drawer (burger + menú) ---------- */
+(function initMobileDrawer() {
+  const nav = document.getElementById("nav");
+  if (!nav) return;
+  const actions = nav.querySelector(".nav__actions");
+  if (!actions) return;
+
+  const burger = document.createElement("button");
+  burger.className = "nav__burger";
+  burger.setAttribute("aria-label", "Abrir menú");
+  burger.setAttribute("aria-expanded", "false");
+  burger.innerHTML =
+    '<svg viewBox="0 0 24 24" aria-hidden="true">' +
+    '<path class="bl1" d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>' +
+    '<path class="bl2" d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>' +
+    '<path class="bl3" d="M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>' +
+    "</svg>";
+  actions.appendChild(burger);
+
+  const drawer = document.createElement("nav");
+  drawer.className = "nav__drawer";
+  drawer.setAttribute("aria-label", "Menú principal");
+  drawer.setAttribute("aria-hidden", "true");
+  drawer.innerHTML =
+    '<div class="nav__drawer__group">' +
+    '<h4>Capacidades</h4>' +
+    '<a href="que-hacemos.html#agronomica">Agronómica</a>' +
+    '<a href="que-hacemos.html#operativa">Operativa</a>' +
+    '<a href="que-hacemos.html#climatica">Climática y Territorial</a>' +
+    '<a href="que-hacemos.html#cumplimiento">Cumplimiento</a>' +
+    '<a href="que-hacemos.html#sostenibilidad">Sostenibilidad</a>' +
+    '<a href="que-hacemos.html#varietal">Inteligencia Varietal</a>' +
+    '<a href="que-hacemos.html#documental">Documental</a>' +
+    '<a href="que-hacemos.html"><strong>Conocer las 7 capacidades →</strong></a>' +
+    "</div>" +
+    '<div class="nav__drawer__group">' +
+    '<h4>Sectores</h4>' +
+    '<a href="sectores.html"><strong>Los 6 sectores →</strong></a>' +
+    "</div>" +
+    '<div class="nav__drawer__group">' +
+    '<h4>Ecosistema Visual</h4>' +
+    '<a href="ecosistema.html#visual">Visual</a>' +
+    '<a href="ecosistema.html#agrovrain">Agrovrain</a>' +
+    '<a href="ecosistema.html#mcp">MCP Visual</a>' +
+    '<a href="ecosistema.html#agentes">Agentes IA</a>' +
+    '<a href="ecosistema.html#fertipro">FertiPRO</a>' +
+    '<a href="ecosistema.html#selphi">Selphi Control Horario</a>' +
+    '<a href="ecosistema.html#sensor">Visual Sensor</a>' +
+    '<a href="ecosistema.html#api">API</a>' +
+    '<a href="ecosistema.html"><strong>Conocer ecosistema →</strong></a>' +
+    "</div>" +
+    '<div class="nav__drawer__group">' +
+    '<h4>Empresa</h4>' +
+    '<a href="nosotros.html">Nosotros</a>' +
+    '<a href="clientes.html">Casos de éxito</a>' +
+    '<a href="blog.html">Blog</a>' +
+    '<a href="contacto.html">Contacto</a>' +
+    "</div>" +
+    '<a href="demo.html" class="btn btn--primary nav__drawer__cta">' +
+    '<span>Solicita demo</span><span class="btn__arrow">→</span>' +
+    "</a>";
+  document.body.appendChild(drawer);
+
+  const setOpen = (open) => {
+    drawer.classList.toggle("is-open", open);
+    drawer.setAttribute("aria-hidden", open ? "false" : "true");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    burger.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    document.body.classList.toggle("has-drawer-open", open);
+  };
+
+  burger.addEventListener("click", () => {
+    setOpen(!drawer.classList.contains("is-open"));
+  });
+
+  drawer.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (a) setOpen(false);
+  });
+
+  // Cerrar al pasar a desktop
+  const mql = window.matchMedia("(min-width: 961px)");
+  const onMq = (e) => { if (e.matches) setOpen(false); };
+  if (mql.addEventListener) mql.addEventListener("change", onMq);
+  else mql.addListener(onMq);
+
+  // Cerrar con Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && drawer.classList.contains("is-open")) setOpen(false);
+  });
+})();
