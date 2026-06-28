@@ -866,12 +866,15 @@ em {
   .hero__title { font-size: clamp(38px, 10vw, 72px); line-height: 1; }
   .hero__lead p { font-size: 15px; }
   .hero__scroll { display: none; }
-  /* En mobile bajamos el frame para que el hex grande quede en
-     la parte inferior de la pantalla (zona de CTAs) y la zona
-     del texto queda más limpia con sólo asomos del fondo. */
+  /* En mobile: bajamos el frame y lo movemos hacia la izquierda
+     para que los hexágonos queden detrás del texto y el hex
+     naranja inferior entre por completo en el viewport. Scale
+     compensa el translate para no dejar borde negro a la
+     derecha. El velo oscuro evita que la imagen compita con
+     el copy. */
   .hero__video {
     object-position: center 78%;
-    transform: scale(1.15);
+    transform: scale(1.4) translateX(-12%);
   }
   /* Swap lead: en mobile mostramos sólo la versión corta */
   .hero__lead-full { display: none; }
