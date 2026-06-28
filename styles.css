@@ -866,6 +866,25 @@ em {
   .hero__title { font-size: clamp(38px, 10vw, 72px); line-height: 1; }
   .hero__lead p { font-size: 15px; }
   .hero__scroll { display: none; }
+  /* Mueve el contenido del video hacia la izquierda para que los
+     hexágonos animados no pisen el bloque de texto en mobile. */
+  .hero__video {
+    object-position: 18% center;
+    transform: scale(1.18) translateX(-8%);
+  }
+  /* Overlay denso en la zona del texto pero translúcido en los
+     bordes para que se sigan viendo los hexágonos moverse de
+     fondo. El radial oscuro va sobre el lado izquierdo donde
+     está el copy; el lado derecho queda más limpio. */
+  .hero__media-glow {
+    background:
+      linear-gradient(180deg,
+        rgba(22, 20, 15, 0.62) 0%,
+        rgba(22, 20, 15, 0.42) 28%,
+        rgba(22, 20, 15, 0.38) 60%,
+        rgba(22, 20, 15, 0.78) 100%),
+      radial-gradient(70% 55% at 20% 50%, rgba(22, 20, 15, 0.55), transparent 80%);
+  }
 }
 @media (max-width: 480px) {
   .hero__top { flex-direction: column; align-items: flex-start; gap: 10px; }
