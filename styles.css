@@ -3115,37 +3115,40 @@ em {
 .diff__card {
   position: relative;
   padding: 36px 28px;
-  background: var(--paper, #FFFFFF);
+  background: var(--ink, #16140F);
   border-radius: 18px;
-  border: 1px solid rgba(22, 20, 15, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 240px;
+  min-height: 440px;
   overflow: hidden;
   isolation: isolate;
+  color: #fff;
+  justify-content: flex-start;
 }
 .diff__card__bg {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
-  opacity: 0.22;
+  background-position: center bottom;
+  opacity: 0.85;
   z-index: 0;
   pointer-events: none;
 }
 .diff__card__veil {
-  /* Wash blanco con mayor opacidad arriba (donde está num + h3 + el
-     grueso del párrafo) y un poco más translúcido abajo, donde
-     se permite que asome el detalle de la foto (atardecer/objeto). */
+  /* Overlay casi sólido hasta el ~78% para que num+h3+p respiren
+     sobre fondo oscuro estable. En el último 20% la foto emerge
+     con fuerza (cuaderno, sensor, dron). */
   position: absolute;
   inset: 0;
   background:
     linear-gradient(180deg,
-      rgba(255, 255, 255, 0.94) 0%,
-      rgba(255, 255, 255, 0.82) 55%,
-      rgba(255, 255, 255, 0.52) 100%),
-    radial-gradient(45% 40% at 85% 95%, rgba(253, 128, 29, 0.05), transparent 70%);
+      rgba(22, 20, 15, 0.95) 0%,
+      rgba(22, 20, 15, 0.93) 60%,
+      rgba(22, 20, 15, 0.80) 78%,
+      rgba(22, 20, 15, 0.18) 100%),
+    radial-gradient(55% 35% at 50% 100%, rgba(253, 128, 29, 0.14), transparent 70%);
   z-index: 1;
   pointer-events: none;
 }
@@ -3165,11 +3168,12 @@ em {
   letter-spacing: -0.02em;
   line-height: 1.15;
   margin: 0;
+  color: #fff;
 }
 .diff__card p {
   font-size: 15.5px;
   line-height: 1.55;
-  color: var(--ink-soft, #555);
+  color: rgba(255, 255, 255, 0.92);
   margin: 0;
 }
 @media (max-width: 880px) {
