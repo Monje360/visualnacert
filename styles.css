@@ -1359,17 +1359,34 @@ em {
   text-align: center;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
-.partner-band::before {
-  /* Acento naranja muy sutil radial — refuerza el branding sin
-     saturar; coherente con los glow naranja del resto de cards. */
-  content: '';
+.partner-band__bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(50% 60% at 50% 50%, rgba(253, 128, 29, 0.05), transparent 70%);
+  background-size: cover;
+  background-position: center 60%;
+  opacity: 0.32;
+  z-index: 0;
   pointer-events: none;
 }
-.partner-band > .container { position: relative; z-index: 1; }
+.partner-band__veil {
+  /* Wash linen radial: la imagen respira en los bordes
+     (camino + hills + sol) y el centro queda velado para
+     que el texto ink mantenga contraste cómodo. */
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(70% 70% at 50% 50%,
+      rgba(245, 241, 234, 0.88) 0%,
+      rgba(245, 241, 234, 0.55) 45%,
+      rgba(245, 241, 234, 0.15) 80%,
+      transparent 100%),
+    radial-gradient(50% 60% at 50% 50%, rgba(253, 128, 29, 0.06), transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+.partner-band > .container { position: relative; z-index: 2; }
 .partner-band .eyebrow { justify-content: center; }
 .partner-band__title {
   font-family: var(--font-display);
