@@ -3114,47 +3114,33 @@ em {
 }
 .diff__card {
   position: relative;
-  padding: 36px 28px;
   background: var(--ink, #16140F);
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  min-height: 440px;
   overflow: hidden;
-  isolation: isolate;
   color: #fff;
-  justify-content: flex-start;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
-.diff__card__bg {
-  position: absolute;
-  inset: 0;
+.diff__card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(253, 128, 29, 0.32);
+  box-shadow: 0 18px 40px rgba(22, 20, 15, 0.18);
+}
+.diff__card__photo {
+  aspect-ratio: 16 / 10;
   background-size: cover;
-  background-position: center bottom;
-  opacity: 0.85;
-  z-index: 0;
-  pointer-events: none;
+  background-position: center;
+  background-color: #0d0c0a;
 }
-.diff__card__veil {
-  /* Overlay casi sólido hasta el ~75% para que num+h3+p respiren
-     sobre fondo oscuro estable. En el último 25% la foto emerge
-     con más fuerza (cuaderno, sensor, dron). */
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg,
-      rgba(22, 20, 15, 0.93) 0%,
-      rgba(22, 20, 15, 0.90) 55%,
-      rgba(22, 20, 15, 0.65) 75%,
-      rgba(22, 20, 15, 0.08) 100%),
-    radial-gradient(55% 35% at 50% 100%, rgba(253, 128, 29, 0.14), transparent 70%);
-  z-index: 1;
-  pointer-events: none;
+.diff__card__body {
+  padding: 28px 30px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
 }
-.diff__card > .diff__num,
-.diff__card > h3,
-.diff__card > p { position: relative; z-index: 2; }
 .diff__num {
   font-family: var(--font-mono, monospace);
   font-size: 13px;
