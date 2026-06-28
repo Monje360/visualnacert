@@ -3313,6 +3313,22 @@ em {
 .capacity__head .section__title {
   margin-top: 12px;
 }
+.section__title--product {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 88px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  color: var(--orange);
+}
+.capacity__subline {
+  margin: 12px 0 0;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft, #666);
+}
 .capacity__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
