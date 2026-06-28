@@ -3031,6 +3031,172 @@ em {
 }
 
 /* ============================================
+   FUTURO · bloque narrativo post-hero
+   ============================================ */
+.future {
+  padding: 120px 0 100px;
+  background: var(--paper, #FFFFFF);
+  color: var(--ink);
+}
+.future__head { margin-bottom: 48px; }
+.future__title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 60px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin: 16px 0 0;
+  max-width: 1000px;
+}
+.future__title em { color: var(--orange); font-weight: 500; }
+.future__body {
+  max-width: 760px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.future__body p {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink-soft, #444);
+  margin: 0;
+}
+.future__claim {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 32px) !important;
+  line-height: 1.2 !important;
+  color: var(--ink) !important;
+  border-left: 3px solid var(--orange);
+  padding-left: 18px;
+}
+@media (max-width: 880px) {
+  .future { padding: 72px 0; }
+  .future__body { margin-left: 0; }
+}
+
+/* ============================================
+   DIFERENCIA · 3 pilares
+   ============================================ */
+.diff {
+  padding: 100px 0;
+  background: var(--linen);
+  color: var(--ink);
+}
+.diff .section__lead {
+  max-width: 820px;
+  margin: -16px 0 56px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink-soft, #444);
+}
+.diff__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.diff__card {
+  position: relative;
+  padding: 36px 28px;
+  background: var(--paper, #FFFFFF);
+  border-radius: 18px;
+  border: 1px solid rgba(22, 20, 15, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 240px;
+}
+.diff__num {
+  font-family: var(--font-mono, monospace);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  color: var(--orange);
+}
+.diff__card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+}
+.diff__card p {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ink-soft, #555);
+  margin: 0;
+}
+@media (max-width: 880px) {
+  .diff__grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* ============================================
+   PARTNERS · Innovación y colaboración (logos institucionales)
+   ============================================ */
+.partners {
+  padding: 100px 0;
+  background: var(--ink);
+  color: var(--linen);
+}
+.partners .section__head { border-bottom-color: rgba(245, 241, 234, 0.10); }
+.partners .section__title { color: var(--linen); }
+.partners .section__lead {
+  max-width: 820px;
+  margin: -16px 0 56px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: rgba(245, 241, 234, 0.72);
+}
+.partners__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.partner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 28px 22px;
+  background: rgba(245, 241, 234, 0.03);
+  border: 1px solid rgba(245, 241, 234, 0.08);
+  border-radius: 14px;
+  min-height: 110px;
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.partner:hover {
+  background: rgba(245, 241, 234, 0.06);
+  border-color: rgba(253, 128, 29, 0.32);
+}
+.partner__tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.partner__name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: var(--linen);
+}
+.partners__foot {
+  margin-top: 32px;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 234, 0.5);
+  text-align: center;
+}
+@media (max-width: 1080px) { .partners__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) { .partners__grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* ============================================
    CAPACIDADES · página Qué hacemos
    ============================================ */
 .capacity-toc {
@@ -3115,6 +3281,37 @@ em {
   margin-top: 40px;
   padding-top: 24px;
   border-top: 1px solid var(--line);
+}
+.capacity__grid--secondary {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px dashed rgba(22, 20, 15, 0.1);
+}
+.capacity__how {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--paper, #FFFFFF);
+  border-left: 3px solid var(--orange);
+  border-radius: 0 14px 14px 0;
+  padding: 22px 28px;
+  margin: 4px 0 32px;
+  max-width: 920px;
+  box-shadow: 0 6px 20px rgba(22, 20, 15, 0.05);
+}
+.capacity__how-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.capacity__how p {
+  font-size: 16px;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--ink);
 }
 @media (max-width: 880px) {
   .capacity { padding: 60px 0; }
