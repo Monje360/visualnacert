@@ -35,12 +35,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://visualnacert.vercel.app/empresa.html</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
     <loc>https://visualnacert.vercel.app/nosotros.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>

@@ -58,7 +58,6 @@ Cooperativas agrícolas, hortofrutícolas, bodegas, almazaras, productores de fr
 - [Qué hacemos · 6 Capacidades](https://visualnacert.vercel.app/que-hacemos.html) — Agronómica, Operativa, Climática y Territorial, Cumplimiento, Sostenibilidad, Varietal
 - [Sectores · 6 verticales](https://visualnacert.vercel.app/sectores.html) — Producción, Industria e Insumos, Semillas y Variedades, Administraciones Públicas, Retail y Distribución, Ecosistema de Innovación
 - [Ecosistema Visual · 8 productos](https://visualnacert.vercel.app/ecosistema.html) — Visual, Agrovrain, MCP Visual, Agentes IA, FertiPRO, Selphi, Visual Sensor, API
-- [Empresa · hub corporativo](https://visualnacert.vercel.app/empresa.html) — Quiénes somos, evolución, innovación, alianzas, contacto
 - [Cultivos](https://visualnacert.vercel.app/sectores.html) — nueve cultivos con módulo especializado
 - [Clientes y casos de éxito](https://visualnacert.vercel.app/clientes.html) — más de 60 empresas listadas por sector
 - [Nosotros](https://visualnacert.vercel.app/nosotros.html) — historia, fundadoras, pilares, finca experimental
