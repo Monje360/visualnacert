@@ -3352,16 +3352,32 @@ em {
   color: rgba(255, 255, 255, 0.82);
   margin: 0;
 }
-.cap-section__foot {
-  margin: 48px 0 0;
+.inline-cta {
+  margin: 80px auto 24px;
+  max-width: 760px;
   text-align: center;
-  font-size: 14.5px;
-  color: var(--ink-soft, #666);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
 }
-.cap-section__foot a {
+.inline-cta .eyebrow { justify-content: center; }
+.inline-cta__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.4vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  margin: 4px 0 12px;
+  color: var(--ink);
+}
+.inline-cta__title em {
+  font-style: normal;
   color: var(--orange);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+}
+@media (max-width: 640px) {
+  .inline-cta { margin: 56px auto 16px; }
+  .inline-cta__title br { display: none; }
 }
 @media (max-width: 880px) {
   .cap-card {
