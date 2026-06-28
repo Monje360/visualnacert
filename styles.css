@@ -3137,17 +3137,17 @@ em {
   pointer-events: none;
 }
 .diff__card__veil {
-  /* Overlay casi sólido hasta el ~78% para que num+h3+p respiren
-     sobre fondo oscuro estable. En el último 20% la foto emerge
-     con fuerza (cuaderno, sensor, dron). */
+  /* Overlay casi sólido hasta el ~75% para que num+h3+p respiren
+     sobre fondo oscuro estable. En el último 25% la foto emerge
+     con más fuerza (cuaderno, sensor, dron). */
   position: absolute;
   inset: 0;
   background:
     linear-gradient(180deg,
-      rgba(22, 20, 15, 0.95) 0%,
-      rgba(22, 20, 15, 0.93) 60%,
-      rgba(22, 20, 15, 0.80) 78%,
-      rgba(22, 20, 15, 0.18) 100%),
+      rgba(22, 20, 15, 0.93) 0%,
+      rgba(22, 20, 15, 0.90) 55%,
+      rgba(22, 20, 15, 0.65) 75%,
+      rgba(22, 20, 15, 0.08) 100%),
     radial-gradient(55% 35% at 50% 100%, rgba(253, 128, 29, 0.14), transparent 70%);
   z-index: 1;
   pointer-events: none;
@@ -3282,50 +3282,74 @@ em {
 }
 .cap-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 .cap-card {
-  background: var(--paper, #FFFFFF);
-  border: 1px solid rgba(22, 20, 15, 0.06);
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  background: var(--ink, #16140F);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+  overflow: hidden;
+  color: #fff;
+  min-height: 260px;
   scroll-margin-top: 120px;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
 }
 .cap-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(253, 128, 29, 0.32);
-  box-shadow: 0 14px 32px rgba(22, 20, 15, 0.08);
+  border-color: rgba(253, 128, 29, 0.42);
+  box-shadow: 0 18px 40px rgba(22, 20, 15, 0.18);
+}
+.cap-card__media {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 260px;
+}
+.cap-card__media::after {
+  /* Fade lateral hacia el lado del texto para coser la foto
+     con el panel oscuro sin línea dura. */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 55%, rgba(22, 20, 15, 0.55) 100%);
+  pointer-events: none;
+}
+.cap-card__content {
+  padding: 36px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
 }
 .cap-card__num {
   font-family: var(--font-mono, monospace);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.18em;
   color: var(--orange);
 }
 .cap-card__tag {
   font-family: var(--font-mono, monospace);
-  font-size: 10px;
-  letter-spacing: 0.16em;
+  font-size: 11px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ink-soft, #777);
+  color: rgba(255, 255, 255, 0.55);
 }
 .cap-card__title {
   font-family: var(--font-display);
-  font-size: clamp(22px, 2.2vw, 28px);
+  font-size: clamp(24px, 2.4vw, 32px);
   font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin: 4px 0 0;
+  line-height: 1.12;
+  margin: 4px 0 4px;
+  color: #fff;
 }
 .cap-card__desc {
   font-size: 15.5px;
   line-height: 1.55;
-  color: var(--ink-soft, #555);
+  color: rgba(255, 255, 255, 0.82);
   margin: 0;
 }
 .cap-section__foot {
@@ -3339,13 +3363,22 @@ em {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-@media (max-width: 960px) {
-  .cap-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 880px) {
+  .cap-card {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .cap-card__media {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+  .cap-card__media::after {
+    background: linear-gradient(180deg, transparent 55%, rgba(22, 20, 15, 0.55) 100%);
+  }
+  .cap-card__content { padding: 28px 24px; }
 }
 @media (max-width: 640px) {
-  .cap-grid { grid-template-columns: 1fr; }
   .cap-section { padding: 64px 0 90px; }
-  .cap-card { padding: 24px 22px; }
 }
 
 /* ============================================
