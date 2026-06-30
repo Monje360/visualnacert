@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=128" />
+  <link rel="stylesheet" href="styles.css?v=129" />
 
   <!-- Schema.org Organization -->
   <script type="application/ld+json">
@@ -168,19 +168,6 @@
         <span class="wordmark"><span class="visual">Visual</span><span class="nacert">NACert</span></span>
       </a>
       <nav class="nav__links">
-        <div class="nav__dropdown">
-          <span class="nav__dropdown-toggle">Capacidades</span>
-          <div class="nav__dropdown-menu">
-            <a href="que-hacemos.html#agronomica">Agronómica</a>
-            <a href="que-hacemos.html#operativa">Operativa</a>
-            <a href="que-hacemos.html#climatica">Climática y Territorial</a>
-            <a href="que-hacemos.html#cumplimiento">Cumplimiento</a>
-            <a href="que-hacemos.html#sostenibilidad">Sostenibilidad</a>
-            <a href="que-hacemos.html#varietal">Inteligencia Varietal</a>
-            <a href="que-hacemos.html#documental">Documental</a>
-            <a href="que-hacemos.html" class="nav__dropdown-cta">Conocer las 7 capacidades →</a>
-          </div>
-        </div>
         <a href="sectores.html">Sectores</a>
         <div class="nav__dropdown">
           <span class="nav__dropdown-toggle">Ecosistema Visual</span>
@@ -466,6 +453,57 @@
       </div>
     </section>
 
+    <!-- CAPACIDADES · 7 tiles compactos -->
+    <section class="caps" id="capacidades">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> Las 7 capacidades</span>
+          <h2 class="section__title">Siete capacidades, <em>una sola plataforma</em>.</h2>
+        </div>
+        <p class="section__lead">Sobre el Ecosistema Visual activamos siete capacidades de inteligencia artificial. Cada una resuelve un problema concreto del sector y se puede activar por separado o combinada con el resto.</p>
+
+        <div class="caps__grid">
+          <a href="que-hacemos.html#agronomica" class="cap-tile" data-reveal>
+            <span class="cap-tile__num">01</span>
+            <h3>Agronómica</h3>
+            <p>Comprender mejor lo que ocurre en cada cultivo.</p>
+          </a>
+          <a href="que-hacemos.html#operativa" class="cap-tile" data-reveal>
+            <span class="cap-tile__num">02</span>
+            <h3>Operativa</h3>
+            <p>Gestionar mejor recursos, equipos y operaciones.</p>
+          </a>
+          <a href="que-hacemos.html#climatica" class="cap-tile" data-reveal>
+            <span class="cap-tile__num">03</span>
+            <h3>Climática y Territorial</h3>
+            <p>Comprender el territorio y anticipar riesgos.</p>
+          </a>
+          <a href="que-hacemos.html#cumplimiento" class="cap-tile" data-reveal>
+            <span class="cap-tile__num">04</span>
+            <h3>Cumplimiento</h3>
+            <p>Reducir la complejidad regulatoria.</p>
+          </a>
+          <a href="que-hacemos.html#sostenibilidad" class="cap-tile" data-reveal>
+            <span class="cap-tile__num">05</span>
+            <h3>Sostenibilidad</h3>
+            <p>Medir, demostrar y mejorar el desempeño ambiental.</p>
+          </a>
+          <a href="que-hacemos.html#varietal" class="cap-tile" data-reveal>
+            <span class="cap-tile__num">06</span>
+            <h3>Inteligencia Varietal</h3>
+            <p>Proteger y gestionar la innovación genética.</p>
+          </a>
+          <a href="que-hacemos.html#documental" class="cap-tile" data-reveal>
+            <span class="cap-tile__num">07</span>
+            <h3>Documental</h3>
+            <p>Transformar documentación en conocimiento utilizable.</p>
+          </a>
+        </div>
+
+        <a href="que-hacemos.html" class="link-arrow caps__cta">Ver el detalle de cada capacidad <span>→</span></a>
+      </div>
+    </section>
+
     <!-- LOGOS MARQUEE -->
     <section class="logos">
       <div class="container logos__head">
@@ -512,62 +550,6 @@
           <span>Habla con un consultor</span>
           <span class="btn__arrow">→</span>
         </a>
-      </div>
-    </section>
-
-    <!-- PROCESO -->
-    <section class="process">
-      <div class="container">
-        <div class="process__head">
-          <span class="eyebrow"><span class="eyebrow__dot"></span> 04 — Cómo trabajamos</span>
-          <h3 class="process__title">
-            Con criterio,<br />
-            con proceso,<br />
-            con <span class="accent">resultados</span>.
-          </h3>
-        </div>
-        <div class="process__row">
-          <div class="step" data-reveal>
-            <span class="step__num">01</span>
-            <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
-              <!-- 25% · cuarto superior derecho (centro → top-mid → top-right → right) -->
-              <polygon points="20,17.32 20,0 30,0 40,17.32" fill="var(--orange)"/>
-              <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-            <h4>Capturar</h4>
-            <p>Sensores IoT, satélite, ERP y cuadernos de campo. La realidad agronómica, en tiempo real.</p>
-          </div>
-          <div class="step" data-reveal>
-            <span class="step__num">02</span>
-            <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
-              <!-- 50% · mitad derecha completa (Q1 + Q2 en sentido horario) -->
-              <polygon points="20,17.32 20,0 30,0 40,17.32 30,34.64 20,34.64" fill="var(--orange)"/>
-              <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-            <h4>Aprender</h4>
-            <p>Entrenamos los modelos con tus datos y 4M+ de hectáreas de contexto. Cada campaña, mejor.</p>
-          </div>
-          <div class="step" data-reveal>
-            <span class="step__num">03</span>
-            <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
-              <!-- 75% · todo el hex MENOS el cuarto superior izquierdo -->
-              <polygon points="20,17.32 20,0 30,0 40,17.32 30,34.64 10,34.64 0,17.32" fill="var(--orange)"/>
-              <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-            <h4>Recomendar</h4>
-            <p>Decisiones priorizadas por impacto, coste y riesgo. Validadas por agrónomos sénior.</p>
-          </div>
-          <div class="step" data-reveal>
-            <span class="step__num">04</span>
-            <svg class="step__icon" viewBox="-2 -2 44 39" aria-hidden="true">
-              <!-- 100% · hexágono completo relleno -->
-              <polygon points="10,0 30,0 40,17.32 30,34.64 10,34.64 0,17.32" fill="var(--orange)"/>
-              <polygon points="40,17.32 30,34.64 10,34.64 0,17.32 10,0 30,0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-            <h4>Medir</h4>
-            <p>Resultado por hectárea, campaña y línea de negocio. Lo que no se mide, no mejora.</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -719,6 +701,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=127"></script>
+  <script src="script.js?v=129"></script>
 </body>
 </html>

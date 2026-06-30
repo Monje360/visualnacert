@@ -747,17 +747,6 @@ window.addEventListener("resize", () => {
   drawer.setAttribute("aria-hidden", "true");
   drawer.innerHTML =
     '<div class="nav__drawer__group">' +
-    '<h4>Capacidades</h4>' +
-    '<a href="que-hacemos.html#agronomica">Agronómica</a>' +
-    '<a href="que-hacemos.html#operativa">Operativa</a>' +
-    '<a href="que-hacemos.html#climatica">Climática y Territorial</a>' +
-    '<a href="que-hacemos.html#cumplimiento">Cumplimiento</a>' +
-    '<a href="que-hacemos.html#sostenibilidad">Sostenibilidad</a>' +
-    '<a href="que-hacemos.html#varietal">Inteligencia Varietal</a>' +
-    '<a href="que-hacemos.html#documental">Documental</a>' +
-    '<a href="que-hacemos.html"><strong>Conocer las 7 capacidades →</strong></a>' +
-    "</div>" +
-    '<div class="nav__drawer__group">' +
     '<h4>Sectores</h4>' +
     '<a href="sectores.html"><strong>Los 6 sectores →</strong></a>' +
     "</div>" +
