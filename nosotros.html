@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=145" />
+  <link rel="stylesheet" href="styles.css?v=146" />
 
   <!-- Schema.org AboutPage + Person founders + next-gen -->
   <script type="application/ld+json">
@@ -347,29 +347,6 @@
       </div>
     </section>
 
-    <!-- NEWSLETTER -->
-    <section class="section" style="padding-top: 0;">
-      <div class="container">
-        <aside class="newsletter-pill">
-          <div>
-            <span class="eyebrow"><span class="eyebrow__dot"></span> Newsletter semanal</span>
-            <h3>Una vez a la semana. <em>Cero ruido</em>.</h3>
-            <p>Las decisiones que tomamos en producto, los casos que vemos en el campo y los recursos técnicos publicados. Para CEOs, directores de operaciones y responsables de transformación digital.</p>
-          </div>
-          <form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('.newsletter-ok').hidden=false;this.querySelector('.newsletter-row').hidden=true;">
-            <div class="newsletter-row">
-              <input type="email" name="email" placeholder="tu@empresa.com" required />
-              <button type="submit" class="btn btn--primary"><span>Suscribirme</span><span class="btn__arrow">→</span></button>
-            </div>
-            <div class="newsletter-ok" hidden>
-              <strong>Listo.</strong> Te has suscrito. Te llega el próximo número el martes que viene.
-            </div>
-            <p class="newsletter-fine">Sin spam. Baja con un clic. <a href="privacidad.html">Política de privacidad</a>.</p>
-          </form>
-        </aside>
-      </div>
-    </section>
-
     <!-- FINCA MILÚ (antes Visual Lab) -->
     <section class="section" id="finca-milu" style="background: var(--linen);">
       <div class="container">
@@ -429,6 +406,29 @@
             <span>Ver casos de éxito</span>
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section" style="padding-top: 40px; padding-bottom: 80px;">
+      <div class="container">
+        <aside class="newsletter-pill">
+          <div>
+            <span class="eyebrow"><span class="eyebrow__dot"></span> Newsletter semanal</span>
+            <h3>Una vez a la semana. <em>Cero ruido</em>.</h3>
+            <p>Las decisiones que tomamos en producto, los casos que vemos en el campo y los recursos técnicos publicados. Para CEOs, directores de operaciones y responsables de transformación digital.</p>
+          </div>
+          <form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('.newsletter-ok').hidden=false;this.querySelector('.newsletter-row').hidden=true;">
+            <div class="newsletter-row">
+              <input type="email" name="email" placeholder="tu@empresa.com" required />
+              <button type="submit" class="btn btn--primary"><span>Suscribirme</span><span class="btn__arrow">→</span></button>
+            </div>
+            <div class="newsletter-ok" hidden>
+              <strong>Listo.</strong> Te has suscrito. Te llega el próximo número el martes que viene.
+            </div>
+            <p class="newsletter-fine">Sin spam. Baja con un clic. <a href="privacidad.html">Política de privacidad</a>.</p>
+          </form>
+        </aside>
       </div>
     </section>
 
