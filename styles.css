@@ -3484,14 +3484,16 @@ em {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--paper, #FFFFFF);
+  color: var(--ink);
 }
 .cap-card.is-open .cap-card__panel { max-height: 3400px; }
 .cap-card__panel-inner {
-  padding: 4px 44px 40px;
+  padding: 4px 44px 44px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 26px 48px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(22, 20, 15, 0.08);
 }
 .cap-card__section h3 {
   font-family: var(--font-mono, monospace);
@@ -3499,13 +3501,13 @@ em {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--orange);
-  margin: 24px 0 12px;
+  margin: 28px 0 12px;
   font-weight: 500;
 }
 .cap-card__section p {
   font-size: 15px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.86);
+  color: var(--ink);
   margin: 0 0 10px;
 }
 .cap-card__section p:last-child { margin-bottom: 0; }
@@ -3520,10 +3522,11 @@ em {
 .cap-card__section li {
   font-size: 14.5px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.86);
+  color: var(--ink-soft, #4a463d);
   padding-left: 16px;
   position: relative;
 }
+.cap-card__section li strong { color: var(--ink); }
 .cap-card__section li::before {
   content: '';
   position: absolute;
@@ -3535,8 +3538,8 @@ em {
   background: var(--orange);
 }
 .cap-card__section li a {
-  color: rgba(255, 255, 255, 0.94);
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+  color: var(--ink);
+  border-bottom: 1px dotted rgba(22, 20, 15, 0.3);
   text-decoration: none;
   transition: color 0.2s, border-color 0.2s;
 }
