@@ -752,14 +752,15 @@ window.addEventListener("resize", () => {
     "</div>" +
     '<div class="nav__drawer__group">' +
     '<h4>Ecosistema Visual</h4>' +
-    '<a href="ecosistema.html#visual">Visual</a>' +
-    '<a href="ecosistema.html#agrovrain">Agrovrain</a>' +
-    '<a href="ecosistema.html#mcp">MCP Visual</a>' +
+    '<a href="visual-academy.html">Academy</a>' +
     '<a href="ecosistema.html#agentes">Agentes IA</a>' +
+    '<a href="ecosistema.html#agrovrain">Agrovrain</a>' +
     '<a href="ecosistema.html#fertipro">FertiPRO</a>' +
-    '<a href="ecosistema.html#selphi">Selphi Control Horario</a>' +
+    '<a href="ecosistema.html#mcp">MCP Visual</a>' +
+    '<a href="ecosistema.html#selphi">Selphi</a>' +
+    '<a href="ecosistema.html#visual">Visual</a>' +
+    '<a href="ecosistema.html#api">Visual APIs</a>' +
     '<a href="ecosistema.html#sensor">Visual Sensor</a>' +
-    '<a href="ecosistema.html#api">API</a>' +
     '<a href="ecosistema.html"><strong>Conocer ecosistema →</strong></a>' +
     "</div>" +
     '<div class="nav__drawer__group">' +

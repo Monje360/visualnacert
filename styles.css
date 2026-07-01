@@ -6348,8 +6348,14 @@ body.is-cookies-modal { overflow: hidden; }
   margin: 0;
 }
 .caps__cta {
-  margin-top: 36px;
-  display: inline-flex;
+  margin-top: 44px;
+  display: flex;
+  justify-content: center;
+}
+.sectors__cta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 880px) {
   .caps__grid { grid-template-columns: repeat(2, 1fr); }
