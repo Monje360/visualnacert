@@ -1687,7 +1687,7 @@ em {
 }
 .sector {
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 2;
   border-radius: var(--radius);
   overflow: hidden;
   background-size: cover;
@@ -1696,7 +1696,7 @@ em {
   background-blend-mode: normal;
   display: flex;
   align-items: flex-end;
-  padding: 20px;
+  padding: 16px;
   isolation: isolate;
   transition: transform 0.5s var(--ease);
 }
@@ -2094,19 +2094,19 @@ em {
 .sector__name {
   position: relative;
   z-index: 2;
-  font-size: clamp(18px, 1.8vw, 24px);
+  font-size: clamp(14px, 1.3vw, 17px);
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   line-height: 1.15;
   color: var(--linen);
 }
 .sector__meta {
   position: absolute;
-  top: 18px;
-  right: 18px;
+  top: 14px;
+  right: 14px;
   z-index: 2;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: 0.08em;
   background: rgba(243, 237, 224, 0.12);
   backdrop-filter: blur(8px);
