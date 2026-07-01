@@ -3685,22 +3685,26 @@ em {
   color: #fff;
 }
 .capacity {
-  padding: 100px 0;
+  padding: 90px 0;
   scroll-margin-top: 100px;
 }
 .capacity__head {
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   padding-bottom: 0;
 }
 .capacity__head .section__title {
-  margin-top: 12px;
+  margin-top: 8px;
+}
+.capacity .section__lead {
+  margin: 0 0 40px;
+  max-width: 900px;
 }
 .section__title--product {
   font-family: var(--font-display);
-  font-size: clamp(40px, 6vw, 88px);
+  font-size: clamp(40px, 5.4vw, 76px);
   font-weight: 600;
   letter-spacing: -0.04em;
-  line-height: 0.98;
+  line-height: 1;
   color: var(--orange);
 }
 .capacity__subline {
