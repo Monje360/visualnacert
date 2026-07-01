@@ -803,3 +803,55 @@ window.addEventListener("resize", () => {
     if (e.key === "Escape" && drawer.classList.contains("is-open")) setOpen(false);
   });
 })();
+
+/* ---------- Accordion cap-card (sectores + capacidades) ---------- */
+(function initCapAccordion() {
+  const headers = document.querySelectorAll(".cap-card__header");
+  if (!headers.length) return;
+
+  function closeCard(card) {
+    card.classList.remove("is-open");
+    const h = card.querySelector(".cap-card__header");
+    if (h) h.setAttribute("aria-expanded", "false");
+  }
+
+  function openCard(card) {
+    // Modo acordeón: sólo uno abierto a la vez en el mismo grid
+    const grid = card.closest(".cap-grid");
+    if (grid) {
+      grid.querySelectorAll(".cap-card.is-open").forEach((other) => {
+        if (other !== card) closeCard(other);
+      });
+    }
+    card.classList.add("is-open");
+    const h = card.querySelector(".cap-card__header");
+    if (h) h.setAttribute("aria-expanded", "true");
+  }
+
+  headers.forEach((header) => {
+    header.addEventListener("click", () => {
+      const card = header.closest(".cap-card");
+      if (!card) return;
+      if (card.classList.contains("is-open")) {
+        closeCard(card);
+      } else {
+        openCard(card);
+        if (card.id) {
+          try { history.replaceState(null, "", "#" + card.id); } catch (_) {}
+        }
+      }
+    });
+  });
+
+  // Auto-abrir si la URL trae hash de una card al cargar
+  function openFromHash() {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const card = document.querySelector(hash + ".cap-card");
+    if (!card) return;
+    openCard(card);
+    setTimeout(() => card.scrollIntoView({ block: "start", behavior: "smooth" }), 120);
+  }
+  openFromHash();
+  window.addEventListener("hashchange", openFromHash);
+})();

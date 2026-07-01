@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=133" />
+  <link rel="stylesheet" href="styles.css?v=134" />
 
   <!-- Schema.org ItemList: 6 sectores -->
   <script type="application/ld+json">
@@ -185,68 +185,333 @@
         <div class="cap-grid">
 
           <article class="cap-card" id="produccion" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/sectors/home/produccion.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">01</span>
-              <span class="cap-card__tag">Agricultura · Ganadería · Cooperativas</span>
-              <h2 class="cap-card__title">Producción Agroalimentaria.</h2>
-              <p class="cap-card__desc">El núcleo histórico de VisualNACert. Empresas y cooperativas que producen en campo y necesitan coordinar agronomía, costes, normativa y datos meteorológicos sobre el mismo dato de parcela.</p>
-              <p class="cap-card__desc">Conectamos parcela, equipo y normativa en una sola plataforma. La cooperativa o explotación decide con datos consolidados, cumple sin doble entrada y anticipa eventos climáticos antes de que impacten en la campaña.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="produccion-panel">
+              <div class="cap-card__media" style="background-image: url('img/sectors/home/produccion.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">01</span>
+                <span class="cap-card__tag">Agricultura · Ganadería · Cooperativas</span>
+                <h2 class="cap-card__title">Producción Agroalimentaria.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="produccion-panel" role="region" aria-label="Detalle Producción Agroalimentaria">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Ayudamos a producir mejor</h3>
+                  <p>La producción agroalimentaria se enfrenta a un entorno cada vez más exigente. Incremento de costes, disponibilidad de agua, sostenibilidad, presión regulatoria, exigencias de trazabilidad y adaptación al cambio climático son algunos de los desafíos que condicionan la rentabilidad de las explotaciones.</p>
+                  <p>VisualNACert ayuda a transformar información técnica, económica y territorial en decisiones más precisas y rentables.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Ámbitos de aplicación</h3>
+                  <ul>
+                    <li>Producción agrícola en fresco (frutas y hortalizas)</li>
+                    <li>Producción de frutos secos (almendro, pistacho, nogal)</li>
+                    <li>Aceite de oliva y explotaciones olivareras</li>
+                    <li>Viñedos y bodegas</li>
+                    <li>Ganadería</li>
+                    <li>Cooperativas y organizaciones de productores</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Principales desafíos</h3>
+                  <ul>
+                    <li>Rentabilidad y costes de producción</li>
+                    <li>Fertilización y riego</li>
+                    <li>Riesgos climáticos</li>
+                    <li>Certificación y trazabilidad</li>
+                    <li>Gestión de equipos</li>
+                    <li>Sostenibilidad</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Capacidades más relevantes</h3>
+                  <ul>
+                    <li><a href="que-hacemos.html#agronomica">Agronómica</a></li>
+                    <li><a href="que-hacemos.html#operativa">Operativa</a></li>
+                    <li><a href="que-hacemos.html#climatica">Climática y Territorial</a></li>
+                    <li><a href="que-hacemos.html#cumplimiento">Cumplimiento</a></li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>9 cultivos con módulo especializado</h3>
+                  <p>Dentro de la producción, entrenamos módulos específicos para cultivos con ciclos, plagas y normativa diferenciada.</p>
+                  <ul>
+                    <li>Viña (+850K ha)</li>
+                    <li>Cítricos (DO / IGP)</li>
+                    <li>Cultivo extensivo (cereales · oleaginosas)</li>
+                    <li>Hortícolas intensivos</li>
+                    <li>Fruta tropical (aguacate · mango)</li>
+                    <li>Fruta de hueso (melocotón · ciruela)</li>
+                    <li>Tubérculos (patata · zanahoria)</li>
+                    <li>Olivar (+1.7M ha)</li>
+                    <li>Frutos secos (almendra · pistacho)</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="industria" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/sectors/home/industria.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">02</span>
-              <span class="cap-card__tag">Transformadora · Fertilizantes · Maquinaria</span>
-              <h2 class="cap-card__title">Industria Agroalimentaria e Insumos.</h2>
-              <p class="cap-card__desc">Industria transformadora, fabricantes de fertilizantes y fitosanitarios, fabricantes de riego y maquinaria. Conectan el dato del campo con la planificación industrial y la entrega al cliente final.</p>
-              <p class="cap-card__desc">Integramos el dato del campo con la planificación industrial: previsión de materia prima entrante, control de calidad asistido por visión por computador y trazabilidad del lote al pallet conectada con el ERP.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="industria-panel">
+              <div class="cap-card__media" style="background-image: url('img/sectors/home/industria.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">02</span>
+                <span class="cap-card__tag">Transformadora · Fertilizantes · Maquinaria</span>
+                <h2 class="cap-card__title">Industria Agroalimentaria e Insumos.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="industria-panel" role="region" aria-label="Detalle Industria Agroalimentaria e Insumos">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Convertimos información en servicios de mayor valor</h3>
+                  <p>Las empresas que suministran productos y servicios al sector necesitan cada vez más conocimiento para diferenciarse.</p>
+                  <p>VisualNACert ayuda a conectar información técnica, operativa y territorial para generar nuevos servicios, mejorar la relación con los clientes y aumentar la eficiencia.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Ámbitos de aplicación</h3>
+                  <ul>
+                    <li>Industria agroalimentaria (transformación y comercialización)</li>
+                    <li>Industria fitosanitaria (servicios técnicos y seguimiento agronómico)</li>
+                    <li>Industria de fertilizantes (nutrición vegetal basada en datos)</li>
+                    <li>Empresas de riego</li>
+                    <li>Maquinaria conectada</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Principales desafíos</h3>
+                  <ul>
+                    <li>Trazabilidad</li>
+                    <li>Gestión documental</li>
+                    <li>Diferenciación mediante servicios</li>
+                    <li>Optimización de recursos</li>
+                    <li>Integración de información</li>
+                    <li>Sostenibilidad</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Capacidades más relevantes</h3>
+                  <ul>
+                    <li><a href="que-hacemos.html#agronomica">Agronómica</a></li>
+                    <li><a href="que-hacemos.html#operativa">Operativa</a></li>
+                    <li><a href="que-hacemos.html#documental">Documental</a></li>
+                    <li><a href="que-hacemos.html#sostenibilidad">Sostenibilidad</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="variedades" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/sectors/home/variedades.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">03</span>
-              <span class="cap-card__tag">Obtentores · Viveros · Organismos de Control</span>
-              <h2 class="cap-card__title">Semillas y Variedades Protegidas.</h2>
-              <p class="cap-card__desc">Obtentores, viveros y organismos de control que necesitan saber dónde se planta cada variedad, cobrar regalías y demostrar el cumplimiento del programa varietal en tiempo real.</p>
-              <p class="cap-card__desc">Geolocalizamos cada licencia varietal, automatizamos la liquidación de regalías y verificamos plantaciones por satélite. Auditoría continua sin necesidad de pisar el campo.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="variedades-panel">
+              <div class="cap-card__media" style="background-image: url('img/sectors/home/variedades.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">03</span>
+                <span class="cap-card__tag">Obtentores · Viveros · Organismos de Control</span>
+                <h2 class="cap-card__title">Semillas y Variedades Protegidas.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="variedades-panel" role="region" aria-label="Detalle Semillas y Variedades Protegidas">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Protegemos la innovación vegetal</h3>
+                  <p>La gestión de variedades protegidas exige controlar información compleja relacionada con licencias, contratos, regalías, trazabilidad y cumplimiento.</p>
+                  <p>VisualNACert cuenta con una amplia experiencia en la digitalización de programas varietales a nivel internacional.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Organizaciones con las que trabajamos</h3>
+                  <ul>
+                    <li>Obtentores vegetales</li>
+                    <li>Viveros</li>
+                    <li>Productores autorizados</li>
+                    <li>Comercializadores</li>
+                    <li>Organismos de control</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Principales desafíos</h3>
+                  <ul>
+                    <li>Gestión de licencias</li>
+                    <li>Regalías</li>
+                    <li>Auditorías</li>
+                    <li>Trazabilidad varietal</li>
+                    <li>Supervisión territorial</li>
+                    <li>Cumplimiento contractual</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Capacidades más relevantes</h3>
+                  <ul>
+                    <li><a href="que-hacemos.html#varietal">Inteligencia Varietal</a></li>
+                    <li><a href="que-hacemos.html#climatica">Climática y Territorial</a></li>
+                    <li><a href="que-hacemos.html#documental">Documental</a></li>
+                    <li><a href="que-hacemos.html#cumplimiento">Cumplimiento</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="administraciones" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/sectors/home/administraciones.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">04</span>
-              <span class="cap-card__tag">Inteligencia Territorial · Sistemas de Información</span>
-              <h2 class="cap-card__title">Administraciones Públicas.</h2>
-              <p class="cap-card__desc">Ministerios, gobiernos regionales y organismos de control. Inteligencia agregada sobre territorio, gestión de ayudas, evaluación rápida de daños tras catástrofes y soporte a políticas agrarias.</p>
-              <p class="cap-card__desc">Inteligencia territorial agregada sobre datos georreferenciados oficiales (SIGPAC). Evaluación rápida de daños tras DANA, sequía o helada y soporte a políticas agrarias con métricas reales.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="administraciones-panel">
+              <div class="cap-card__media" style="background-image: url('img/sectors/home/administraciones.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">04</span>
+                <span class="cap-card__tag">Inteligencia Territorial · Sistemas de Información</span>
+                <h2 class="cap-card__title">Administraciones Públicas.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="administraciones-panel" role="region" aria-label="Detalle Administraciones Públicas">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Inteligencia territorial para una mejor gestión agraria</h3>
+                  <p>La toma de decisiones públicas requiere cada vez más información actualizada, objetiva y territorializada.</p>
+                  <p>VisualNACert desarrolla sistemas de información que ayudan a comprender mejor la realidad del sector y apoyar la gestión basada en datos.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Organizaciones con las que trabajamos</h3>
+                  <ul>
+                    <li>Ministerios</li>
+                    <li>Comunidades Autónomas</li>
+                    <li>Organismos de gestión</li>
+                    <li>Agencias públicas</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Principales desafíos</h3>
+                  <ul>
+                    <li>Monitorización territorial</li>
+                    <li>Evaluación de daños</li>
+                    <li>Riesgos climáticos</li>
+                    <li>Gestión de ayudas</li>
+                    <li>Información sectorial</li>
+                    <li>Sostenibilidad</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Capacidades más relevantes</h3>
+                  <ul>
+                    <li><a href="que-hacemos.html#climatica">Climática y Territorial</a></li>
+                    <li><a href="que-hacemos.html#documental">Documental</a></li>
+                    <li><a href="que-hacemos.html#sostenibilidad">Sostenibilidad</a></li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Proyecto destacado</h3>
+                  <p>Sistema de información de daños por eventos climáticos desarrollado desde <strong>La Vega Innova</strong> para el <strong>Ministerio de Agricultura</strong>.</p>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="retail" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/sectors/home/retail.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">05</span>
-              <span class="cap-card__tag">Trazabilidad · Sostenibilidad · Transparencia</span>
-              <h2 class="cap-card__title">Retail y Distribución.</h2>
-              <p class="cap-card__desc">Grandes cadenas, marketplaces y centrales de compra que necesitan demostrar el origen, la huella ambiental y el cumplimiento normativo de lo que venden — al regulador y al cliente final.</p>
-              <p class="cap-card__desc">Trazabilidad bidireccional del pallet al campo, reporte CSRD generado desde el dato real y auditoría de proveedores en continuo. Lo necesario para el regulador, el cliente final y la dirección.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="retail-panel">
+              <div class="cap-card__media" style="background-image: url('img/sectors/home/retail.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">05</span>
+                <span class="cap-card__tag">Trazabilidad · Sostenibilidad · Transparencia</span>
+                <h2 class="cap-card__title">Retail y Distribución.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="retail-panel" role="region" aria-label="Detalle Retail y Distribución">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Más transparencia y confianza desde el origen</h3>
+                  <p>La distribución alimentaria necesita disponer de información fiable para responder a las exigencias de consumidores, reguladores y mercados.</p>
+                  <p>VisualNACert ayuda a conectar la información del origen con las necesidades de la cadena de suministro.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Organizaciones con las que trabajamos</h3>
+                  <ul>
+                    <li>Retail alimentario</li>
+                    <li>Distribuidores</li>
+                    <li>Centrales de compra</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Principales desafíos</h3>
+                  <ul>
+                    <li>Trazabilidad bidireccional del pallet al campo</li>
+                    <li>Transparencia y reporte CSRD/ESG</li>
+                    <li>Homologación de proveedores</li>
+                    <li>Riesgos de suministro</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Capacidades más relevantes</h3>
+                  <ul>
+                    <li><a href="que-hacemos.html#cumplimiento">Cumplimiento</a></li>
+                    <li><a href="que-hacemos.html#sostenibilidad">Sostenibilidad</a></li>
+                    <li><a href="que-hacemos.html#documental">Documental</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="innovacion" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/sectors/home/innovacion.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">06</span>
-              <span class="cap-card__tag">Centros de Investigación · Universidades · Corporates</span>
-              <h2 class="cap-card__title">Ecosistema de Innovación.</h2>
-              <p class="cap-card__desc">Centros tecnológicos, universidades y corporates que necesitan validar modelos, transferir tecnología o conectar I+D con datos reales del campo.</p>
-              <p class="cap-card__desc">Acceso a series históricas agronómicas, finca experimental para validar modelos en condiciones reales y API abierta para colaboraciones de I+D. Compartimos infraestructura, no solo datos.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="innovacion-panel">
+              <div class="cap-card__media" style="background-image: url('img/sectors/home/innovacion.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">06</span>
+                <span class="cap-card__tag">Centros de Investigación · Universidades · Corporates</span>
+                <h2 class="cap-card__title">Ecosistema de Innovación.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="innovacion-panel" role="region" aria-label="Detalle Ecosistema de Innovación">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Transformamos conocimiento en impacto</h3>
+                  <p>La innovación agroalimentaria requiere conectar investigación, tecnología y aplicación práctica.</p>
+                  <p>VisualNACert colabora con centros de investigación, universidades, entidades financieras y compañías tecnológicas para acelerar la transformación del sector.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Organizaciones con las que colaboramos</h3>
+                  <ul>
+                    <li>Centros de investigación</li>
+                    <li>Universidades</li>
+                    <li>Institutos tecnológicos</li>
+                    <li>Entidades financieras</li>
+                    <li>Corporates tecnológicos</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Capacidades más relevantes</h3>
+                  <ul>
+                    <li><a href="que-hacemos.html#documental">Documental</a></li>
+                    <li><a href="que-hacemos.html#sostenibilidad">Sostenibilidad</a></li>
+                    <li><a href="que-hacemos.html#climatica">Climática y Territorial</a></li>
+                    <li><a href="que-hacemos.html#agronomica">Agronómica</a></li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Colaboraciones destacadas</h3>
+                  <ul>
+                    <li><strong>IVIA</strong> — proyecto de balance de carbono en mandarina</li>
+                    <li><strong>ITACyL</strong> — integración de modelos de fertilización</li>
+                    <li><strong>CITA Aragón</strong> — iniciativas de transferencia tecnológica</li>
+                    <li><strong>CaixaBank</strong> — servicios digitales agroalimentarios</li>
+                    <li><strong>Caja Rural de Teruel</strong> — asesoramiento digital especializado</li>
+                    <li><strong>Telefónica</strong> — distribución de soluciones de digitalización</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -260,77 +525,6 @@
             <span class="btn__arrow">→</span>
           </a>
         </div>
-      </div>
-    </section>
-
-    <!-- CULTIVOS · capa secundaria especializada -->
-    <section class="cultivos" id="cultivos">
-      <div class="container">
-        <div class="section__head">
-          <span class="eyebrow"><span class="eyebrow__dot"></span> Cultivos con módulo especializado</span>
-          <h2 class="section__title">Nueve cultivos, <em>nueve agronomías</em>.</h2>
-        </div>
-        <p class="section__lead">Dentro del sector <a href="#produccion">Producción Agroalimentaria</a>, entrenamos módulos específicos para los cultivos con ciclos, plagas y normativa diferenciada. Pasa el cursor para ver cada uno.</p>
-      </div>
-
-      <div class="cultivos__layout container">
-        <ol class="cultivos__list">
-          <li><a class="cultivo-row" href="demo.html" id="vina" data-img="img/sectors/viticultura.jpg">
-            <span class="cultivo-row__num">01</span>
-            <span class="cultivo-row__name">Viña</span>
-            <span class="cultivo-row__meta">+850K ha</span>
-          </a></li>
-          <li><a class="cultivo-row" href="demo.html" id="citricos" data-img="img/sectors/citrico.jpg">
-            <span class="cultivo-row__num">02</span>
-            <span class="cultivo-row__name">Cítricos</span>
-            <span class="cultivo-row__meta">DO/IGP</span>
-          </a></li>
-          <li><a class="cultivo-row" href="demo.html" id="extensivo" data-img="img/sectors/extensivo.jpg">
-            <span class="cultivo-row__num">03</span>
-            <span class="cultivo-row__name">Cultivo extensivo</span>
-            <span class="cultivo-row__meta">Cereales · oleaginosas</span>
-          </a></li>
-          <li><a class="cultivo-row" href="demo.html" id="horticolas" data-img="img/sectors/horticultura.jpg">
-            <span class="cultivo-row__num">04</span>
-            <span class="cultivo-row__name">Hortícolas</span>
-            <span class="cultivo-row__meta">Intensivo</span>
-          </a></li>
-          <li><a class="cultivo-row" href="demo.html" id="tropical" data-img="img/sectors/tropical.jpg">
-            <span class="cultivo-row__num">05</span>
-            <span class="cultivo-row__name">Fruta tropical</span>
-            <span class="cultivo-row__meta">Aguacate · mango</span>
-          </a></li>
-          <li><a class="cultivo-row" href="demo.html" id="hueso" data-img="img/sectors/hueso.jpg">
-            <span class="cultivo-row__num">06</span>
-            <span class="cultivo-row__name">Fruta de hueso</span>
-            <span class="cultivo-row__meta">Melocotón · ciruela</span>
-          </a></li>
-          <li><a class="cultivo-row" href="demo.html" id="tuberculos" data-img="img/sectors/tuberculos.jpg">
-            <span class="cultivo-row__num">07</span>
-            <span class="cultivo-row__name">Tubérculos</span>
-            <span class="cultivo-row__meta">Patata · zanahoria</span>
-          </a></li>
-          <li><a class="cultivo-row" href="demo.html" id="olivar" data-img="img/sectors/olivar.jpg">
-            <span class="cultivo-row__num">08</span>
-            <span class="cultivo-row__name">Olivar</span>
-            <span class="cultivo-row__meta">+1.7M ha</span>
-          </a></li>
-          <li><a class="cultivo-row" href="demo.html" id="frutosecos" data-img="img/sectors/frutoseco.jpg">
-            <span class="cultivo-row__num">09</span>
-            <span class="cultivo-row__name">Frutos secos</span>
-            <span class="cultivo-row__meta">Almendra · pistacho</span>
-          </a></li>
-        </ol>
-
-        <aside class="cultivos__preview" aria-hidden="true">
-          <div class="cultivos__preview-stage">
-            <div class="cultivos__preview-img" style="background-image: url('img/sectors/viticultura.jpg')"></div>
-            <div class="cultivos__preview-fallback">
-              <svg viewBox="0 0 200 200" aria-hidden="true"><use href="#m-nucleo"/></svg>
-            </div>
-          </div>
-          <span class="cultivos__preview-label">Pasa el cursor sobre cada cultivo</span>
-        </aside>
       </div>
     </section>
 
@@ -467,6 +661,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=132"></script>
+  <script src="script.js?v=134"></script>
 </body>
 </html>

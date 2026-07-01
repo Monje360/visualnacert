@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=133" />
+  <link rel="stylesheet" href="styles.css?v=134" />
 
   <!-- Schema.org ItemList con 7 Services -->
   <script type="application/ld+json">
@@ -158,79 +158,381 @@
         <div class="cap-grid">
 
           <article class="cap-card" id="agronomica" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/capacidades/agronomica.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">01</span>
-              <span class="cap-card__tag">Agronómica</span>
-              <h2 class="cap-card__title">Comprender mejor lo que ocurre en cada cultivo.</h2>
-              <p class="cap-card__desc">La gestión agronómica moderna exige interpretar una gran cantidad de información procedente de diferentes fuentes.</p>
-              <p class="cap-card__desc">Ayudamos a transformar esa información en conocimiento accionable para optimizar el rendimiento de los cultivos.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="agronomica-panel">
+              <div class="cap-card__media" style="background-image: url('img/capacidades/agronomica.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">01</span>
+                <span class="cap-card__tag">Agronómica</span>
+                <h2 class="cap-card__title">Comprender mejor lo que ocurre en cada cultivo.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="agronomica-panel" role="region" aria-label="Detalle Agronómica">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Qué problema resuelve</h3>
+                  <p>La gestión agronómica moderna exige interpretar una gran cantidad de información procedente de diferentes fuentes.</p>
+                  <p>VisualNACert ayuda a transformar esa información en conocimiento accionable para optimizar el rendimiento de los cultivos y mejorar la toma de decisiones técnicas.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Aplicaciones</h3>
+                  <ul>
+                    <li>Gestión agronómica</li>
+                    <li>Fertilización</li>
+                    <li>Riego</li>
+                    <li>Seguimiento fenológico</li>
+                    <li>Plagas y enfermedades</li>
+                    <li>Evaluación del estado vegetativo</li>
+                    <li>Monitorización satelital</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Información utilizada</h3>
+                  <ul>
+                    <li>Datos de campo</li>
+                    <li>Imágenes satelitales</li>
+                    <li>Análisis agronómicos</li>
+                    <li>Históricos productivos</li>
+                    <li>Sensores</li>
+                    <li>Información climática</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Sectores donde aplica</h3>
+                  <ul>
+                    <li><a href="sectores.html#produccion">Producción agrícola</a></li>
+                    <li>Cooperativas</li>
+                    <li>Frutos secos</li>
+                    <li>Olivar</li>
+                    <li>Viñedo</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="operativa" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/capacidades/operativa.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">02</span>
-              <span class="cap-card__tag">Operativa</span>
-              <h2 class="cap-card__title">Gestionar mejor recursos, equipos y operaciones.</h2>
-              <p class="cap-card__desc">Las explotaciones y organizaciones agroalimentarias generan una enorme cantidad de información relacionada con personas, tareas, costes y operaciones.</p>
-              <p class="cap-card__desc">Transformamos esos datos en visibilidad operativa para mejorar la eficiencia y reducir costes.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="operativa-panel">
+              <div class="cap-card__media" style="background-image: url('img/capacidades/operativa.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">02</span>
+                <span class="cap-card__tag">Operativa</span>
+                <h2 class="cap-card__title">Gestionar mejor recursos, equipos y operaciones.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="operativa-panel" role="region" aria-label="Detalle Operativa">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Qué problema resuelve</h3>
+                  <p>Las explotaciones y organizaciones agroalimentarias generan una enorme cantidad de información relacionada con personas, tareas, costes y operaciones.</p>
+                  <p>VisualNACert ayuda a transformar esos datos en visibilidad operativa para mejorar la eficiencia y reducir costes.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Aplicaciones</h3>
+                  <ul>
+                    <li>Control de costes de producción</li>
+                    <li>Gestión de equipos</li>
+                    <li>Control horario</li>
+                    <li>Gestión de tareas</li>
+                    <li>Seguimiento de operaciones</li>
+                    <li>Productividad</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Información utilizada</h3>
+                  <ul>
+                    <li>Registros operativos</li>
+                    <li>Jornadas laborales</li>
+                    <li>Actividades de campo</li>
+                    <li>Recursos utilizados</li>
+                    <li>Costes asociados</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Sectores donde aplica</h3>
+                  <ul>
+                    <li><a href="sectores.html#produccion">Productores</a></li>
+                    <li>Cooperativas</li>
+                    <li><a href="sectores.html#industria">Industria agroalimentaria</a></li>
+                    <li>Empresas de servicios</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="climatica" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/capacidades/climatica.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">03</span>
-              <span class="cap-card__tag">Climática y Territorial</span>
-              <h2 class="cap-card__title">Comprender mejor el territorio y anticipar riesgos.</h2>
-              <p class="cap-card__desc">La disponibilidad de agua, los eventos climáticos extremos y la variabilidad territorial condicionan cada vez más la actividad agroalimentaria.</p>
-              <p class="cap-card__desc">Integramos información geoespacial, climática y territorial para facilitar decisiones más precisas.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="climatica-panel">
+              <div class="cap-card__media" style="background-image: url('img/capacidades/climatica.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">03</span>
+                <span class="cap-card__tag">Climática y Territorial</span>
+                <h2 class="cap-card__title">Comprender mejor el territorio y anticipar riesgos.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="climatica-panel" role="region" aria-label="Detalle Climática y Territorial">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Qué problema resuelve</h3>
+                  <p>La disponibilidad de agua, los eventos climáticos extremos y la variabilidad territorial condicionan cada vez más la actividad agroalimentaria.</p>
+                  <p>VisualNACert integra información geoespacial, climática y territorial para facilitar decisiones más precisas.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Aplicaciones</h3>
+                  <ul>
+                    <li>Riesgos climáticos</li>
+                    <li>Monitorización territorial</li>
+                    <li>Evaluación de daños</li>
+                    <li>Gestión hídrica</li>
+                    <li>Seguimiento de grandes superficies</li>
+                    <li>Inteligencia para administraciones públicas</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Información utilizada</h3>
+                  <ul>
+                    <li>Satélite (Copernicus / Sentinel)</li>
+                    <li>Estaciones meteorológicas</li>
+                    <li>Sensores</li>
+                    <li>Sistemas de información geográfica (SIG)</li>
+                    <li>Cartografía</li>
+                    <li>Datos históricos</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Sectores donde aplica</h3>
+                  <ul>
+                    <li>Agricultura</li>
+                    <li><a href="sectores.html#administraciones">Administraciones públicas</a></li>
+                    <li>Centros de investigación</li>
+                    <li>Seguros agrarios</li>
+                    <li>Organismos de gestión</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="cumplimiento" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/capacidades/cumplimiento.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">04</span>
-              <span class="cap-card__tag">Cumplimiento</span>
-              <h2 class="cap-card__title">Reducir la complejidad regulatoria.</h2>
-              <p class="cap-card__desc">La gestión documental y normativa es uno de los mayores retos para las organizaciones agroalimentarias.</p>
-              <p class="cap-card__desc">Facilitamos el cumplimiento mediante sistemas inteligentes capaces de estructurar información y automatizar procesos.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="cumplimiento-panel">
+              <div class="cap-card__media" style="background-image: url('img/capacidades/cumplimiento.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">04</span>
+                <span class="cap-card__tag">Cumplimiento</span>
+                <h2 class="cap-card__title">Reducir la complejidad regulatoria.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="cumplimiento-panel" role="region" aria-label="Detalle Cumplimiento">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Qué problema resuelve</h3>
+                  <p>La gestión documental y normativa es uno de los mayores retos para las organizaciones agroalimentarias.</p>
+                  <p>VisualNACert facilita el cumplimiento mediante sistemas inteligentes capaces de estructurar información y automatizar procesos.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Aplicaciones</h3>
+                  <ul>
+                    <li>Cuaderno de campo</li>
+                    <li>Certificación GLOBALG.A.P.</li>
+                    <li>Gestión documental</li>
+                    <li>Auditorías</li>
+                    <li>Evidencias</li>
+                    <li>Cumplimiento normativo</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Información utilizada</h3>
+                  <ul>
+                    <li>Registros de explotación</li>
+                    <li>Documentación técnica</li>
+                    <li>Normativas</li>
+                    <li>Certificaciones</li>
+                    <li>Evidencias digitales</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Sectores donde aplica</h3>
+                  <ul>
+                    <li><a href="sectores.html#produccion">Productores</a></li>
+                    <li>Cooperativas</li>
+                    <li><a href="sectores.html#industria">Industria agroalimentaria</a></li>
+                    <li>Certificadoras</li>
+                    <li><a href="sectores.html#administraciones">Administraciones</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="sostenibilidad" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/capacidades/sostenibilidad.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">05</span>
-              <span class="cap-card__tag">Sostenibilidad</span>
-              <h2 class="cap-card__title">Medir, demostrar y mejorar el desempeño ambiental.</h2>
-              <p class="cap-card__desc">La sostenibilidad ha dejado de ser una declaración para convertirse en un requisito de mercado.</p>
-              <p class="cap-card__desc">Ayudamos a convertir datos ambientales en indicadores útiles para la gestión y la toma de decisiones.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="sostenibilidad-panel">
+              <div class="cap-card__media" style="background-image: url('img/capacidades/sostenibilidad.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">05</span>
+                <span class="cap-card__tag">Sostenibilidad</span>
+                <h2 class="cap-card__title">Medir, demostrar y mejorar el desempeño ambiental.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="sostenibilidad-panel" role="region" aria-label="Detalle Sostenibilidad">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Qué problema resuelve</h3>
+                  <p>La sostenibilidad ha dejado de ser una declaración para convertirse en un requisito de mercado.</p>
+                  <p>VisualNACert ayuda a convertir datos ambientales en indicadores útiles para la gestión y la toma de decisiones.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Aplicaciones</h3>
+                  <ul>
+                    <li>Huella de carbono</li>
+                    <li>Gestión de purines</li>
+                    <li>Indicadores ESG</li>
+                    <li>Uso eficiente de recursos</li>
+                    <li>Reportes ambientales</li>
+                    <li>Sostenibilidad corporativa</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Información utilizada</h3>
+                  <ul>
+                    <li>Datos de explotación</li>
+                    <li>Consumos</li>
+                    <li>Fertilización</li>
+                    <li>Producción</li>
+                    <li>Factores de emisión</li>
+                    <li>Información territorial</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Sectores donde aplica</h3>
+                  <ul>
+                    <li>Agricultura</li>
+                    <li>Ganadería</li>
+                    <li><a href="sectores.html#industria">Industria agroalimentaria</a></li>
+                    <li><a href="sectores.html#retail">Retail</a></li>
+                    <li>Entidades financieras</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="varietal" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/capacidades/varietal.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">06</span>
-              <span class="cap-card__tag">Inteligencia Varietal</span>
-              <h2 class="cap-card__title">Proteger y gestionar la innovación genética.</h2>
-              <p class="cap-card__desc">Las variedades protegidas requieren sistemas capaces de controlar licencias, trazabilidad y cumplimiento contractual.</p>
-              <p class="cap-card__desc">Somos referentes internacionales en la digitalización de programas varietales.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="varietal-panel">
+              <div class="cap-card__media" style="background-image: url('img/capacidades/varietal.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">06</span>
+                <span class="cap-card__tag">Inteligencia Varietal</span>
+                <h2 class="cap-card__title">Proteger y gestionar la innovación genética.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="varietal-panel" role="region" aria-label="Detalle Inteligencia Varietal">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Qué problema resuelve</h3>
+                  <p>Las variedades protegidas requieren sistemas capaces de controlar licencias, trazabilidad y cumplimiento contractual.</p>
+                  <p>VisualNACert es uno de los referentes internacionales en la digitalización de programas varietales.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Aplicaciones</h3>
+                  <ul>
+                    <li>Gestión de licencias</li>
+                    <li>Regalías</li>
+                    <li>Auditorías</li>
+                    <li>Seguimiento de plantaciones</li>
+                    <li>Supervisión varietal</li>
+                    <li>Control de programas</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Información utilizada</h3>
+                  <ul>
+                    <li>Contratos</li>
+                    <li>Registros de producción</li>
+                    <li>Datos territoriales</li>
+                    <li>Información varietal</li>
+                    <li>Evidencias documentales</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Sectores donde aplica</h3>
+                  <ul>
+                    <li><a href="sectores.html#variedades">Obtentores</a></li>
+                    <li>Viveros</li>
+                    <li>Productores autorizados</li>
+                    <li>Organismos de control</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="cap-card" id="documental" data-reveal>
-            <div class="cap-card__media" style="background-image: url('img/capacidades/documental.jpg')"></div>
-            <div class="cap-card__content">
-              <span class="cap-card__num">07</span>
-              <span class="cap-card__tag">Documental</span>
-              <h2 class="cap-card__title">Transformar documentación en conocimiento utilizable.</h2>
-              <p class="cap-card__desc">El sector agroalimentario genera miles de documentos técnicos, normativos y operativos que contienen información valiosa pero difícil de explotar.</p>
-              <p class="cap-card__desc">Utilizamos inteligencia artificial para estructurar, interpretar y activar ese conocimiento.</p>
+            <button type="button" class="cap-card__header" aria-expanded="false" aria-controls="documental-panel">
+              <div class="cap-card__media" style="background-image: url('img/capacidades/documental.jpg')"></div>
+              <div class="cap-card__content">
+                <span class="cap-card__num">07</span>
+                <span class="cap-card__tag">Documental</span>
+                <h2 class="cap-card__title">Transformar documentación en conocimiento utilizable.</h2>
+              </div>
+              <span class="cap-card__chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="cap-card__panel" id="documental-panel" role="region" aria-label="Detalle Documental">
+              <div class="cap-card__panel-inner">
+                <div class="cap-card__section cap-card__section--intro">
+                  <h3>Qué problema resuelve</h3>
+                  <p>El sector agroalimentario genera miles de documentos técnicos, normativos y operativos que contienen información valiosa pero difícil de explotar.</p>
+                  <p>VisualNACert utiliza inteligencia artificial para estructurar, interpretar y activar ese conocimiento.</p>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Aplicaciones</h3>
+                  <ul>
+                    <li>Consulta inteligente de documentación</li>
+                    <li>Automatización documental</li>
+                    <li>Gestión del conocimiento</li>
+                    <li>Asistencia técnica</li>
+                    <li>Soporte a decisiones</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section">
+                  <h3>Información utilizada</h3>
+                  <ul>
+                    <li>Informes técnicos</li>
+                    <li>Normativas</li>
+                    <li>Contratos</li>
+                    <li>Procedimientos</li>
+                    <li>Bases documentales</li>
+                  </ul>
+                </div>
+                <div class="cap-card__section cap-card__section--wide">
+                  <h3>Sectores donde aplica</h3>
+                  <ul>
+                    <li><a href="sectores.html#administraciones">Administraciones públicas</a></li>
+                    <li><a href="sectores.html#industria">Industria</a></li>
+                    <li>Certificación</li>
+                    <li>Centros de investigación</li>
+                    <li>Grandes organizaciones</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -356,6 +658,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=132"></script>
+  <script src="script.js?v=134"></script>
 </body>
 </html>
