@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=148" />
+  <link rel="stylesheet" href="styles.css?v=149" />
 
   <!-- Schema.org AboutPage + Person founders + next-gen -->
   <script type="application/ld+json">
@@ -348,40 +348,42 @@
     </section>
 
     <!-- FINCA MILÚ (antes Visual Lab) -->
-    <section class="section" id="finca-milu" style="background: var(--linen);">
+    <section class="section finca-milu" id="finca-milu" style="background: var(--linen);">
       <div class="container">
-        <div class="section__head">
+        <header class="finca-milu__head">
           <span class="eyebrow"><span class="eyebrow__dot"></span> Nuestro campo de entrenamiento</span>
-          <h2 class="section__title"><em>Finca Milú</em>,<br/>donde la IA aprende del campo.</h2>
+          <h2 class="finca-milu__title"><em>Finca Milú</em>, donde la IA aprende del campo.</h2>
+        </header>
+
+        <div class="finca-milu__layout">
+          <div class="finca-milu__gallery" data-reveal>
+            <a class="finca-milu__shot finca-milu__shot--lead" style="background-image: url('img/finca-milu-1.jpg')" href="img/finca-milu-1.jpg" target="_blank" rel="noopener" aria-label="Finca Milú — vista general del cultivo de cítricos"></a>
+            <a class="finca-milu__shot" style="background-image: url('img/finca-milu-2.jpg')" href="img/finca-milu-2.jpg" target="_blank" rel="noopener" aria-label="Finca Milú — biodiversidad funcional"></a>
+            <a class="finca-milu__shot" style="background-image: url('img/finca-milu-3.jpg')" href="img/finca-milu-3.jpg" target="_blank" rel="noopener" aria-label="Finca Milú — cubiertas vegetales y setos"></a>
+          </div>
+
+          <div class="finca-milu__body">
+            <p><strong>Cinco hectáreas de cítricos ecológicos</strong> en El Puig (Valencia). Centro de experiencias y laboratorio de la agricultura del futuro: probamos cada sensor, modelo y algoritmo en condiciones reales antes de escalarlos a la plataforma.</p>
+            <p>Enfoque holístico — salud del suelo, biodiversidad y viabilidad económica. <strong>Gestión proactiva de plagas</strong> con muestreo continuo, refuerzo de enemigos naturales, casetas de murciélagos y fauna auxiliar. <strong>Control biológico por conservación</strong>: cubiertas vegetales, setos de biodiversidad y plantas autóctonas.</p>
+            <p>Nuestra meta es el <strong>tratamiento 0</strong>: sólo productos autorizados y respetuosos con la fauna auxiliar cuando sean estrictamente necesarios. Un ecosistema autosostenible y un espacio de enseñanza.</p>
+          </div>
         </div>
 
-        <div class="finca-milu__gallery" data-reveal>
-          <a class="finca-milu__shot finca-milu__shot--lead" style="background-image: url('img/finca-milu-1.jpg')" href="img/finca-milu-1.jpg" target="_blank" rel="noopener" aria-label="Finca Milú — vista general del cultivo de cítricos"></a>
-          <a class="finca-milu__shot" style="background-image: url('img/finca-milu-2.jpg')" href="img/finca-milu-2.jpg" target="_blank" rel="noopener" aria-label="Finca Milú — biodiversidad funcional"></a>
-          <a class="finca-milu__shot" style="background-image: url('img/finca-milu-3.jpg')" href="img/finca-milu-3.jpg" target="_blank" rel="noopener" aria-label="Finca Milú — cubiertas vegetales y setos"></a>
-        </div>
-
-        <div class="finca-milu__body">
-          <p class="section__lead" style="margin: 0 0 24px;">Cinco hectáreas de <strong>cítricos ecológicos</strong> en El Puig (Valencia). Centro de experiencias y laboratorio de la agricultura del futuro: aquí fusionamos la tecnología del Ecosistema Visual con prácticas eco-amigables para probar cada sensor, cada modelo y cada algoritmo en condiciones reales antes de escalarlos a la plataforma.</p>
-          <p>Enfoque holístico: salud del suelo, biodiversidad y viabilidad económica. <strong>Gestión proactiva de plagas</strong> con muestreo continuo, refuerzo de enemigos naturales, casetas de murciélagos y fauna auxiliar en momentos estratégicos del ciclo. <strong>Control biológico por conservación</strong>: cubiertas vegetales multifuncionales, setos de biodiversidad y plantas autóctonas que ofrecen refugio, alimento y reproducción a organismos útiles.</p>
-          <p>Nuestra meta es el <strong>tratamiento 0</strong>: sólo productos autorizados y respetuosos con la fauna auxiliar cuando resulten estrictamente necesarios. Un ecosistema autosostenible, un espacio de enseñanza e intercambio de experiencias, y un ejemplo de cómo tecnología y sostenibilidad avanzan de la mano.</p>
-        </div>
-
-        <div class="pillars-grid" style="margin-top: 48px;">
+        <div class="pillars-grid finca-milu__pillars">
           <div class="pillar" data-reveal>
             <div class="pillar__num">Gestión proactiva de plagas</div>
             <h4>Enemigos naturales y fauna auxiliar.</h4>
-            <p>Muestreo continuo, refuerzo de poblaciones EENN, casetas de murciélagos y liberaciones estratégicas. Equilibrio ecológico como base del control fitosanitario.</p>
+            <p>Muestreo continuo, refuerzo de poblaciones EENN, casetas de murciélagos y liberaciones estratégicas.</p>
           </div>
           <div class="pillar" data-reveal>
             <div class="pillar__num">Control biológico por conservación</div>
             <h4>Cubiertas vegetales y setos.</h4>
-            <p>Cubiertas vegetales multifuncionales y setos de biodiversidad con plantas autóctonas. Refugio y alimento para organismos útiles, más salud del suelo y menor erosión.</p>
+            <p>Cubiertas multifuncionales y setos de biodiversidad con plantas autóctonas. Refugio y alimento para organismos útiles.</p>
           </div>
           <div class="pillar" data-reveal>
             <div class="pillar__num">Objetivo estratégico</div>
             <h4>Hacia el tratamiento 0.</h4>
-            <p>Solo productos autorizados y respetuosos con la fauna auxiliar cuando sean necesarios. Un ecosistema autosostenible que valida lo que después escalamos a la plataforma.</p>
+            <p>Solo productos autorizados cuando sean necesarios. Un ecosistema autosostenible que después escalamos a la plataforma.</p>
           </div>
         </div>
       </div>

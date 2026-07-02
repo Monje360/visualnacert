@@ -6600,17 +6600,41 @@ body.is-cookies-modal { overflow: hidden; }
 /* ============================================
    FINCA MILÚ · bloque en Nosotros
    ============================================ */
+/* Head propio — evita el space-between del .section__head global */
+.finca-milu__head {
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+.finca-milu__head .eyebrow { margin-bottom: 12px; }
+.finca-milu__title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin: 0;
+}
+.finca-milu__title em { font-style: normal; color: var(--orange); }
+
+/* Layout: galería izquierda + texto derecha, alineados en la misma fila */
+.finca-milu__layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 44px;
+  align-items: center;
+  margin-bottom: 56px;
+}
 .finca-milu__gallery {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 32px;
-  max-width: 820px;
-  aspect-ratio: 20 / 6;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  aspect-ratio: 4 / 3;
 }
 .finca-milu__shot {
   position: relative;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -6620,27 +6644,25 @@ body.is-cookies-modal { overflow: hidden; }
 }
 .finca-milu__shot:hover { transform: scale(1.015); }
 .finca-milu__shot--lead { grid-row: 1 / -1; }
-.finca-milu__body {
-  max-width: 900px;
-}
 .finca-milu__body p {
   font-size: 15.5px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--ink-soft, #555);
   margin: 0 0 14px;
 }
 .finca-milu__body p:last-child { margin-bottom: 0; }
 .finca-milu__body p strong { color: var(--ink); }
-@media (max-width: 880px) {
-  .finca-milu__gallery {
-    grid-template-columns: 1fr 1fr;
-    aspect-ratio: auto;
-  }
-  .finca-milu__shot { aspect-ratio: 4 / 3; }
-  .finca-milu__shot--lead { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.finca-milu__pillars { margin-top: 0; }
+@media (max-width: 960px) {
+  .finca-milu__layout { grid-template-columns: 1fr; gap: 32px; }
+  .finca-milu__gallery { aspect-ratio: 16 / 9; }
 }
 @media (max-width: 480px) {
-  .finca-milu__gallery { grid-template-columns: 1fr; }
+  .finca-milu__gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    aspect-ratio: auto;
+  }
   .finca-milu__shot { aspect-ratio: 16 / 10; }
-  .finca-milu__shot--lead { aspect-ratio: 16 / 10; }
+  .finca-milu__shot--lead { grid-row: auto; }
 }
