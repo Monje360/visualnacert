@@ -6603,9 +6603,10 @@ body.is-cookies-modal { overflow: hidden; }
 .finca-milu__gallery {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 40px;
-  aspect-ratio: 16 / 7;
+  gap: 10px;
+  margin-bottom: 32px;
+  max-width: 820px;
+  aspect-ratio: 20 / 6;
 }
 .finca-milu__shot {
   position: relative;
